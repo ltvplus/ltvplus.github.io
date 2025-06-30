@@ -394,13 +394,23 @@
       video.play().catch(() => {});
     }
 
-    document.getElementById("fullscreen-btn").onclick = () => {
-      const wr = document.getElementById("video-wrapper");
-      (wr.requestFullscreen ||
-       wr.webkitRequestFullscreen ||
-       wr.mozRequestFullScreen ||
-       wr.msRequestFullscreen).call(wr);
-    };
+document.getElementById("fullscreen-btn").onclick = () => {
+  const video = document.getElementById("player");
+  const wrapper = document.getElementById("video-wrapper");
+
+  // Safari (iOS/macOS)
+  if (video.webkitEnterFullscreen) {
+    video.webkitEnterFullscreen();
+  } else if (wrapper.requestFullscreen) {
+    wrapper.requestFullscreen();
+  } else if (wrapper.webkitRequestFullscreen) {
+    wrapper.webkitRequestFullscreen();
+  } else if (wrapper.mozRequestFullScreen) {
+    wrapper.mozRequestFullScreen();
+  } else if (wrapper.msRequestFullscreen) {
+    wrapper.msRequestFullscreen();
+  }
+};
 
     const sections = ["search", "group-filter", "channel-list", "fullscreen-btn"];
     let currentSection = 0, currentIndex = 0;
