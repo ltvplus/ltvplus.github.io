@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOVIES</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #141414;
+      color: #ffffff;
+      user-select: none;
+      margin: 0;
+    }
+
+    #grupo-filtros {
+      margin: 20px 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    #grupo-filtros button,
+    .boton-filtro {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    #grupo-filtros button:hover,
+    .boton-filtro:hover {
+      background-color: #e50914;
+    }
+
+    #grupo-filtros button.activo {
+      background-color: #e50914;
+      font-weight: bold;
+    }
+
+    #search-container {
+      margin: 20px;
+    }
+
+    #search-bar {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      background-color: #1e1e1e;
+      color: white;
+      font-size: 16px;
+    }
+
+    #lista {
+      max-width: 90%;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .item {
+      cursor: pointer;
+      border: 1px solid #444;
+      padding: 10px;
+      background: #1e1e1e;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+      outline: none;
+    }
+
+    .item:hover,
+    .item:focus {
+      transform: scale(1.05);
+      border-color: #e50914;
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .item span {
+      margin-top: 5px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .fullscreen-video {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .fullscreen-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .fullscreen-video video:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main-content" style="display: block;">
+    <div id="grupo-filtros"></div>
+    <div id="search-container">
+      <input id="search-bar" type="text" placeholder="Buscar por nombre de pelicula..." oninput="filtrarLista()" />
+    </div>
+    <div id="lista"></div>
+
+    <div style="margin: 30px 0; text-align: center;">
+      <button class="boton-filtro" onclick="window.location.href='https://la.movie/'">
+        Más Contenido
+      </button>
+    </div>
+
+    <div id="fullscreen-video" class="fullscreen-video">
+      <video id="video-player" controls autoplay controlsList="nodownload"></video>
+    </div>
+  </div>
+
+  <script>
+    // Bloqueo de teclas
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'F12') event.preventDefault();
+      if ((event.ctrlKey && event.shiftKey && ['I', 'C', 'J'].includes(event.key)) || (event.ctrlKey && event.key === 'u')) {
+        event.preventDefault();
+      }
+    });
+
+    // Bloqueo del clic derecho
+    document.addEventListener('contextmenu', function (event) {
+      event.preventDefault();
+    });
+
+    const mainContent = document.getElementById("main-content");
+    cargarLista();
+
+    let videoPlayer = document.getElementById("video-player");
+    let fullscreenVideo = document.getElementById("fullscreen-video");
+    let listaElementos = document.getElementById("lista");
+    let listaCanales = [];
+    let grupos = new Set();
+    let grupoActual = "Todos";
+
+    async function cargarLista() {
+      const url = "https://ltvplus.github.io/movies.m3u";
+
+      try {
+        const response = await fetch(url, { mode: "cors" });
+        if (!response.ok) throw new Error("HTTP error! Status: " + response.status);
+
+        const data = await response.text();
+        const lineas = data.split("\n");
+        listaCanales = [];
+        grupos = new Set(["Todos"]);
+        listaElementos.innerHTML = "";
+
+        for (let i = 0; i < lineas.length; i++) {
+          let linea = lineas[i].trim();
+          if (linea.startsWith("#EXTINF")) {
+            const nombre = linea.split(",")[1] || "Desconocido";
+            const logoMatch = linea.match(/tvg-logo="(.*?)"/);
+            const logo = logoMatch ? logoMatch[1] : "";
+            const grupoMatch = linea.match(/group-title="(.*?)"/);
+            const grupo = grupoMatch ? grupoMatch[1] : "Otros";
+            grupos.add(grupo);
+
+            let urlVideo = lineas[i + 1]?.trim() || "";
+
+            if (urlVideo && /\.(mp4|webm|mkv|ogg|m3u8|m3u)$/.test(urlVideo)) {
+              const item = document.createElement("div");
+              item.classList.add("item");
+              item.tabIndex = 0;
+
+              if (logo) {
+                const img = document.createElement("img");
+                img.src = logo;
+                img.alt = nombre;
+                item.appendChild(img);
+              }
+
+              const texto = document.createElement("span");
+              texto.textContent = nombre;
+              item.appendChild(texto);
+
+              item.onclick = () => playVideo(urlVideo);
+
+              listaCanales.push({ nombre, item, urlVideo, grupo });
+            }
+          }
+        }
+
+        renderGrupos();
+        filtrarLista();
+
+      } catch (error) {
+        console.error("Error al cargar la lista M3U:", error);
+        alert("No se pudo cargar la lista. Verifica la URL.");
+      }
+    }
+
+    function renderGrupos() {
+      const container = document.getElementById("grupo-filtros");
+      container.innerHTML = "";
+
+      const gruposArray = Array.from(grupos);
+
+      const gruposOrdenados = gruposArray.sort((a, b) => {
+        const esAnoA = /^\d{4}$/.test(a);
+        const esAnoB = /^\d{4}$/.test(b);
+
+        if (esAnoA && esAnoB) {
+          return parseInt(a) - parseInt(b);
+        } else if (esAnoA) {
+          return -1;
+        } else if (esAnoB) {
+          return 1;
+        } else {
+          return a.localeCompare(b, 'es', { sensitivity: 'base' });
+        }
+      });
+
+      gruposOrdenados.forEach((grupo) => {
+        const btn = document.createElement("button");
+        btn.textContent = grupo;
+        if (grupo === grupoActual) btn.classList.add("activo");
+        btn.onclick = () => {
+          grupoActual = grupo;
+          renderGrupos();
+          filtrarLista();
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    function normalizarTexto(texto) {
+      return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function filtrarLista() {
+      const filtro = normalizarTexto(document.getElementById("search-bar").value.toLowerCase());
+      listaElementos.innerHTML = "";
+
+      listaCanales.forEach((canal) => {
+        const nombreCanal = normalizarTexto(canal.nombre.toLowerCase());
+        const enGrupo = grupoActual === "Todos" || canal.grupo === grupoActual;
+        const coincide = nombreCanal.includes(filtro);
+
+        if (enGrupo && coincide) {
+          listaElementos.appendChild(canal.item);
+        }
+      });
+    }
+
+    let ultimaPosScroll = 0;
+
+    function playVideo(url) {
+      ultimaPosScroll = window.scrollY;
+      videoPlayer.src = url;
+      fullscreenVideo.style.display = 'block';
+
+      const tiempoGuardado = localStorage.getItem("pos_" + url);
+      if (tiempoGuardado) {
+        videoPlayer.currentTime = parseFloat(tiempoGuardado);
+      }
+
+      videoPlayer.play();
+
+      if (fullscreenVideo.requestFullscreen) {
+        fullscreenVideo.requestFullscreen();
+      } else if (fullscreenVideo.mozRequestFullScreen) {
+        fullscreenVideo.mozRequestFullScreen();
+      } else if (fullscreenVideo.webkitRequestFullscreen) {
+        fullscreenVideo.webkitRequestFullscreen();
+      } else if (fullscreenVideo.msRequestFullscreen) {
+        fullscreenVideo.msRequestFullscreen();
+      }
+
+      history.pushState(null, '', '#fullscreen');
+
+      videoPlayer.ontimeupdate = () => {
+        if (!videoPlayer.paused) {
+          localStorage.setItem("pos_" + url, videoPlayer.currentTime);
+        }
+      };
+    }
+
+    function exitFullscreen() {
+      fullscreenVideo.style.display = 'none';
+      videoPlayer.pause();
+      window.scrollTo(0, ultimaPosScroll);
+    }
+
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) exitFullscreen();
+    });
+    document.addEventListener('webkitfullscreenchange', () => {
+      if (!document.webkitFullscreenElement) exitFullscreen();
+    });
+    document.addEventListener('mozfullscreenchange', () => {
+      if (!document.mozFullScreenElement) exitFullscreen();
+    });
+    document.addEventListener('MSFullscreenChange', () => {
+      if (!document.msFullscreenElement) exitFullscreen();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      switch (e.key) {
+        case 'ArrowUp':
+          console.log('Subiendo volumen');
+          break;
+        case 'ArrowDown':
+          console.log('Bajando volumen');
+          break;
+        case 'ArrowLeft':
+          videoPlayer.currentTime -= 10;
+          break;
+        case 'ArrowRight':
+          videoPlayer.currentTime += 10;
+          break;
+        case 'Enter':
+        case 'MediaPlayPause':
+          videoPlayer.paused ? videoPlayer.play() : videoPlayer.pause();
+          break;
+        case 'Backspace':
+        case 'MediaStop':
+          fullscreenVideo.style.display = 'none';
+          videoPlayer.pause();
+          window.scrollTo(0, ultimaPosScroll);
+          break;
+        case 'MediaFastForward':
+          videoPlayer.currentTime += 30;
+          break;
+        case 'MediaRewind':
+          videoPlayer.currentTime -= 30;
+          break;
+      }
+    });
+  </script>
+</body>
+</html>
