@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Login</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #141414;
+      color: #ffffff;
+      user-select: none;
+      margin: 0;
+    }
+
+    #login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url("https://i.ibb.co/G4LGgKDD/FONDO.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: filter 0.3s ease;
+    }
+
+    input[type="text"], input[type="password"] {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      background-color: #1e1e1e;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #e50914;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #error-msg {
+      color: red;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .checkbox-container input {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+
+<body oncontextmenu="return false">
+
+  <div id="login-container">
+    <h2>Iniciar sesión</h2>
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    
+    <div class="checkbox-container">
+      <input type="checkbox" id="recordarDatos">
+      <label for="recordarDatos">Recordar usuario y contraseña</label>
+    </div>
+
+    <button id="entrarBtn" onclick="validarLogin()">Entrar</button>
+    <p id="error-msg"></p>
+  </div>
+
+  <script>
+    // Cargar usuario y contraseña si están guardados
+    window.onload = function () {
+      if (localStorage.getItem("recordar") === "true") {
+        document.getElementById("username").value = localStorage.getItem("usuario");
+        document.getElementById("password").value = localStorage.getItem("contrasena");
+        document.getElementById("recordarDatos").checked = true;
+      }
+    };
+
+    function validarLogin() {
+      const usuario = document.getElementById("username").value;
+      const contrasena = document.getElementById("password").value;
+      const recordar = document.getElementById("recordarDatos").checked;
+      const errorMsg = document.getElementById("error-msg");
+
+      const usuariosValidos = {
+        "admin": "rfra87",
+        "prueba": "prueba",
+        "mariana": "princess2",
+        "usuario": "1234"
+      };
+
+      if (usuariosValidos[usuario] === contrasena) {
+        if (recordar) {
+          localStorage.setItem("usuario", usuario);
+          localStorage.setItem("contrasena", contrasena);
+          localStorage.setItem("recordar", true);
+        } else {
+          localStorage.clear();
+        }
+        window.location.href = "go:PLUSTV";
+      } else {
+        errorMsg.textContent = "Usuario o contraseña incorrectos.";
+      }
+    }
+
+    // Navegar entre campos con teclas de flecha
+    document.getElementById("username").addEventListener("keydown", function(e) {
+      if (e.key === "ArrowDown") {
+        document.getElementById("password").focus();
+      }
+    });
+
+    document.getElementById("password").addEventListener("keydown", function(e) {
+      if (e.key === "ArrowDown") {
+        document.getElementById("recordarDatos").focus();
+      } else if (e.key === "ArrowUp") {
+        document.getElementById("username").focus();
+      } else if (e.key === "Enter") {
+        document.getElementById("recordarDatos").focus();
+      }
+    });
+
+    document.getElementById("recordarDatos").addEventListener("keydown", function(e) {
+      if (e.key === "ArrowDown") {
+        document.getElementById("entrarBtn").focus();
+      } else if (e.key === "ArrowUp") {
+        document.getElementById("password").focus();
+      }
+    });
+
+    document.getElementById("entrarBtn").addEventListener("keydown", function(e) {
+      if (e.key === "ArrowUp") {
+        document.getElementById("recordarDatos").focus();
+      }
+    });
+
+    // Bloqueo de funciones del navegador
+    document.addEventListener("keydown", function(e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") ||
+        (e.ctrlKey && e.key.toLowerCase() === "u")
+      ) {
+        e.preventDefault();
+        alert("Función deshabilitada.");
+      }
+    });
+
+    window.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>
