@@ -1,0 +1,291 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://i.ibb.co/MD2JBPnZ/WILLAX.png" group-title="|PE| Nacionales",WILLAX
+https://live-zlr1.tv360.bitel.com.pe/bitel/willax_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/9kKJsj3g/LATINA.png" group-title="|PE| Nacionales",LATINA
+https://live-zlr1.tv360.bitel.com.pe/bitel/latina_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5gzhfrDs/RPP.png" group-title="|PE| Nacionales",RPP
+https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/RPP/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/KpjfT12j/AMERICA.png" group-title="|PE| Nacionales",AMERICA
+https://live-zlr1.tv360.bitel.com.pe/bitel/americatv_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/d46jNSvg/PANAMERICANA.png" group-title="|PE| Nacionales",PANAMERICANA
+https://live-zlr1.tv360.bitel.com.pe/bitel/panamericana_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1Y8hWQ90/EXITOSA.png" group-title="|PE| Nacionales",EXITOSA
+https://live-zlr1.tv360.bitel.com.pe/bitel/exitosa_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/9k59dSMX/TVPERU.png" group-title="|PE| Nacionales",TV PERU
+https://live-zlr1.tv360.bitel.com.pe/bitel/tvperu_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/0kwJkM4/ATVPLUS.png" group-title="|PE| Nacionales",ATV+ NOTICIAS
+https://live-zlr1.tv360.bitel.com.pe/bitel/atvmas_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/7dZvdnMf/ATV.png" group-title="|PE| Nacionales",ATV
+https://live-zlr1.tv360.bitel.com.pe/bitel/atv_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/tM4vrQpL/VIVATV.png" group-title="|PE| Locales",VIVA TV
+https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/vivatv.stream/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/LdZdbgBV/LATELE.png" group-title="|PE| Locales",LA TELE
+https://live-zlr1.tv360.bitel.com.pe/bitel/latele/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/0j3TJ1g2/USMPTV.png" group-title="|PE| Locales",USMPTV
+https://live-zlr1.tv360.bitel.com.pe/bitel/usmp/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DgPwwHS1/GLOBAL.png" group-title="|PE| Nacionales",GLOBAL
+https://live-zlr1.tv360.bitel.com.pe/bitel/global/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Y7n0n14L/KARIBENA.png" group-title="|PE| Locales",KARIBEÑA
+https://live-evg25.tv360.bitel.com.pe/bitel/karibe%C3%B1atv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DfxDLp84/PBO.png" group-title="|PE| Locales",PBO
+https://live-evg25.tv360.bitel.com.pe/bitel/pbo/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/FqdbN1TS/OVACION.png" group-title="|PE| Locales",OVACION
+https://5c3fb01839654.streamlock.net:1963/iptvovacion2/liveovacion2tv/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/P7DjsVn/CONECTA2-TV.png" group-title="|PE| Locales",CONECTA2 TV
+https://live-zlr1.tv360.bitel.com.pe/bitel/conectado2_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/qFpVP3pL/NATIVA.png" group-title="|PE| Locales",NATIVA TV
+https://live-zlr1.tv360.bitel.com.pe/bitel/nativa_ori_480p/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/gMYg5TW2/JN19.png" group-title="|PE| Locales",JN19
+https://servilive.com:3028/live/jntv19live.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/QSDQdFj/TELELIMA.png" group-title="|PE| Locales",TELELIMA
+https://live-zlr1.tv360.bitel.com.pe/bitel/telelima/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PHbtL9k/ATVSUR.png" group-title="|PE| Locales",ATV SUR
+https://live-zlr1.tv360.bitel.com.pe/bitel/atvsur/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/YJNnf2z/BHTV.png" group-title="|PE| Locales",BHTV
+https://live-zlr1.tv360.bitel.com.pe/bitel/bhtv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Vc8yg50S/LIKETV.png" group-title="|PE| Locales",LIKE TV
+https://live-zlr1.tv360.bitel.com.pe/bitel/liketv/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/whVGb3G6/MATICES.png" group-title="|PE| Locales",MATICES
+https://live20.bozztv.com/giatv/giatv-Maticestv/Maticestv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/mC3Qb1fT/BETHELTV.png" group-title="|PE| Locales",BETHEL TV
+https://live-evg25.tv360.bitel.com.pe/bitel/bethel/bitel/bethel_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Vc9PY9dt/LATINA-NOTICIAS.png" group-title="|PE| Locales",LATINA NOTICIAS
+https://jireh-3-hls-video-us-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latinanoticias/latinanoticias.smil/latinanoticias/livestream0/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/27DL43BX/LATINA-CLASICOS.png" group-title="|PE| Locales",LATINA CLASICOS
+https://jireh-4-hls-video-us-isp.dps.live/hls-video/plus226/latina2/latina2.smil/latina2/livestream0/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/yFbsSBm6/TVPERU-INTERNACIONAL.png" group-title="|PE| Locales",TV PERU INTERNACIONAL
+https://cdnhd.iblups.com/hls/ee2450c81e554f4cae0e6292106993c2.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/XZGDMDCR/TVPERU-NOTICIAS.png" group-title="|PE| Locales",TV PERU NOTICIAS
+https://cdnhd.iblups.com/hls/902c1a0395264f269f1160efa00660e4.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/B513TXpt/CANAL-IPE.png" group-title="|PE| Locales",CANAL IPE
+https://cdnhd.iblups.com/hls/3f2cb1658d114f2693eff18d83199e67.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Ng86jy1t/ODTV.png" group-title="|PE| Región Costa",ONDA DIGITAL TV
+https://v4.tustreaming.cl/ondadigitaltv/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ym4TnB7m/ODTV2.png" group-title="|PE| Región Costa",ONDA DIGITAL TV 2
+https://v4.tustreaming.cl/odtv2/tracks-v1a1/mono.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/kV5160y4/CTV.png" group-title="|PE| Región Costa",CTV PERU
+https://live-evg25.tv360.bitel.com.pe/bitel/ctv/bitel/ctv_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/wZBXjwsL/NACIONALTV-PERU.png" group-title="|PE| Región Costa",NACIONAL TV PERU
+https://live-evg25.tv360.bitel.com.pe/bitel/nacionaltv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Ld5mM6vY/NEOTV.png" group-title="|PE| Región Costa",NEOTV
+https://live-evg25.tv360.bitel.com.pe/bitel/neotv/bitel/neotv_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Fkw5S2wK/RTVCALLAO.png" group-title="|PE| Región Costa",RTV CALLAO
+https://servilive.com:3757/live/regiontvlive.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/7tyP8MP6/COSMOS.png" group-title="|PE| Región Costa",COSMOS TV
+https://live-evg12.tv360.bitel.com.pe/8134/8134/chunklist_w1482158653.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ksjKMwBq/N-CANAL.png" group-title="|PE| Región Costa",N CANAL
+https://live-evg25.tv360.bitel.com.pe/bitel/ncanal/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/QFQRbQVR/SOLTV.png" group-title="|PE| Región Costa",SOLTV
+https://live-evg25.tv360.bitel.com.pe/bitel/soltv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Cp2PwPNJ/VISION-SUR.png" group-title="|PE| Región Costa",VISION SUR
+https://ott1.hdlatam.tv/live_abr/webtvVisionSur/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/39M98nM2/AGROTV.png" group-title="|PE| Región Sierra",AGRO TV
+https://ed21ov.live.opencaster.com/pAtGzcAnwziC/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Vct8nfRM/AUNO.png" group-title="|PE| Región Sierra",AUNO
+https://live-evg25.tv360.bitel.com.pe/bitel/auno/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/wZ6wQ3Y5/CNC-I.png" group-title="|PE| Región Sierra",CNC CAJAMARCA
+https://live-evg25.tv360.bitel.com.pe/bitel/cnccajamarca/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/7tFGbnbg/COSITEL.png" group-title="|PE| Región Sierra",COSITEL
+https://live-evg25.tv360.bitel.com.pe/bitel/cositel/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/nMSHXsyb/MEGATV.png" group-title="|PE| Región Sierra",MEGA TV AREQUIPA
+https://mc.servidor.stream:19360/megatv/megatv.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/RTpSVqQM/TV-WANKA.png" group-title="|PE| Región Sierra",TV WANKA
+https://live-evg25.tv360.bitel.com.pe/bitel/tvwanka/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/4RNPCxBb/UNITELTV.png" group-title="|PE| Región Sierra",UNITEL TV
+https://live-evg25.tv360.bitel.com.pe/bitel/uniteltv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/qMDQPVJn/CADENATV.png" group-title="|PE| Región Sierra",CADENA TV
+https://live-zlr1.tv360.bitel.com.pe/bitel/cadenatv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/CT51N9s/XTV.png" group-title="|PE| Región Sierra",XTV
+https://live-evg25.tv360.bitel.com.pe/bitel/xtv/bitel/xtv_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ztdhXYn/XTVPLUS.png" group-title="|PE| Región Sierra",XTV PLUS
+https://live-evg25.tv360.bitel.com.pe/bitel/xtvplus/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/vpcqvr8/AMAZONICA-TV.png" group-title="|PE| Región Selva",AMAZONICA TV
+https://live-evg25.tv360.bitel.com.pe/bitel/amazonicatv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/jkgR4Wdx/AUTENTICA-TV.png" group-title="|PE| Región Selva",AUTENTICA TV
+https://live.obslivestream.com/autenticatvmux/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/wZ6wQ3Y5/CNC-I.png" group-title="|PE| Región Selva",CNC IQUITOS
+https://live-evg25.tv360.bitel.com.pe/bitel/cnctv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5XM0GVzB/CRTV.png" group-title="|PE| Región Selva",CRTV
+https://live.obslivestream.com/crtvmux/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/pj4CMNxR/PLANETA.png" group-title="|PE| Región Selva",PLANETA
+https://live.obslivestream.com/planetatv/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/gbLXnrr8/RIBERE-A.png" group-title="|PE| Región Selva",RIBEREÑA
+https://live-evg25.tv360.bitel.com.pe/bitel/ribere%C3%B1a/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Nd4Nnfw1/SELVA-TV.png" group-title="|PE| Región Selva",SELVA TV
+https://live-evg25.tv360.bitel.com.pe/bitel/selvatv/bitel/selvatv_ori_source/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/XxQQ6jdF/SUPER-CANAL.png" group-title="|PE| Región Selva",SUPER CANAL
+https://live-evg25.tv360.bitel.com.pe/bitel/supercanal/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/MygFNQgG/TELECOLOR.png" group-title="|PE| Región Selva",TELECOLOR
+https://live.obslivestream.com/telecolormux/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/fVTGcTVh/VIA-TELEVISION.png" group-title="|PE| Región Selva",VIA TELEVISION
+https://live-evg25.tv360.bitel.com.pe/bitel/viatv/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/TDS338xS/ADULTSWIM.png" group-title="Infantiles",ADULT SWIM
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278392.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Kp7X6cqG/TOONCAST.png" group-title="Infantiles",TOONCAST
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278551.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/B27b6NCT/DISNEY-CHANNEL.png" group-title="Infantiles",DISNEY CHANNEL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278539.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/b5SPh8Xn/DISNEY-JR.png" group-title="Infantiles",DISNEY JR.
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278542.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/kgHfwbJf/DISCOVERY-KIDS.png" group-title="Infantiles",DISCOVERY KIDS
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278536.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/WvWBk8Nt/CARTOON-NETWORK.png" group-title="Infantiles",CARTOON NETWORK
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278525.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Xx05Yf6n/CARTOONITO.png" group-title="Infantiles",CARTOONITO
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278528.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/xt3Fjv4f/NICKELODEON.png" group-title="Infantiles",NICKELODEON
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278544.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/7Jp3RPxG/NICK-JR.png" group-title="Infantiles",NICK JR.
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278546.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5hL4W84x/TEEN-NICK.png" group-title="Infantiles",TEENNICK
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278550.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5hf2dGVj/ANIMAL-PLANET.png" group-title="Ciencia y Cultura",ANIMAL PLANET
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278617.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/WpkNbq3w/LOVE-NATURE.png" group-title="Ciencia y Cultura",LOVE NATURE
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/296574.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/yFgTQDkT/NATIONAL-GEOGRAPHIC.png" group-title="Ciencia y Cultura",NAT GEO
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278637.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DHGkj8np/HISTORY.png" group-title="Ciencia y Cultura",HISTORY
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278631.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/0pKrrZgg/HISTORY2.png" group-title="Ciencia y Cultura",HISTORY 2
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278630.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/hJZ2g9Qw/DISCOVERY.png" group-title="Ciencia y Cultura",DISCOVERY
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/166560.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ds4TXXNH/DISCOVERY-ID.png" group-title="Ciencia y Cultura",DISCOVERY ID
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/165459.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/sJHfh850/DISCOVERY-SCIENCE.png" group-title="Ciencia y Cultura",DISCOVERY SCIENCE
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278621.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1tGYkZRR/DISCOVERY-THEATHER.png" group-title="Ciencia y Cultura",DISCOVERY THEATER
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278623.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/8DzNy8c2/DISCOVERY-WORLD.png" group-title="Ciencia y Cultura",DISCOVERY WORLD
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278625.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="Deportes",ESPN
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278977.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="Deportes",ESPN 2
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278978.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ycKgBfC7/ESPN3.png" group-title="Deportes",ESPN 3
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278979.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/TDbLPNgJ/ESPN4.png" group-title="Deportes",ESPN 4
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278764.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="Deportes",ESPN 5
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278558.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="Deportes",ESPN 6
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278566.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="Deportes",ESPN 7
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278567.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Deportes",L1MAX
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278898.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Deportes",MOVISTAR DEPORTES
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278899.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/4RWCzBjg/GOLPERU.png" group-title="Deportes",GOLPERU
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278895.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/MD9PdtLQ/A-E.png" group-title="Cine y Series",A&E
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278389.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5h2PGqNx/AMC.png" group-title="Cine y Series",AMC
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278394.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/7NXd6mZm/AXN.png" group-title="Cine y Series",AXN
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278386.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/359pqQHd/CINE-CANAL.png" group-title="Cine y Series",CINECANAL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278463.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/93vbP6Xf/CINEMAX.png" group-title="Cine y Series",CINEMAX
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278468.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/qYBm3GKP/COMEDY-CENTRAL.png" group-title="Cine y Series",COMEDY CENTRAL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278410.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/rRCCV8bD/DHE.png" group-title="Cine y Series",DHE
+https://bigboss.bemtv.cn/STREAM/6591/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/604rt5rk/FX.png" group-title="Cine y Series",FX
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278427.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/4Zc73QPP/PARAMOUNT-NETWORK.png" group-title="Cine y Series",PARAMOUNT
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278513.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/QF65VvwZ/SONY-CHANNEL.png" group-title="Cine y Series",SONY
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278405.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/SDFjjhcc/SONY-MOVIES.png" group-title="Cine y Series",SONY MOVIES
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278471.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/HfWXtZwh/SPACE.png" group-title="Cine y Series",SPACE
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278516.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/xq6mnpLF/STAR-CHANNEL.png" group-title="Cine y Series",STAR CHANNEL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278439.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/996pX4LK/STUDIO-UNIVERSAL.png" group-title="Cine y Series",STUDIO UNIVERSAL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278518.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/RGYLVKpN/TCM.png" group-title="Cine y Series",TCM
+https://bigboss.bemtv.cn/STREAM/23572/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/whnJrMS4/TNT.png" group-title="Cine y Series",TNT
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278520.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Qj702Jbq/TNT-SERIES.png" group-title="Cine y Series",TNT SERIES
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278443.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/KjkdR0RJ/UNIVERSAL-TV.png" group-title="Cine y Series",UNIVERSAL TV
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278449.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/bM3HxkRn/USA.png" group-title="Cine y Series",USA
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278452.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/JwJmFLVL/WARNER-TV.png" group-title="Cine y Series",WARNER CHANNEL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278454.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/SDX578wG/CNN-ESPANOL.png" group-title="Noticias",CNN ESPAÑOL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/158621.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ynjvXqCb/TELESUR-NOTICIAS.png" group-title="Noticias",TELESUR
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278998.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/TDspfh7D/CANAL-N.png" group-title="Noticias",CANAL N
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278891.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/vvcsS5m4/DW.png" group-title="Noticias",DW
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278308.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/8DT6XYv4/FRANCE-24.png" group-title="Noticias",FRANCE24
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278310.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5xX0xYwh/DISCOVERY-H-H.png" group-title="Entretenimiento",DISCOVERY H&H
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278411.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/vx0n2KSN/HGTV.png" group-title="Entretenimiento",HGTV
+https://otakon.bemtv.cn/STREAM/1242/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/whxYP5tQ/EL-GOURMET.png" group-title="Entretenimiento",EL GOURMET
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278421.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DH77CLHt/FOOD-NETWORK.png" group-title="Entretenimiento",FOOD NETWORK
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278401.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Gvz1vjfr/DISCOVERY-TURBO.png" group-title="Entretenimiento",DISCOVERY TURBO
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278414.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Fbk86KrM/KANAL-D-DRAMA.png" group-title="Novelas",KANAL D DRAMA
+https://otakon.bemtv.cn/STREAM/1297/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/LhnmYy7T/LAS-ESTRELLAS.png" group-title="Novelas",LAS ESTRELLAS
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278348.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/KjGS06DG/PASIONES.png" group-title="Novelas",PASIONES
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278403.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/xqSgtSft/TLNOVELAS.png" group-title="Novelas",TLNOVELAS
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278368.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Ldk1kbjf/TNT-NOVELAS.png" group-title="Novelas",TNT NOVELAS
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278408.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/j95scBF7/TELEMUNDO.png" group-title="Internacionales",TELEMUNDO
+http://172.93.102.112:8989/158514_.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/N2dG3Skc/TELEMUNDO-INT.png" group-title="Internacionales",TELEMUNDO INTERNACIONAL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278685.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/YBTpR2LF/CARACOL.png" group-title="Internacionales",CARACOL
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/279387.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/zhzwZFkd/UNIVISION.png" group-title="Internacionales",UNIVISIÓN
+https://bigboss.bemtv.cn/STREAM/1945/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/LdyWvMnz/VE-PLUS.png" group-title="Internacionales",VE PLUS
+https://otakon.bemtv.cn/STREAM/22282/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/TxpQrm5g/UNIVERSAL-CINEMA.png" group-title="Cine y Series",UNIVERSAL CINEMA
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278472.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/fdkNm8c2/UNIVERSAL-COMEDY.png" group-title="Cine y Series",UNIVERSAL COMEDY
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278473.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/JWWYjHgZ/UNIVERSAL-PREMIERE.png" group-title="Cine y Series",UNIVERSAL PREMIERE
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278476.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/JjpXkd8n/UNIVERSAL-CRIME.png" group-title="Entretenimiento",UNIVERSAL CRIME
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278474.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/WN6VRG1Y/UNIVERSAL-REALITY.png" group-title="Entretenimiento",UNIVERSAL REALITY
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278478.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/nqYyVjLT/GOLDEN.png" group-title="Cine y Series",GOLDEN
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278483.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/wNCYbtYp/GOLDEN-EDGE.png" group-title="Cine y Series",GOLDEN EDGE
+http://xcm.budtv-ultra.com:2424/budtv/websline/eWmWuCeW3j9F/278481.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/VY5kYj2x/CINE-PREMIUM.png" group-title="Cine y Series",CINE PREMIUM
+https://otakon.bemtv.cn/STREAM/23105/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/9kw1xvsW/CINE-FAMILIAR.png" group-title="Cine y Series",CINE FAMILIAR
+https://otakon.bemtv.cn/STREAM/23106/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Kjt9WfHw/CINE-HISPANO.png" group-title="Cine y Series",CINE HISPANO
+https://bigboss.bemtv.cn/STREAM/1678/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/HfRxQPym/SIMPSON.png" group-title="Streaming",LOS SIMPSON
+https://live20.bozztv.com/giatvplayout7/giatv-208410/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/KjYt4880/LOS-PITUFOS.png" group-title="Streaming",LOS PITUFOS
+https://imps-smrfs.otteravision.com/imps/smrfs/smrfs.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/8gFW5JR8/DRAGON-BALL-Z.png" group-title="Streaming",DRAGON BALL Z
+https://live20.bozztv.com/giatvplayout7/giatv-208725/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/0j1QjYd5/DRAGON-BALL-SUPER.png" group-title="Streaming",DRAGON BALL SUPER
+https://live20.bozztv.com/giatvplayout7/giatv-208708/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/cSK4tHSM/EL-CHAVO.png" group-title="Streaming",EL CHAVO
+https://live20.bozztv.com/giatvplayout7/giatv-208219/playlist.m3u8
