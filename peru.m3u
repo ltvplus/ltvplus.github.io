@@ -119,13 +119,3 @@ https://live-evg25.tv360.bitel.com.pe/bitel/supercanal/chunks.m3u8
 https://live.obslivestream.com/telecolormux/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/fVTGcTVh/VIA-TELEVISION.png" group-title="|PE| Región Selva",VIA TELEVISION
 https://live-evg25.tv360.bitel.com.pe/bitel/viatv/chunks.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/HfRxQPym/SIMPSON.png" group-title="Streaming",LOS SIMPSON
-https://live20.bozztv.com/giatvplayout7/giatv-208410/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/KjYt4880/LOS-PITUFOS.png" group-title="Streaming",LOS PITUFOS
-https://imps-smrfs.otteravision.com/imps/smrfs/smrfs.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/8gFW5JR8/DRAGON-BALL-Z.png" group-title="Streaming",DRAGON BALL Z
-https://live20.bozztv.com/giatvplayout7/giatv-208725/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/0j1QjYd5/DRAGON-BALL-SUPER.png" group-title="Streaming",DRAGON BALL SUPER
-https://live20.bozztv.com/giatvplayout7/giatv-208708/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/cSK4tHSM/EL-CHAVO.png" group-title="Streaming",EL CHAVO
-https://live20.bozztv.com/giatvplayout7/giatv-208219/playlist.m3u8
