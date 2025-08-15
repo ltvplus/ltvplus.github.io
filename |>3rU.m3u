@@ -16,7 +16,7 @@ https://live-zlr1.tv360.bitel.com.pe/bitel/tvperu_ori_source/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/0kwJkM4/ATVPLUS.png" group-title="|PE| Nacionales",ATV+ NOTICIAS
 https://live-zlr1.tv360.bitel.com.pe/bitel/atvmas_ori_source/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/7dZvdnMf/ATV.png" group-title="|PE| Nacionales",ATV
-https://live-zlr1.tv360.bitel.com.pe/bitel/atv_ori_source/chunks.m3u8
+https://live-zlr1.tv360.bitel.com.pe/bitel/atv_ori_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/tM4vrQpL/VIVATV.png" group-title="|PE| Locales",VIVA TV
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/vivatv.stream/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/LdZdbgBV/LATELE.png" group-title="|PE| Locales",LA TELE
