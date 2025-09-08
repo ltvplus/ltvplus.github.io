@@ -1,22 +1,22 @@
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://i.ibb.co/MD2JBPnZ/WILLAX.png" group-title="|PE| Nacionales",WILLAX
-https://live-zlr1.tv360.bitel.com.pe/bitel/willax_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/willax_abr/bitel/willax_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/9kKJsj3g/LATINA.png" group-title="|PE| Nacionales",LATINA
-https://live-zlr1.tv360.bitel.com.pe/bitel/latina_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/latina_abr/bitel/latina_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/5gzhfrDs/RPP.png" group-title="|PE| Nacionales",RPP
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/RPP/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/KpjfT12j/AMERICA.png" group-title="|PE| Nacionales",AMERICA
-https://live-zlr1.tv360.bitel.com.pe/bitel/americatv_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/america_tv_abr/bitel/america_tv_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/d46jNSvg/PANAMERICANA.png" group-title="|PE| Nacionales",PANAMERICANA
-https://live-zlr1.tv360.bitel.com.pe/bitel/panamericana_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/panamericana_abr/bitel/panamericana_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/1Y8hWQ90/EXITOSA.png" group-title="|PE| Nacionales",EXITOSA
-https://live-zlr1.tv360.bitel.com.pe/bitel/exitosa_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/exitosa_abr/bitel/exitosa_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/9k59dSMX/TVPERU.png" group-title="|PE| Nacionales",TV PERU
-https://live-zlr1.tv360.bitel.com.pe/bitel/tvperu_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/tvperu_abr/bitel/tvperu_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/0kwJkM4/ATVPLUS.png" group-title="|PE| Nacionales",ATV+ NOTICIAS
-https://live-zlr1.tv360.bitel.com.pe/bitel/atvmas_ori_source/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/atvmas_abr/bitel/atvmas_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/7dZvdnMf/ATV.png" group-title="|PE| Nacionales",ATV
-https://live-zlr1.tv360.bitel.com.pe/bitel/atv_ori_720p/chunks.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/atv_abr/bitel/atv_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/tM4vrQpL/VIVATV.png" group-title="|PE| Locales",VIVA TV
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/vivatv.stream/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/LdZdbgBV/LATELE.png" group-title="|PE| Locales",LA TELE
@@ -24,11 +24,11 @@ https://live-zlr1.tv360.bitel.com.pe/bitel/latele/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/0j3TJ1g2/USMPTV.png" group-title="|PE| Locales",USMPTV
 https://live-zlr1.tv360.bitel.com.pe/bitel/usmp/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/DgPwwHS1/GLOBAL.png" group-title="|PE| Nacionales",GLOBAL
-https://live-zlr1.tv360.bitel.com.pe/bitel/global/playlist.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/global_abr/bitel/global_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Y7n0n14L/KARIBENA.png" group-title="|PE| Locales",KARIBEÑA
 https://live-evg25.tv360.bitel.com.pe/bitel/karibe%C3%B1atv/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/DfxDLp84/PBO.png" group-title="|PE| Locales",PBO
-https://live-evg25.tv360.bitel.com.pe/bitel/pbo/playlist.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/pbo_abr/bitel/pbo_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/FqdbN1TS/OVACION.png" group-title="|PE| Locales",OVACION
 https://5c3fb01839654.streamlock.net:1963/iptvovacion2/liveovacion2tv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/P7DjsVn/CONECTA2-TV.png" group-title="|PE| Locales",CONECTA2 TV
@@ -40,7 +40,7 @@ https://servilive.com:3028/live/jntv19live.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/QSDQdFj/TELELIMA.png" group-title="|PE| Locales",TELELIMA
 https://live-zlr1.tv360.bitel.com.pe/bitel/telelima/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PHbtL9k/ATVSUR.png" group-title="|PE| Locales",ATV SUR
-https://live-zlr1.tv360.bitel.com.pe/bitel/atvsur/playlist.m3u8
+https://live-evg20.tv360.bitel.com.pe/bitel/atvsur_abr/bitel/atvsur_720p/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/YJNnf2z/BHTV.png" group-title="|PE| Locales",BHTV
 https://live-zlr1.tv360.bitel.com.pe/bitel/bhtv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Vc8yg50S/LIKETV.png" group-title="|PE| Locales",LIKE TV
@@ -80,7 +80,7 @@ https://live-evg25.tv360.bitel.com.pe/bitel/soltv/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Cp2PwPNJ/VISION-SUR.png" group-title="|PE| Región Costa",VISION SUR
 https://ott1.hdlatam.tv/live_abr/webtvVisionSur/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/39M98nM2/AGROTV.png" group-title="|PE| Región Sierra",AGRO TV
-https://ed21ov.live.opencaster.com/pAtGzcAnwziC/index.m3u8
+https://play.agenciastreaming.com:8081/agrotv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Vct8nfRM/AUNO.png" group-title="|PE| Región Sierra",AUNO
 https://live-evg25.tv360.bitel.com.pe/bitel/auno/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/wZ6wQ3Y5/CNC-I.png" group-title="|PE| Región Sierra",CNC CAJAMARCA
@@ -96,7 +96,7 @@ https://live-evg25.tv360.bitel.com.pe/bitel/uniteltv/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/qMDQPVJn/CADENATV.png" group-title="|PE| Región Sierra",CADENA TV
 https://live-zlr1.tv360.bitel.com.pe/bitel/cadenatv/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CT51N9s/XTV.png" group-title="|PE| Región Sierra",XTV
-https://live-evg25.tv360.bitel.com.pe/bitel/xtv/bitel/xtv_ori_source/chunks.m3u8
+https://live-evg25.tv360.bitel.com.pe/bitel/xtv/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/ztdhXYn/XTVPLUS.png" group-title="|PE| Región Sierra",XTV PLUS
 https://live-evg25.tv360.bitel.com.pe/bitel/xtvplus/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/vpcqvr8/AMAZONICA-TV.png" group-title="|PE| Región Selva",AMAZONICA TV
