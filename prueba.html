@@ -31,7 +31,7 @@
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.2s;
-      text-decoration: none; /* ✅ Esto quita el subrayado */
+      text-decoration: none;
     }
 
     #grupo-filtros button:hover,
@@ -128,20 +128,25 @@
     </div>
     <div id="lista"></div>
 
-<!-- Botón Smart TV -->
-<div style="margin: 30px 0; text-align: center;">
-  <a href="go:SMARTTV" class="boton-filtro">
-    Versión Smart TV
-  </a>
-</div>
-<!-- Botón MOVIES -->
-<div style="margin: 30px 0; text-align: center;">
-  <a href="go:MOVIES" class="boton-filtro">
-    MOVIES
-  </a>
-</div>
+    <!-- Botón Smart TV -->
+    <div style="margin: 30px 0; text-align: center;">
+      <a href="go:SMARTTV" class="boton-filtro">
+        Versión Smart TV
+      </a>
+    </div>
+
+    <!-- Botón MOVIES -->
+    <div style="margin: 30px 0; text-align: center;">
+      <a href="go:MOVIES" class="boton-filtro">
+        MOVIES
+      </a>
+    </div>
 
     <div id="fullscreen-video" class="fullscreen-video">
+      <!-- Botón de cierre -->
+      <div style="position: absolute; top: 10px; right: 20px; z-index: 10000;">
+        <button onclick="salirFullscreen()" style="font-size: 24px; background: transparent; border: none; color: white; cursor: pointer;">✕</button>
+      </div>
       <video id="video-player" autoplay muted></video>
     </div>
   </div>
@@ -262,22 +267,22 @@
     }
 
     function playVideo(url) {
-      localStorage.setItem("scrollY", window.scrollY); // Guardamos la posición de scroll
+      localStorage.setItem("scrollY", window.scrollY);
 
       fullscreenVideo.style.display = "block";
       videoPlayer.onerror = null;
 
-if (url.endsWith(".m3u8")) {
-  if (Hls.isSupported()) {
-    const hls = new Hls({
-      liveSyncDuration: 3,         // Baja latencia
-      maxBufferLength: 10,         // Máximo 10 segundos de buffer
-      maxMaxBufferLength: 30       // Límite superior de seguridad
-    });
-    hls.loadSource(url);
-    hls.attachMedia(videoPlayer);
-    hls.on(Hls.Events.MANIFEST_PARSED, function () {
-      videoPlayer.play();
+      if (url.endsWith(".m3u8")) {
+        if (Hls.isSupported()) {
+          const hls = new Hls({
+            liveSyncDuration: 3,
+            maxBufferLength: 10,
+            maxMaxBufferLength: 30
+          });
+          hls.loadSource(url);
+          hls.attachMedia(videoPlayer);
+          hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            videoPlayer.play();
           });
         } else {
           alert("Tu navegador no soporta HLS.js.");
@@ -311,8 +316,24 @@ if (url.endsWith(".m3u8")) {
 
         const savedY = localStorage.getItem("scrollY");
         if (savedY !== null) {
-          window.scrollTo(0, parseInt(savedY)); // Restauramos la posición de scroll
-          localStorage.removeItem("scrollY"); // Limpiar después de usar
+          window.scrollTo(0, parseInt(savedY));
+          localStorage.removeItem("scrollY");
+        }
+      }
+    }
+
+    function salirFullscreen() {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        fullscreenVideo.style.display = "none";
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+
+        const savedY = localStorage.getItem("scrollY");
+        if (savedY !== null) {
+          window.scrollTo(0, parseInt(savedY));
+          localStorage.removeItem("scrollY");
         }
       }
     }
