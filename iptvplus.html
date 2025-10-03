@@ -122,17 +122,27 @@
       object-fit: contain;
     }
 
-    .close-btn {
+    .video-controls {
       position: absolute;
       top: 8px;
       right: 12px;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
+      display: flex;
+      gap: 8px;
       z-index: 10000;
+    }
+
+    .video-controls button {
+      font-size: 20px;
+      color: white;
       background: rgba(0,0,0,0.5);
+      border: none;
       padding: 4px 10px;
+      cursor: pointer;
       border-radius: 5px;
+    }
+
+    .video-controls button:hover {
+      background: rgba(255,255,255,0.2);
     }
   </style>
 </head>
@@ -156,7 +166,10 @@
     </div>
 
     <div id="fullscreen-video" class="fullscreen-video">
-      <div class="close-btn" onclick="cerrarVideo()">×</div>
+      <div class="video-controls">
+        <button onclick="toggleFullscreen()">⛶</button>
+        <button onclick="cerrarVideo()">×</button>
+      </div>
       <video id="video-player" autoplay muted></video>
     </div>
   </div>
@@ -314,6 +327,19 @@
       if (savedY !== null) {
         window.scrollTo(0, parseInt(savedY));
         localStorage.removeItem("scrollY");
+      }
+
+      // Salir del modo pantalla completa si estaba activo
+      if (document.fullscreenElement) {
+        document.exitFullscreen?.();
+      }
+    }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        fullscreenVideo.requestFullscreen?.();
+      } else {
+        document.exitFullscreen?.();
       }
     }
   </script>
