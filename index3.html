@@ -2,316 +2,465 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reproductor M3U</title>
+  <title>LatinoTV+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    * { user-select: none; margin: 0; padding: 0; }
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #141414;
-      color: #ffffff;
-      user-select: none;
-      margin: 0;
+      background: #121212;
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
-
-    #grupo-filtros {
-      margin: 20px 10px 0;
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
     }
-
-    #grupo-filtros button,
-    .boton-filtro {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-      text-decoration: none; /* ✅ Esto quita el subrayado */
-    }
-
-    #grupo-filtros button:hover,
-    .boton-filtro:hover {
-      background-color: #e50914;
-    }
-
-    #grupo-filtros button.activo {
-      background-color: #e50914;
-      font-weight: bold;
-    }
-
     #search-container {
-      margin: 20px;
+      width: 20%;
+      min-width: 150px;
     }
-
-    #search-bar {
-      width: 100%;
-      max-width: 500px;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid #444;
-      background-color: #1e1e1e;
-      color: white;
-      font-size: 16px;
-    }
-
-    #lista {
-      max-width: 90%;
-      margin: 20px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 15px;
+    #logo-container {
+      width: 200px;
+      display: flex;
       justify-content: center;
+      align-items: center;
     }
-
-    .item {
-      cursor: pointer;
-      border: 1px solid #444;
+    #logo-container img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+    main {
+      display: flex;
+      height: calc(100vh - 100px);
+      min-height: 300px;
+    }
+    #group-filter, #channel-list, #player-container {
+      overflow-y: auto;
+      padding: 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+    #group-filter {
+      width: 20%;
+      min-width: 150px;
+      background: #1b1b1b;
+      max-width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+    #group-filter h3 {
+      margin-bottom: 10px;
+    }
+    #group-filter button {
+      width: 100%;
       padding: 10px;
-      background: #1e1e1e;
-      border-radius: 10px;
+      margin-bottom: 5px;
+      background: #2c2c2c;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: left;
+    }
+    #group-filter button.focused {
+      background: #444;
+    }
+    #channel-list {
+      width: 40%;
+      background: #181818;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 100vw;
+    }
+    .channel {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #2a2a2a;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .channel.focused {
+      background: #444;
+    }
+    .channel img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 5px;
+      background: #4b4b4b;
+      flex-shrink: 0;
+    }
+    #player-container {
+      width: 40%;
+      background: #101010;
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: transform 0.2s;
-      outline: none;
+      max-width: 100vw;
     }
-
-    .item:hover,
-    .item:focus {
-      transform: scale(1.05);
-      border-color: #e50914;
-    }
-
-    .item img {
+    #video-wrapper {
       width: 100%;
-      height: auto;
-      object-fit: cover;
+      height: 300px;
+      background: #000;
       border-radius: 5px;
-    }
-
-    .item span {
-      margin-top: 5px;
-      font-size: 14px;
-      text-align: center;
-    }
-
-    .fullscreen-video {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      z-index: 9999;
+      position: relative;
       overflow: hidden;
+      transition: box-shadow 0.3s ease;
     }
-
-    .fullscreen-video video {
+    video {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      pointer-events: auto;
+    }
+    #placeholder {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      z-index: 2;
+    }
+    #fullscreen-btn {
+      margin-top: 10px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background: #2c2c2c;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #fullscreen-btn.focused {
+      background: #444;
+    }
+    body:not(:fullscreen) #video-wrapper {
+      box-shadow:
+        0 0 20px rgba(0, 188, 212, 0.3),
+        0 0 40px rgba(0, 188, 212, 0.2),
+        0 0 60px rgba(0, 188, 212, 0.1);
+    }
+    #placeholder img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+    #search {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 20px;
+      border: 2px solid #444;
+      background-color: #1f1f1f;
+      color: #fff;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    #search:focus {
+      border-color: #00bcd4;
+      background-color: #2a2a2a;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+    }
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+      }
+      #group-filter,
+      #channel-list,
+      #player-container {
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        padding: 10px;
+      }
+      #group-filter button,
+      #fullscreen-btn {
+        font-size: 14px;
+        padding: 8px;
+      }
+      .channel {
+        flex-direction: row;
+        gap: 10px;
+      }
+      .channel img {
+        width: 40px;
+        height: 40px;
+      }
+      #video-wrapper,
+      video {
+        height: 200px;
+      }
+      #search-container {
+        width: 100%;
+        padding: 10px 0;
+      }
+      #search {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      #logo-container {
+        justify-content: center;
+        width: auto;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div id="main-content" style="display: block;">
-    <div id="grupo-filtros"></div>
+  <header>
     <div id="search-container">
-      <input id="search-bar" type="text" placeholder="Buscar por nombre de canal o video..." oninput="filtrarLista()" />
+      <input id="search" type="text" placeholder="Buscar canal..." />
     </div>
-    <div id="lista"></div>
-
-<!-- Botón SMART TV -->
-<div style="margin: 30px 0; text-align: center;">
-  <a href="go:SMARTTVP" class="boton-filtro">
-    VERSIÓN SMART TV
-  </a>
-</div>
-<!-- Botón Movies -->
-<div style="margin: 30px 0; text-align: center;">
-  <a href="go:MOVIES" class="boton-filtro">
-    :::MOVIES:::
-  </a>
-</div>
-
-    <div id="fullscreen-video" class="fullscreen-video">
-      <video id="video-player" autoplay muted></video>
+    <div id="logo-container">
+      <img src="https://i.ibb.co/YBs0RxQP/LATINOTV.png" alt="Logo LatinoTV" />
     </div>
-  </div>
+    <div style="width: 20%; min-width: 150px;"></div>
+  </header>
+
+  <main>
+    <div id="group-filter"><h3>Grupos</h3></div>
+    <div id="channel-list"></div>
+    <div id="player-container">
+      <div id="video-wrapper">
+        <div id="placeholder"><img src="https://i.ibb.co/MyBwnTcY/LTVPLUS.png" alt="Logo"></div>
+        <video id="player" autoplay playsinline></video>
+      </div>
+      <button id="fullscreen-btn">Pantalla Completa</button>
+    </div>
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
   <script>
-    // Bloqueo de teclas
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'F12') event.preventDefault();
-      if ((event.ctrlKey && event.shiftKey && ['I', 'C', 'J'].includes(event.key)) || (event.ctrlKey && event.key === 'u')) {
-        event.preventDefault();
-      }
-    });
+    const M3U_URL = "https://ltvplus.github.io/|>r3M!uM.m3u";
+    let allChannels = [], filteredChannels = [], hls;
 
-    // Bloqueo del clic derecho
-    document.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
-    });
+    async function loadM3U() {
+      const text = await (await fetch(M3U_URL)).text();
+      const lines = text.split("\n");
+      allChannels = [];
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith("#EXTINF")) {
+          const infoLine = lines[i];
+          const urlLine = lines[i+1] ? lines[i+1].trim() : "";
+          if (!urlLine.startsWith("http")) continue;
 
-    const mainContent = document.getElementById("main-content");
-    cargarLista();
+          const name = (infoLine.match(/,(.*)$/) || [])[1] || "Sin nombre";
+          const logo = (infoLine.match(/tvg-logo="(.*?)"/) || [])[1] || "https://via.placeholder.com/50";
+          const group = (infoLine.match(/group-title="(.*?)"/) || [])[1] || "Otros";
 
-    let videoPlayer = document.getElementById("video-player");
-    let fullscreenVideo = document.getElementById("fullscreen-video");
-    let listaElementos = document.getElementById("lista");
-    let listaCanales = [];
-    let grupos = new Set();
-    let grupoActual = "Todos";
-
-    async function cargarLista() {
-      const url = "https://ltvplus.github.io/|>r3M!uM.m3u";
-
-      try {
-        const response = await fetch(url, { mode: "cors" });
-        if (!response.ok) throw new Error("HTTP error! Status: " + response.status);
-
-        const data = await response.text();
-        const lineas = data.split("\n");
-        listaCanales = [];
-        grupos = new Set(["Todos"]);
-        listaElementos.innerHTML = "";
-
-        for (let i = 0; i < lineas.length; i++) {
-          let linea = lineas[i].trim();
-          if (linea.startsWith("#EXTINF")) {
-            const nombre = linea.split(",")[1] || "Desconocido";
-            const logoMatch = linea.match(/tvg-logo="(.*?)"/);
-            const logo = logoMatch ? logoMatch[1] : "";
-            const grupoMatch = linea.match(/group-title="(.*?)"/);
-            const grupo = grupoMatch ? grupoMatch[1] : "Otros";
-            grupos.add(grupo);
-
-            let urlVideo = lineas[i + 1]?.trim() || "";
-
-            if (urlVideo && /\.(mp4|webm|mkv|avi|ogg|m3u8|m3u)$/.test(urlVideo)) {
-              const item = document.createElement("div");
-              item.classList.add("item");
-              item.tabIndex = 0;
-
-              if (logo) {
-                const img = document.createElement("img");
-                img.src = logo;
-                img.alt = nombre;
-                item.appendChild(img);
-              }
-
-              const texto = document.createElement("span");
-              texto.textContent = nombre;
-              item.appendChild(texto);
-
-              item.onclick = () => playVideo(urlVideo);
-
-              listaCanales.push({ nombre, item, urlVideo, grupo });
-            }
-          }
+          allChannels.push({ name, logo, group, url: urlLine });
+          i++;
         }
-
-        renderGrupos();
-        filtrarLista();
-
-      } catch (error) {
-        console.error("Error al cargar la lista M3U:", error);
-        alert("No se pudo cargar la lista. Verifica la URL.");
       }
+      filteredChannels = [...allChannels];
+      renderGroups();
+      renderChannels();
+      initFocus();
     }
 
-    function renderGrupos() {
-      const container = document.getElementById("grupo-filtros");
-      container.innerHTML = "";
+    function renderGroups() {
+      const cont = document.getElementById("group-filter");
+      cont.innerHTML = "<h3>Grupos</h3>";
 
-      grupos.forEach((grupo) => {
-        const btn = document.createElement("button");
-        btn.textContent = grupo;
-        if (grupo === grupoActual) btn.classList.add("activo");
-        btn.onclick = () => {
-          grupoActual = grupo;
-          renderGrupos();
-          filtrarLista();
-        };
-        container.appendChild(btn);
+      const btnAll = document.createElement("button");
+      btnAll.textContent = "Todos";
+      btnAll.dataset.group = "all";
+      btnAll.onclick = () => filterGroup("all");
+      cont.appendChild(btnAll);
+
+      const groups = [];
+      allChannels.forEach(c => {
+        if (!groups.includes(c.group)) groups.push(c.group);
+      });
+
+      groups.forEach(g => {
+        const b = document.createElement("button");
+        b.textContent = g;
+        b.dataset.group = g;
+        b.onclick = () => filterGroup(g);
+        cont.appendChild(b);
       });
     }
 
-    function filtrarLista() {
-      const filtro = document.getElementById("search-bar").value.toLowerCase();
-      listaElementos.innerHTML = "";
+    function filterGroup(g) {
+      filteredChannels = g === "all"
+        ? [...allChannels]
+        : allChannels.filter(c => c.group === g);
+      renderChannels();
+      currentSection = 2; currentIndex = 0;
+      updateFocus();
+    }
 
-      listaCanales.forEach((canal) => {
-        const nombreCanal = canal.nombre.toLowerCase();
-        const enGrupo = grupoActual === "Todos" || canal.grupo === grupoActual;
-        const coincide = nombreCanal.includes(filtro);
-
-        if (enGrupo && coincide) {
-          listaElementos.appendChild(canal.item);
-        }
+    function renderChannels() {
+      const cont = document.getElementById("channel-list");
+      cont.innerHTML = "";
+      filteredChannels.forEach(c => {
+        const d = document.createElement("div");
+        d.className = "channel";
+        d.innerHTML = `<img src="${c.logo}"><span>${c.name}</span>`;
+        d.onclick = () => playChannel(c);
+        cont.appendChild(d);
       });
     }
 
-    function playVideo(url) {
-      localStorage.setItem("scrollY", window.scrollY); // Guardamos la posición de scroll
-
-      fullscreenVideo.style.display = "block";
-      videoPlayer.onerror = null;
-
-      if (url.endsWith(".m3u8")) {
-        if (Hls.isSupported()) {
-          const hls = new Hls();
-          hls.loadSource(url);
-          hls.attachMedia(videoPlayer);
-          hls.on(Hls.Events.MANIFEST_PARSED, function () {
-            videoPlayer.play();
-          });
-        } else {
-          alert("Tu navegador no soporta HLS.js.");
-        }
+    function playChannel(c) {
+      const video = document.getElementById("player");
+      const ph = document.getElementById("placeholder");
+      ph.style.display = "flex";
+      if (hls) hls.destroy();
+      if (Hls.isSupported()) {
+        hls = new Hls(); hls.loadSource(c.url); hls.attachMedia(video);
       } else {
-        videoPlayer.src = url;
-        videoPlayer.play();
+        video.src = c.url;
       }
-
-      videoPlayer.muted = false;
-      videoPlayer.onerror = () => {
-        if (videoPlayer.src) {
-          alert("Este formato de video no es compatible con tu navegador.");
-        }
-      };
-
-      fullscreenVideo.requestFullscreen?.();
-      history.pushState(null, "", "#fullscreen");
+      video.onplaying = () => ph.style.display = "none";
+      video.play().catch(() => {});
     }
 
-    document.addEventListener("fullscreenchange", exitFullscreen);
-    document.addEventListener("webkitfullscreenchange", exitFullscreen);
-    document.addEventListener("mozfullscreenchange", exitFullscreen);
-    document.addEventListener("msfullscreenchange", exitFullscreen);
+    document.getElementById("fullscreen-btn").onclick = () => {
+      const video = document.getElementById("player");
+      const wrapper = document.getElementById("video-wrapper");
+      if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
+      } else if (wrapper.requestFullscreen) {
+        wrapper.requestFullscreen();
+      } else if (wrapper.webkitRequestFullscreen) {
+        wrapper.webkitRequestFullscreen();
+      } else if (wrapper.mozRequestFullScreen) {
+        wrapper.mozRequestFullScreen();
+      } else if (wrapper.msRequestFullscreen) {
+        wrapper.msRequestFullscreen();
+      }
+    };
 
-    function exitFullscreen() {
-      if (!document.fullscreenElement) {
-        fullscreenVideo.style.display = "none";
-        videoPlayer.pause();
-        videoPlayer.currentTime = 0;
+    const sections = ["search", "group-filter", "channel-list", "fullscreen-btn"];
+    let currentSection = 0, currentIndex = 0;
 
-        const savedY = localStorage.getItem("scrollY");
-        if (savedY !== null) {
-          window.scrollTo(0, parseInt(savedY)); // Restauramos la posición de scroll
-          localStorage.removeItem("scrollY"); // Limpiar después de usar
+    function getItems() {
+      if (currentSection === 0) return [document.getElementById("search")];
+      if (currentSection === 1) return document.querySelectorAll("#group-filter button");
+      if (currentSection === 2) return document.querySelectorAll("#channel-list .channel");
+      if (currentSection === 3) return [document.getElementById("fullscreen-btn")];
+      return [];
+    }
+
+    function updateFocus() {
+      document.querySelectorAll(".focused").forEach(el => el.classList.remove("focused"));
+      const items = getItems();
+      if (items[currentIndex]) {
+        items[currentIndex].classList.add("focused");
+        items[currentIndex].focus();
+        if (typeof items[currentIndex].scrollIntoView === 'function') {
+          items[currentIndex].scrollIntoView({ block: "nearest" });
         }
       }
     }
+
+    function moveVert(d) {
+      let items = getItems();
+      currentIndex += d;
+      if (currentIndex < 0) {
+        if (currentSection > 0) {
+          currentSection -= 1;
+          items = getItems();
+          currentIndex = items.length - 1;
+        } else {
+          currentIndex = 0;
+        }
+      } else if (currentIndex >= items.length) {
+        currentIndex = items.length - 1;
+      }
+      updateFocus();
+    }
+
+    function moveHorz(d) {
+      const newSec = currentSection + d;
+      if (newSec < 0 || newSec >= sections.length) return;
+      const cnt = getItemsForSec(newSec).length;
+      if (cnt === 0) return;
+      currentSection = newSec;
+      currentIndex = 0;
+      updateFocus();
+    }
+
+    function getItemsForSec(sec) {
+      const prev = currentSection;
+      currentSection = sec;
+      const items = getItems();
+      currentSection = prev;
+      return items;
+    }
+
+    function activate() {
+      const items = getItems();
+      if (items[currentIndex] && typeof items[currentIndex].click === 'function') {
+        items[currentIndex].click();
+      }
+    }
+
+    window.addEventListener("keydown", e => {
+      const k = e.key;
+      const ok = ["Enter", "OK", "MediaPlayPause", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(k);
+      if (!ok) return;
+      e.preventDefault();
+      switch (k) {
+        case "ArrowUp": moveVert(-1); break;
+        case "ArrowDown": moveVert(1); break;
+        case "ArrowLeft": moveHorz(-1); break;
+        case "ArrowRight": moveHorz(1); break;
+        case "Enter":
+        case "OK":
+        case "MediaPlayPause":
+          activate();
+          break;
+      }
+    });
+
+    function initFocus() {
+      currentSection = 0;
+      currentIndex = 0;
+      updateFocus();
+    }
+
+    // Aquí se agrega el listener del buscador
+    document.getElementById("search").addEventListener("input", (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      if (query === "") {
+        filteredChannels = [...allChannels];
+      } else {
+        filteredChannels = allChannels.filter(c =>
+          c.name.toLowerCase().includes(query)
+        );
+      }
+      renderChannels();
+      currentSection = 2;
+      currentIndex = 0;
+      updateFocus();
+    });
+
+    loadM3U();
   </script>
 </body>
 </html>
