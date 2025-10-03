@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reproductor M3U</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IPTV+</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -126,8 +126,6 @@
       position: absolute;
       top: 8px;
       right: 12px;
-      display: flex;
-      gap: 8px;
       z-index: 10000;
     }
 
@@ -168,10 +166,9 @@
 
     <div id="fullscreen-video" class="fullscreen-video">
       <div class="video-controls">
-        <button onclick="toggleFullscreen()" title="Pantalla completa">⛶</button>
         <button onclick="cerrarVideo()" title="Cerrar">×</button>
       </div>
-      <video id="video-player" autoplay muted></video>
+      <video id="video-player" autoplay muted playsinline></video>
     </div>
   </div>
 
@@ -288,7 +285,7 @@
       });
     }
 
-    function playVideo(url) {
+    async function playVideo(url) {
       localStorage.setItem("scrollY", window.scrollY);
       fullscreenVideo.style.display = "block";
       videoPlayer.onerror = null;
@@ -300,13 +297,15 @@
           hls.attachMedia(videoPlayer);
           hls.on(Hls.Events.MANIFEST_PARSED, function () {
             videoPlayer.play();
+            requestFullscreenSafe(fullscreenVideo);
           });
         } else {
           alert("Tu navegador no soporta HLS.js.");
         }
       } else {
         videoPlayer.src = url;
-        videoPlayer.play();
+        await videoPlayer.play();
+        requestFullscreenSafe(fullscreenVideo);
       }
 
       videoPlayer.muted = false;
@@ -344,39 +343,15 @@
       }
     }
 
-    function toggleFullscreen() {
-      // Elemento a poner en pantalla completa
-      const elem = fullscreenVideo;
-
-      if (
-        !document.fullscreenElement &&
-        !document.webkitFullscreenElement &&
-        !document.mozFullScreenElement &&
-        !document.msFullscreenElement
-      ) {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen().catch(err => {
-            alert(`Error al entrar en pantalla completa: ${err.message}`);
-          });
-        } else if (elem.webkitRequestFullscreen) { /* Safari */
-          elem.webkitRequestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-          elem.mozRequestFullScreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-          elem.msRequestFullscreen();
-        }
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen().catch(err => {
-            alert(`Error al salir de pantalla completa: ${err.message}`);
-          });
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
+    function requestFullscreenSafe(elem) {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen().catch(() => {});
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
       }
     }
   </script>
