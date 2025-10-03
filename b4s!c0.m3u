@@ -1,0 +1,41 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://i.ibb.co/MD2JBPnZ/WILLAX.png" group-title="Nacionales",Willax TV
+http://179.51.160.246:8888/play/a005/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/9kKJsj3g/LATINA.png" group-title="Nacionales",Latina Televisión
+http://179.51.160.246:8888/play/a002/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/5gzhfrDs/RPP.png" group-title="Nacionales",RPP TV
+http://179.51.160.246:8888/play/a004/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/KpjfT12j/AMERICA.png" group-title="Nacionales",América Televisión
+http://179.51.160.246:8888/play/a001/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/d46jNSvg/PANAMERICANA.png" group-title="Nacionales",Panamericana TV
+http://179.51.160.246:8888/play/a008/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1Y8hWQ90/EXITOSA.png" group-title="Nacionales",Exitosa TV
+http://179.51.160.246:8888/play/a006/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/9k59dSMX/TVPERU.png" group-title="Nacionales",TV Perú
+http://179.51.160.246:8888/play/a009/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/0kwJkM4/ATVPLUS.png" group-title="Nacionales",ATV+ Noticias
+http://179.51.160.246:8888/play/a00a/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/7dZvdnMf/ATV.png" group-title="Nacionales",ATV
+http://179.51.160.246:8888/play/a00b/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PHbtL9k/ATVSUR.png" group-title="Locales",ATV Sur
+https://live-evg20.tv360.bitel.com.pe/bitel/atvsur_abr/bitel/atvsur_720p/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Y7n0n14L/KARIBENA.png" group-title="Locales",Karibeña TV
+http://38.199.6.1:17001/play/a0cd/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DgPwwHS1/GLOBAL.png" group-title="Nacionales",Global TV
+http://179.51.160.246:8888/play/a007/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/wF0Z9XzT/JUSTICIA-TV.png" group-title="Locales",Justicia TV
+http://179.51.160.246:8888/play/a02n/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DfxDLp84/PBO.png" group-title="Locales",PBO TV
+http://179.51.160.246:8888/play/a02g/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/P7DjsVn/CONECTA2-TV.png" group-title="Locales",Conecta2 TV
+http://179.51.160.246:8888/play/a02o/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/qFpVP3pL/NATIVA.png" group-title="Locales",Nativa TV
+http://179.51.160.246:8888/play/a01j/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/QSDQdFj/TELELIMA.png" group-title="Locales",TeleLima
+https://live-evg25.tv360.bitel.com.pe/bitel/telelima/chunks.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/WNFvfhF6/enlace.png" group-title="Religiosos",Enlace
+http://179.51.160.246:8888/play/a01f/index.m3u8
+#EXTINF:-1 tvg-id="JN19 TELEJUAN.pe" tvg-logo="https://i.ibb.co/gMYg5TW2/JN19.png" group-title="Religiosos",JN19
+https://servilive.com:3028/live/jntv19live.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/mC3Qb1fT/BETHELTV.png" group-title="Religiosos",Bethel TV
+http://179.51.160.246:8888/play/a01h/index.m3u8
