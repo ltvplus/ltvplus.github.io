@@ -3,19 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="0; url=https://la.movie/">
-    <title>Redirección</title>
-    
-    <!-- Intento de evitar mostrar anuncios mediante ocultación -->
+    <title>Redirección con Bloqueo de Anuncios</title>
     <style>
-        /* Ocultar anuncios comunes (es solo una forma de intentar bloquearlos visualmente) */
-        .ads, .ad, #ad, iframe[src*="ads"], div[id*="ad"] {
-            display: none !important;
+        /* Ocultar la página de contenido mientras la redirección se realiza */
+        body {
+            display: none;
         }
     </style>
+    <script>
+        // Función para bloquear anuncios
+        function bloquearAnuncios() {
+            // Se crea un array de patrones comunes de anuncios
+            const patrones = [
+                "ad", "banner", "advertisement", "ads", "popup", "iframe"
+            ];
 
+            // Función para eliminar elementos con nombres de clases o id's que contengan los patrones
+            function eliminarAnuncios() {
+                const elementos = document.querySelectorAll('*');
+                for (let i = 0; i < elementos.length; i++) {
+                    const el = elementos[i];
+                    patrones.forEach(patron => {
+                        if (el.className && el.className.includes(patron) || el.id && el.id.includes(patron)) {
+                            el.style.display = 'none';
+                        }
+                    });
+                }
+            }
+
+            // Ejecutar la eliminación de anuncios al cargar
+            eliminarAnuncios();
+        }
+
+        // Ejecutar el bloqueo de anuncios cuando la página haya cargado
+        window.onload = function() {
+            bloquearAnuncios();
+            // Redirigir a la página de destino
+            setTimeout(function() {
+                window.location.href = "https://la.movie/";
+            }, 100);
+        };
+    </script>
 </head>
 <body>
-    <!-- Contenido visible durante la redirección (opcional) -->
-    <p>Si no eres redirigido automáticamente, <a href="https://la.movie/">haz clic aquí</a>.</p>
+    <p>Redirigiendo...</p>
 </body>
 </html>
