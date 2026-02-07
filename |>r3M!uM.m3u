@@ -22,35 +22,24 @@ http://38.199.6.1:17001/play/a0ce/index.m3u8
 #EXTINF:-1 tvg-id="M DEPORTES HD.pe" tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Servidor 1",Movistar Deportes
 http://38.199.6.1:17001/play/a05j/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="Servidor 2",ESPN
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278977.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="Servidor 2",ESPN 2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278762.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/ycKgBfC7/ESPN3.png" group-title="Servidor 2",ESPN 3
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278979.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/TDbLPNgJ/ESPN4.png" group-title="Servidor 2",ESPN 4
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278764.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="Servidor 2",ESPN 5
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278558.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="Servidor 2",ESPN 6
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278566.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="Servidor 2",ESPN 7
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278567.m3u8
 #EXTINF:-1 tvg-id="ESPN Premium HD.cl" tvg-logo="https://i.ibb.co/B5XhTspB/ESPNPREMIUM.png" group-title="Servidor 2",ESPN Premium
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278981.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/7d027zDJ/L1.png" group-title="Servidor 2",L1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278897.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Servidor 2",L1MAX
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278898.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Servidor 2",Movistar Deportes
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278899.m3u8
