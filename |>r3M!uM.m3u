@@ -1,107 +1,31 @@
 #EXTM3U
-#EXTINF:-1,ESPN PERU
-http://217.26.190.76:8888/play/a0gb/index.m3u8
-#EXTINF:-1,ESPN
-http://217.26.190.76:8888/play/a0ee/index.m3u8
-#EXTINF:-1,ESPN 2 HD...
-http://217.26.190.76:8888/play/a0kp/index.m3u8
-#EXTINF:-1,ESPN 3
-http://217.26.190.76:8888/play/a0k0/index.m3u8
-#EXTINF:-1,ESPN 4
-http://217.26.190.76:8888/play/a0jy/index.m3u8
-#EXTINF:-1,ESPN 5HD
-http://217.26.190.76:8888/play/a0kh/index.m3u8
-#EXTINF:-1,ESPN 6
-http://217.26.190.76:8888/play/a0fa/index.m3u8
-#EXTINF:-1,ESPN 7
-http://217.26.190.76:8888/play/a0g2/index.m3u8
-#EXTINF:-1,ESPN Premium
-http://217.26.190.76:8888/play/a0es/index.m3u8
-#EXTINF:-1,Liga1
-http://217.26.190.76:8888/play/a0bt/index.m3u8
-#EXTINF:-1,Liga1 MAX
-http://217.26.190.76:8888/play/a0j4/index.m3u8
-#EXTINF:-1,Movistar Deportes
-http://217.26.190.76:8888/play/a0gm/index.m3u8
-#EXTINF:-1,ESPN 2 HD
-http://38.199.6.1:17001/play/a046/index.m3u8
-#EXTINF:-1,ESPN 3 HD
-http://38.199.6.1:17001/play/a043/index.m3u8
-#EXTINF:-1,ESPN 4 HD
-http://38.199.6.1:17001/play/a055/index.m3u8
-#EXTINF:-1,ESPN 5 HD
-http://38.199.6.1:17001/play/a04o/index.m3u8
-#EXTINF:-1,ESPN 6 HD
-http://38.199.6.1:17001/play/a044/index.m3u8
+#EXTINF:-1,ESPN 7HD
+http://209.45.101.155:8000/play/a01z
+#EXTINF:-1,433 ESPN 7
+http://161.132.49.62:15946/play/a09c/index.m3u8
+#EXTINF:-1,18.2 ESPN 7HD
+http://200.60.97.100:28888/play/a0if/index.m3u8
+#EXTINF:-1,7.4 ESPN 7
+http://200.60.97.100:28888/play/a0bg/index.m3u8
 #EXTINF:-1,ESPN 7 HD
 http://38.199.6.1:17001/play/a04p/index.m3u8
-#EXTINF:-1,ESPN HD
-http://38.199.6.1:17001/play/a03f/index.m3u8
-#EXTINF:-1,ESPN Premium HD
-http://38.199.6.1:17001/play/a06g/index.m3u8
-#EXTINF:-1,Liga 1 ENCODER HD
-http://38.199.6.1:17001/play/a0cz/index.m3u8
-#EXTINF:-1,Liga 1 MAX HD
-http://38.199.6.1:17001/play/a0ce/index.m3u8
-#EXTINF:-1,ESPN 1 PERU - TRANSCODER
-http://45.173.201.51:4000/play/a0pt/index.m3u8
-#EXTINF:-1,ESPN 2 HD
-http://45.173.201.51:4000/play/a0pk/index.m3u8
-#EXTINF:-1,ESPN 2 HD
-http://45.173.201.51:4000/play/a0pm/index.m3u8
-#EXTINF:-1,ESPN 2 PERU - TRANSCODER
-http://45.173.201.51:4000/play/a0pu/index.m3u8
-#EXTINF:-1,ESPN 3 HD
-http://45.173.201.51:4000/play/a05z/index.m3u8
-#EXTINF:-1,ESPN 4HD
-http://45.173.201.51:4000/play/a094/index.m3u8
-#EXTINF:-1,ESPN 5HD
-http://45.173.201.51:4000/play/a0lu/index.m3u8
-#EXTINF:-1,ESPN 6 HD
-http://45.173.201.51:4000/play/a08t/index.m3u8
-#EXTINF:-1,ESPN 7
-http://45.173.201.51:4000/play/a0q3/index.m3u8
-#EXTINF:-1,ESPN 7
-http://45.173.201.51:4000/play/a0jk/index.m3u8
-#EXTINF:-1,ESPN HD
-http://45.173.201.51:4000/play/a0o9/index.m3u8
-#EXTINF:-1,ESPN Premium HD
-http://45.173.201.51:4000/play/a0qw/index.m3u8
-#EXTINF:-1,L1
-http://45.173.201.51:4000/play/a09d/index.m3u8
-#EXTINF:-1,L1 MAX
-http://45.173.201.51:4000/play/a07f/index.m3u8
-#EXTINF:-1,L1 MAX TRANSCODER
-http://45.173.201.51:4000/play/a0o1/index.m3u8
-#EXTINF:-1 group-title="-",118 ESPN HD
-http://38.187.3.110:8000/play/a0c6/index.m3u8
-#EXTINF:-1 group-title="-",119 ESPN 2 HD
-http://38.187.3.110:8000/play/a0bn/index.m3u8
-#EXTINF:-1 group-title="-",120 ESPN 3 HD
-http://38.187.3.110:8000/play/a01p/index.m3u8
-#EXTINF:-1 group-title="-",121 ESPN 4HD
-http://38.187.3.110:8000/play/a07x/index.m3u8
-#EXTINF:-1 group-title="-",122 ESPN 5HD
-http://38.187.3.110:8000/play/a0ai/index.m3u8
-#EXTINF:-1 group-title="-",123 ESPN 6HD
-http://38.187.3.110:8000/play/a07c/index.m3u8
-#EXTINF:-1 group-title="-",124 ESPN 7 HD
+#EXTINF:-1 group-title="-",ESPN 7HD
+http://181.224.226.128:5000/play/a07v/index.m3u8
+#EXTINF:-1 group-title="-",70-ESPN 7 HD
+http://8.243.126.131:8000/play/a065/index.m3u8
+#EXTINF:-1 group-title="-",ESPN 7HD
+http://190.119.168.226:4000/play/a07s/index.m3u8
+#EXTINF:-1 tvg-id="55" group-title="-",ESPN 7
+http://181.66.249.246:8000/play/a03w/index.m3u8
+#EXTINF:-1,124 ESPN 7
 http://38.187.3.110:8000/play/a09j/index.m3u8
-#EXTINF:-1 group-title="-",125 ESPN PREMIUN HD
-http://38.187.3.110:8000/play/a0aq/index.m3u8
-#EXTINF:-1 group-title="-",ESPN
-http://38.187.3.110:8000/play/a09c/index.m3u8
-#EXTINF:-1 group-title="-",ESPN 2
-http://38.187.3.110:8000/play/a09b/index.m3u8
-#EXTINF:-1 group-title="-",ESPN 3
-http://38.187.3.110:8000/play/a09w/index.m3u8
-#EXTINF:-1 group-title="-",ESPN 5
-http://38.187.3.110:8000/play/a0ac/index.m3u8
-#EXTINF:-1 group-title="-",ESPN 6
-http://38.187.3.110:8000/play/a09k/index.m3u8
-#EXTINF:-1 group-title="-",ESPN 7
-http://38.187.3.110:8000/play/a0c1/index.m3u8
-#EXTINF:-1 group-title="-",103 Movistar Deportes
-http://38.187.3.110:8000/play/a0a3/index.m3u8
-#EXTINF:-1 group-title="-",127 L1MAX
-http://38.187.3.110:8000/play/a069/index.m3u8
+#EXTINF:-1,ESPN 7HD
+http://179.1.146.22:8000/play/a0g4/index.m3u8
+#EXTINF:-1 group-title="-",44.1 - ESPN 7HD
+http://190.187.200.242:8000/play/a0pm/index.m3u8
+#EXTINF:-1 group-title="-",44.1 - ESPN 7HD
+http://190.187.200.243:8000/play/a0pm/index.m3u8
+#EXTINF:-1 group-title="-",44.1 - ESPN 7HD
+http://190.187.200.244:8000/play/a0pm/index.m3u8
+#EXTINF:-1 group-title="-",44.1 - ESPN 7HD
+http://190.187.200.246:8000/play/a0pm/index.m3u8
