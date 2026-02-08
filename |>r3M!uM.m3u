@@ -4,8 +4,6 @@ http://38.199.6.1:17001/play/a0cz/index.m3u8
 #EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Fútbol Peruano",L1MAX
 http://38.199.6.1:17001/play/a0ce/index.m3u8
 #EXTINF:-1 tvg-id="M DEPORTES HD.pe" tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Fútbol Peruano",Movistar Deportes
-http://38.187.3.110:8000/play/a0a3/index.m3u8
-#EXTINF:-1 tvg-id="M DEPORTES HD.pe" tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Fútbol Peruano",Movistar Deportes
 http://38.199.6.1:17001/play/a05j/index.m3u8
 #EXTINF:-1 tvg-id="ESPN HD.pe" tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="Fútbol Internacional",ESPN
 http://217.26.190.76:8888/play/a0gb/index.m3u8
