@@ -1,41 +1,39 @@
 #EXTM3U
-#EXTINF:-1 tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="Argentina",ESPN Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278977.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="Argentina",ESPN 2 Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278762.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/ycKgBfC7/ESPN3.png" group-title="Argentina",ESPN 3 Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278763.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/TDbLPNgJ/ESPN4.png" group-title="Argentina",ESPN 4 Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278764.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="Argentina",ESPN 5 Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278980.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="Argentina",ESPN 6 Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278566.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="Argentina",ESPN 7 Sur
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278567.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/4g1QJG91/TYC-SPORTS-INT.png" group-title="Otros",TyC Sports Internacional
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278779.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/hJ9dBBjS/GOLTV.png" group-title="Otros",GOLTV
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/279431.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/FqdbN1TS/OVACION.png" group-title="Perú",Ovación
-https://5c3fb01839654.streamlock.net:1963/iptvovacion2/liveovacion2tv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/7d027zDJ/L1.png" group-title="Perú",L1
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278897.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Perú",L1MAX
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278898.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Perú",Movistar Deportes
+#EXTINF:-1 tvg-id="L1.pe" tvg-logo="https://i.ibb.co/7d027zDJ/L1.png" group-title="Fútbol Peruano",L1
+http://38.199.6.1:17001/play/a0cz/index.m3u8
+#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Fútbol Peruano",L1MAX
+http://38.199.6.1:17001/play/a0ce/index.m3u8
+#EXTINF:-1 tvg-id="M DEPORTES HD.pe" tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="Fútbol Peruano",Movistar Deportes
 http://38.199.6.1:17001/play/a05j/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/4RWCzBjg/GOLPERU.png" group-title="Perú",GOLPERU
-http://38.199.6.1:17001/play/a05y/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/whVGb3G6/MATICES.png" group-title="Perú",Al Día con Matices
-https://matices.jfernandezvalerio.workers.dev/chunks.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/Qvqcj4Zk/ESPN-MX.png" group-title="México",ESPN Norte
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278588.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/xK3QKbpg/ESPN2-MX.png" group-title="México",ESPN 2 Norte
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/277642.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/tPMc1xt2/ESPN3-MX.png" group-title="México",ESPN 3 Norte
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278580.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/PZCfh3Rk/ESPN4-MX.png" group-title="México",ESPN 4 Norte
-http://xcm.budtv-ultra.com:9000/budtv/websline/eWmWuCeW3j9F/278583.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/d4ntGZxB/ESPN5-MX.png" group-title="México",ESPN 5 Norte
-http://181.119.108.27:8000/play/a065/index.m3u8
+#EXTINF:-1 tvg-id="ESPN HD.pe" tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="Fútbol Internacional",ESPN
+http://217.26.190.76:8888/play/a0gb/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 2 HD.pe" tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="Fútbol Internacional",ESPN 2
+http://217.26.190.76:8888/play/a0kp/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 3 HD.pe" tvg-logo="https://i.ibb.co/ycKgBfC7/ESPN3.png" group-title="Fútbol Internacional",ESPN 3
+http://217.26.190.76:8888/play/a0k0/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 4 HD.pe" tvg-logo="https://i.ibb.co/TDbLPNgJ/ESPN4.png" group-title="Fútbol Internacional",ESPN 4
+http://45.173.201.51:4000/play/a094/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 5 HD.pe" tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="Fútbol Internacional",ESPN 5
+http://45.173.201.51:4000/play/a0lu/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 6 HD.pe" tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="Fútbol Internacional",ESPN 6
+http://45.173.201.51:4000/play/a08t/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 7 HD.pe" tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="Fútbol Internacional",ESPN 7
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/espn7.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="ESPN Premium HD.cl" tvg-logo="https://i.ibb.co/B5XhTspB/ESPNPREMIUM.png" group-title="Fútbol Internacional",ESPN Premium
+http://217.26.190.76:8888/play/a0es/index.m3u8
+#EXTINF:-1 tvg-id="ESPN HD.pe" tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="Fútbol Internacional",ESPN
+http://38.187.3.110:8000/play/a0c6/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 2 HD.pe" tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="Fútbol Internacional",ESPN 2
+http://38.187.3.110:8000/play/a0bn/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 3 HD.pe" tvg-logo="https://i.ibb.co/ycKgBfC7/ESPN3.png" group-title="Fútbol Internacional",ESPN 3
+http://38.187.3.110:8000/play/a01p/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 4 HD.pe" tvg-logo="https://i.ibb.co/TDbLPNgJ/ESPN4.png" group-title="Fútbol Internacional",ESPN 4
+http://38.187.3.110:8000/play/a07x/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 5 HD.pe" tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="Fútbol Internacional",ESPN 5
+http://38.187.3.110:8000/play/a0ai/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 6 HD.pe" tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="Fútbol Internacional",ESPN 6
+http://38.187.3.110:8000/play/a07c/index.m3u8
+#EXTINF:-1 tvg-id="ESPN 7 HD.pe" tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="Fútbol Internacional",ESPN 7
+http://8.243.126.131:8000/play/a065/index.m3u8
+#EXTINF:-1 tvg-id="ESPN Premium HD.cl" tvg-logo="https://i.ibb.co/B5XhTspB/ESPNPREMIUM.png" group-title="Fútbol Internacional",ESPN Premium
+http://38.187.3.110:8000/play/a0aq/index.m3u8
