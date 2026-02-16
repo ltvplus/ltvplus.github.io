@@ -48,10 +48,8 @@ http://38.187.3.110:8000/play/a0ai/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="ESPN 5",ESPN 5 HD
 http://45.173.201.51:4000/play/a0lu/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="ESPN 5",ESPN 5 HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/espn5.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="ESPN 5",ESPN 5 HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/espn5.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="ESPN 6",ESPN 6 HD
 http://38.187.3.110:8000/play/a07c/index.m3u8
@@ -60,10 +58,8 @@ http://45.173.201.51:4000/play/a08t/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="ESPN 7",ESPN 7 HD
 http://8.243.126.131:8000/play/a065/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="ESPN 7",ESPN 7 HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/espn7.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="ESPN 7",ESPN 7 HD
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/espn7.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/B5XhTspB/ESPNPREMIUM.png" group-title="ESPN Premium",ESPN Premium | CH
 http://217.26.190.76:8888/play/a0es/index.m3u8
