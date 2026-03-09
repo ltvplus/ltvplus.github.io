@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>InKable... La nueva forma de ver TV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#121212;
+    color:#fff;
+    padding:15px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* Standard */
+    cursor: default;
+}
+
+h1{
+    text-align:center;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.note{
+    text-align:center;
+    font-size:14px;
+    margin-bottom:15px;
+    color:#ccc;
+}
+
+.note a{
+    color:#FF0000; /* Rojo pasión */
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.note a:hover{
+    text-decoration:underline;
+}
+
+button{
+    padding:8px 16px;
+    margin:10px auto;
+    font-size:14px;
+    border-radius:4px;
+    border:none;
+    cursor:pointer;
+    background:#850810;
+    color:white;
+    display:block;
+}
+
+button:hover{
+    background:#6f070d;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    background:#1e1e1e;
+}
+
+th,td{
+    padding:8px;
+    border:1px solid #333;
+    font-size:12px;
+}
+
+th{
+    background:#222;
+}
+
+tr:nth-child(even){
+    background:#181818;
+}
+
+.center{
+    text-align:center;
+}
+
+.action-link{
+    color:#FF0000; /* Rojo pasión para Abrir */
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.logo-box{
+    width:44px;
+    height:44px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    border-radius:4px;
+}
+
+.logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+</style>
+<script>
+// Protección anti-copia
+document.addEventListener('contextmenu', function(e){
+    e.preventDefault();
+    alert('Copiar contenido está deshabilitado.');
+});
+
+document.addEventListener('keydown', function(e){
+    if(e.ctrlKey && (e.key==='c'||e.key==='C'||e.key==='u'||e.key==='U'||e.key==='s'||e.key==='S')){
+        e.preventDefault();
+        alert('Acción de teclado deshabilitada.');
+    }
+    if(e.key==='F12'){ // Deshabilitar inspección
+        e.preventDefault();
+        alert('Inspección de elementos deshabilitada.');
+    }
+});
+
+document.addEventListener('dragstart', function(e){
+    e.preventDefault(); // evita arrastrar imágenes o texto
+});
+</script>
+</head>
+
+<body>
+
+<div class="note">
+Para reproducir los canales debes instalar la App 
+<a href="https://play.google.com/store/apps/details?id=is.xyz.mpv" target="_blank">
+MPV Player
+</a>
+</div>
+
+<button onclick="loadList()">Actualizar Lista</button>
+
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Grupo</th>
+<th class="center">Logo</th>
+<th class="center">Play</th>
+</tr>
+</thead>
+<tbody id="channelsTable"></tbody>
+</table>
+
+<script>
+const LIST_URL="https://pastebin.com/raw/sL8VKjBd";
+const proxies=[
+    LIST_URL,
+    "https://api.allorigins.win/raw?url="+encodeURIComponent(LIST_URL),
+    "https://corsproxy.io/?"+LIST_URL,
+    "https://cors.isomorphic-git.org/"+LIST_URL
+];
+
+function isAndroid(){return /Android/i.test(navigator.userAgent);}
+function isIOS(){return /iPhone|iPad|iPod/i.test(navigator.userAgent);}
+
+function openChannel(url){
+    if(isAndroid()){
+        let scheme="http";
+        if(url.startsWith("https://")) scheme="https";
+        const clean=url.replace(/^https?:\/\//,'');
+        const intent=`intent://${clean}#Intent;package=is.xyz.mpv;type=video/*;scheme=${scheme};end`;
+        window.location.href=intent;
+    } else if(isIOS()){
+        window.open(url,"_blank");
+    } else{
+        alert("Solo Android o iPhone.");
+    }
+}
+
+async function loadList(){
+    const tbody=document.getElementById("channelsTable");
+    tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Cargando lista...</td></tr>";
+
+    const fetchPromises = proxies.map(url => 
+        fetch(url+"?t="+Date.now()).then(r=>r.text()).catch(()=>null)
+    );
+
+    const results = await Promise.all(fetchPromises);
+
+    const valid = results.find(r => r && r.includes("#EXTM3U"));
+
+    if(valid){
+        parseM3U(valid);
+    } else{
+        tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>No se pudo cargar la lista</td></tr>";
+    }
+}
+
+function parseM3U(data){
+    const lines=data.split('\n');
+    const tbody=document.getElementById("channelsTable");
+    tbody.innerHTML="";
+    let channel={};
+    lines.forEach(line=>{
+        line=line.trim();
+        if(line.startsWith("#EXTINF")){
+            const name=line.split(",")[1]||"Sin nombre";
+            const group=line.match(/group-title="(.*?)"/);
+            const logo=line.match(/tvg-logo="(.*?)"/);
+            channel={name:name,group:group?group[1]:"Sin grupo",logo:logo?logo[1]:"",url:""};
+        } else if(line && !line.startsWith("#")){
+            channel.url=line;
+            const logoHTML=channel.logo
+                ? `<div class="logo-box"><img class="logo" loading="lazy" src="${channel.logo}" onerror="this.style.display='none'"></div>`
+                : "";
+            const row=document.createElement("tr");
+            row.innerHTML=`
+<td>${channel.name}</td>
+<td>${channel.group}</td>
+<td class="center">${logoHTML}</td>
+<td class="center"><span class="action-link" onclick='openChannel("${channel.url}")'>Abrir</span></td>
+`;
+            tbody.appendChild(row);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded",loadList);
+</script>
+</body>
+</html>
