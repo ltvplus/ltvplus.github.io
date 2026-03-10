@@ -8,70 +8,93 @@
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <style>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: black;
-  overflow: hidden;
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+  background:black;
+  overflow:hidden;
 }
 
-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain; /* 🔥 CAMBIO AQUÍ */
-  background: black;
+video{
+  width:100vw;
+  height:100vh;
+  object-fit:contain;
+  background:black;
 }
 </style>
 </head>
 
 <body>
 
-<video id="video" autoplay playsinline></video>
+<video id="video" autoplay muted playsinline></video>
 
 <script>
-const video = document.getElementById('video');
+
+const video = document.getElementById("video");
 const videoSrc = "http://38.7.101.90:8000/play/a1es/index.m3u8";
 
-// Forzar sonido
-video.muted = false;
+/* Autoplay SOLO funciona si está muted */
+video.muted = true;
 video.volume = 1.0;
 
-// Configuración HLS optimizada
-if (Hls.isSupported()) {
+function startPlayer(){
 
-  const hls = new Hls({
-    maxBufferLength: 30,
-    maxMaxBufferLength: 60,
-    startLevel: -1,
-    capLevelToPlayerSize: true,
-    lowLatencyMode: true,
-    backBufferLength: 90
-  });
+  if (Hls.isSupported()) {
 
-  hls.loadSource(videoSrc);
-  hls.attachMedia(video);
-
-  hls.on(Hls.Events.MANIFEST_PARSED, function() {
-    video.play().catch(() => {
-      console.log("Autoplay con sonido bloqueado por el navegador");
+    const hls = new Hls({
+      maxBufferLength:30,
+      maxMaxBufferLength:60,
+      startLevel:-1,
+      capLevelToPlayerSize:true,
+      lowLatencyMode:true,
+      backBufferLength:90
     });
-  });
 
-} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-  video.src = videoSrc;
-  video.addEventListener('loadedmetadata', function() {
-    video.play().catch(() => {});
-  });
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+
+    hls.on(Hls.Events.MANIFEST_PARSED,function(){
+
+      video.play().then(()=>{
+        console.log("Reproduciendo");
+
+        /* activar sonido después */
+        setTimeout(()=>{
+          video.muted = false;
+        },1000);
+
+      }).catch(err=>{
+        console.log("Autoplay bloqueado",err);
+      });
+
+    });
+
+    hls.on(Hls.Events.ERROR,function(event,data){
+      console.log("Error HLS:",data);
+    });
+
+  }
+
+  else if(video.canPlayType("application/vnd.apple.mpegurl")){
+    video.src = videoSrc;
+
+    video.addEventListener("loadedmetadata",function(){
+      video.play().catch(()=>{});
+    });
+  }
+
 }
 
-// Intentar forzar fullscreen automático
-document.addEventListener("DOMContentLoaded", () => {
-  const elem = document.documentElement;
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen().catch(() => {});
+startPlayer();
+
+/* fullscreen opcional */
+setTimeout(()=>{
+  if(document.documentElement.requestFullscreen){
+    document.documentElement.requestFullscreen().catch(()=>{});
   }
-});
+},1000);
+
 </script>
 
 </body>
