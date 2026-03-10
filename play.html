@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Player</title>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  background: black;
+}
+</style>
+</head>
+
+<body>
+
+<video id="video" autoplay playsinline></video>
+
+<script>
+const video = document.getElementById('video');
+const videoSrc = "http://38.7.101.90:8000/play/a1es/index.m3u8";
+
+// Forzar sonido
+video.muted = false;
+video.volume = 1.0;
+
+// Configuración HLS optimizada
+if (Hls.isSupported()) {
+
+  const hls = new Hls({
+    maxBufferLength: 30,
+    maxMaxBufferLength: 60,
+    startLevel: -1,
+    capLevelToPlayerSize: true,
+    lowLatencyMode: true,
+    backBufferLength: 90
+  });
+
+  hls.loadSource(videoSrc);
+  hls.attachMedia(video);
+
+  hls.on(Hls.Events.MANIFEST_PARSED, function() {
+    video.play().catch(() => {
+      console.log("Autoplay con sonido bloqueado por el navegador");
+    });
+  });
+
+} else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+  // Safari
+  video.src = videoSrc;
+  video.addEventListener('loadedmetadata', function() {
+    video.play().catch(() => {});
+  });
+}
+
+// Intentar forzar fullscreen automático
+document.addEventListener("DOMContentLoaded", () => {
+  const elem = document.documentElement;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen().catch(() => {});
+  }
+});
+</script>
+
+</body>
+</html>
