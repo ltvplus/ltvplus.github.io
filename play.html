@@ -19,7 +19,7 @@ html, body {
 video {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain; /* 🔥 CAMBIO AQUÍ */
   background: black;
 }
 </style>
@@ -59,7 +59,6 @@ if (Hls.isSupported()) {
   });
 
 } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-  // Safari
   video.src = videoSrc;
   video.addEventListener('loadedmetadata', function() {
     video.play().catch(() => {});
