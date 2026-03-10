@@ -8,92 +8,84 @@
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <style>
-html, body{
-  margin:0;
-  padding:0;
-  height:100%;
-  background:black;
-  overflow:hidden;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  overflow: hidden;
 }
 
-video{
-  width:100vw;
-  height:100vh;
-  object-fit:contain;
-  background:black;
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: black;
 }
 </style>
 </head>
 
 <body>
 
-<video id="video" autoplay muted playsinline></video>
+<video id="video" autoplay playsinline></video>
 
 <script>
-
 const video = document.getElementById("video");
 const videoSrc = "http://38.7.101.90:8000/play/a1es/index.m3u8";
 
-/* Autoplay SOLO funciona si está muted */
-video.muted = true;
-video.volume = 1.0;
-
-function startPlayer(){
-
-  if (Hls.isSupported()) {
-
+// Configuración HLS
+function initHLS() {
+  if(Hls.isSupported()){
     const hls = new Hls({
-      maxBufferLength:30,
-      maxMaxBufferLength:60,
-      startLevel:-1,
-      capLevelToPlayerSize:true,
-      lowLatencyMode:true,
-      backBufferLength:90
+      maxBufferLength: 30,
+      maxMaxBufferLength: 60,
+      startLevel: -1,
+      capLevelToPlayerSize: true,
+      lowLatencyMode: true,
+      backBufferLength: 90
     });
 
     hls.loadSource(videoSrc);
     hls.attachMedia(video);
 
-    hls.on(Hls.Events.MANIFEST_PARSED,function(){
-
-      video.play().then(()=>{
-        console.log("Reproduciendo");
-
-        /* activar sonido después */
-        setTimeout(()=>{
-          video.muted = false;
-        },1000);
-
-      }).catch(err=>{
-        console.log("Autoplay bloqueado",err);
-      });
-
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      attemptPlay();
     });
 
-    hls.on(Hls.Events.ERROR,function(event,data){
-      console.log("Error HLS:",data);
+    hls.on(Hls.Events.ERROR, (event, data) => {
+      console.error("Error HLS:", data);
     });
-
-  }
-
-  else if(video.canPlayType("application/vnd.apple.mpegurl")){
+  } else if(video.canPlayType('application/vnd.apple.mpegurl')) {
     video.src = videoSrc;
-
-    video.addEventListener("loadedmetadata",function(){
-      video.play().catch(()=>{});
-    });
+    video.addEventListener('loadedmetadata', attemptPlay);
   }
-
 }
 
-startPlayer();
+// Función para intentar reproducir con sonido
+function attemptPlay() {
+  video.play().catch(err => {
+    console.warn("Autoplay bloqueado, esperando interacción del usuario...", err);
+    // Esperar el primer click o toque
+    const resume = () => {
+      video.play().catch(err => console.error("No se pudo reproducir:", err));
+      document.body.removeEventListener('click', resume);
+      document.body.removeEventListener('touchstart', resume);
+    };
+    document.body.addEventListener('click', resume);
+    document.body.addEventListener('touchstart', resume);
+  });
+}
 
-/* fullscreen opcional */
-setTimeout(()=>{
+// Forzar fullscreen opcional
+function tryFullscreen() {
   if(document.documentElement.requestFullscreen){
     document.documentElement.requestFullscreen().catch(()=>{});
   }
-},1000);
+}
+
+// Inicializar
+initHLS();
+tryFullscreen();
 
 </script>
 
