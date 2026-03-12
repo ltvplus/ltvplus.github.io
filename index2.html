@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>InKable... La nueva forma de ver TV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#121212;
+    color:#fff;
+    padding:15px;
+    user-select:none;
+    cursor:default;
+}
+
+.note{
+    text-align:center;
+    font-size:14px;
+    margin-bottom:15px;
+    color:#ccc;
+}
+
+button{
+    padding:8px 16px;
+    margin:10px auto;
+    font-size:14px;
+    border-radius:4px;
+    border:none;
+    cursor:pointer;
+    background:#850810;
+    color:white;
+    display:block;
+}
+
+button:hover{
+    background:#6f070d;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    background:#1e1e1e;
+}
+
+th,td{
+    padding:8px;
+    border:1px solid #333;
+    font-size:12px;
+}
+
+th{
+    background:#222;
+}
+
+tr:nth-child(even){
+    background:#181818;
+}
+
+.center{
+    text-align:center;
+}
+
+.action-link{
+    color:#FF0000;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.logo-box{
+    width:44px;
+    height:44px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    border-radius:4px;
+}
+
+.logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+/* PLAYER FULLSCREEN */
+#playerContainer{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    display:none;
+    z-index:9999;
+}
+
+#videoPlayer{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:black;
+}
+
+/* Ocultar controles */
+#videoPlayer::-webkit-media-controls,
+#videoPlayer::-webkit-media-controls-enclosure,
+#videoPlayer::-webkit-media-controls-panel {
+    display: none !important;
+}
+#videoPlayer::-moz-media-controls {
+    display: none !important;
+}
+
+#closePlayer{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    border:none;
+    padding:10px 14px;
+    font-size:14px;
+    cursor:pointer;
+    border-radius:4px;
+    z-index:10000;
+}
+</style>
+
+<!-- hls.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+// Protección básica
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('dragstart',e=>e.preventDefault());
+
+document.addEventListener('keydown',function(e){
+    if(e.ctrlKey && (e.key==='c'||e.key==='C'||e.key==='u'||e.key==='U'||e.key==='s'||e.key==='S')){
+        e.preventDefault();
+    }
+    if(e.key==='F12'){
+        e.preventDefault();
+    }
+});
+</script>
+
+</head>
+<body>
+
+<div class="note">
+Selecciona un canal para reproducirlo en pantalla completa.
+</div>
+
+<button onclick="loadList()">Actualizar Lista</button>
+
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Grupo</th>
+<th class="center">Logo</th>
+<th class="center">Play</th>
+</tr>
+</thead>
+<tbody id="channelsTable"></tbody>
+</table>
+
+<div id="playerContainer">
+    <button id="closePlayer" onclick="closePlayer()">Cerrar</button>
+    <video id="videoPlayer" autoplay playsinline></video>
+</div>
+
+<script>
+const LIST_URL="https://ltvplus.github.io/%7C%3Er3M!uM.m3u";
+let hlsInstance = null;
+
+function openChannel(url){
+    const container=document.getElementById("playerContainer");
+    const player=document.getElementById("videoPlayer");
+    container.style.display="block";
+
+    // Usar hls.js si el navegador no soporta nativo HLS
+    if(Hls.isSupported()){
+        if(hlsInstance) hlsInstance.destroy();
+        hlsInstance = new Hls();
+        hlsInstance.loadSource(url);
+        hlsInstance.attachMedia(player);
+        hlsInstance.on(Hls.Events.MANIFEST_PARSED,function(){player.play();});
+    }else if(player.canPlayType('application/vnd.apple.mpegurl')){
+        player.src=url;
+        player.play();
+    }else{
+        alert("Este canal no se puede reproducir en tu navegador.");
+        return;
+    }
+
+    // Pantalla completa
+    if(player.requestFullscreen){
+        player.requestFullscreen().catch(()=>{});
+    }
+}
+
+function closePlayer(){
+    const container=document.getElementById("playerContainer");
+    const player=document.getElementById("videoPlayer");
+
+    if(hlsInstance){
+        hlsInstance.destroy();
+        hlsInstance = null;
+    }
+
+    player.pause();
+    player.src="";
+    container.style.display="none";
+
+    if(document.fullscreenElement){
+        document.exitFullscreen();
+    }
+}
+
+async function loadList(){
+    const tbody=document.getElementById("channelsTable");
+    tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Cargando lista...</td></tr>";
+
+    try{
+        const response=await fetch(LIST_URL+"?v="+Date.now(),{cache:"no-store"});
+        const data=await response.text();
+
+        if(!data.includes("#EXTM3U")) throw new Error("Lista inválida");
+
+        parseM3U(data);
+
+    }catch(e){
+        tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Error cargando lista</td></tr>";
+    }
+}
+
+function parseM3U(data){
+    const lines=data.split(/\r?\n/);
+    const tbody=document.getElementById("channelsTable");
+    tbody.innerHTML="";
+    let channel={};
+
+    lines.forEach(line=>{
+        line=line.trim();
+        if(line.startsWith("#EXTINF")){
+            const name=line.split(",")[1]||"Sin nombre";
+            const group=line.match(/group-title="(.*?)"/);
+            const logo=line.match(/tvg-logo="(.*?)"/);
+            channel={
+                name:name,
+                group:group?group[1]:"Sin grupo",
+                logo:logo?logo[1]:"",
+                url:""
+            };
+        }else if(line && !line.startsWith("#")){
+            channel.url=line;
+            const logoHTML=channel.logo
+                ? `<div class="logo-box"><img class="logo" loading="lazy" src="${channel.logo}" onerror="this.style.display='none'"></div>`
+                : "";
+            const row=document.createElement("tr");
+            row.innerHTML=`
+<td>${channel.name}</td>
+<td>${channel.group}</td>
+<td class="center">${logoHTML}</td>
+<td class="center"><span class="action-link" onclick='openChannel("${channel.url}")'>Abrir</span></td>`;
+            tbody.appendChild(row);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded",loadList);
+</script>
+
+</body>
+</html>
