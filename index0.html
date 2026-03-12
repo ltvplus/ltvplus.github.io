@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>InKable... La nueva forma de ver TV</title>
+<title>Inka League... La nueva forma de ver TV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -11,14 +11,11 @@ body{
     background:#121212;
     color:#fff;
     padding:15px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
     user-select:none;
     cursor:default;
-}
-
-h1{
-    text-align:center;
-    font-size:22px;
-    margin-bottom:5px;
 }
 
 .note{
@@ -93,30 +90,73 @@ tr:nth-child(even){
     object-fit:contain;
 }
 
-#playerBox{
-    margin-top:20px;
+/* PLAYER FULLSCREEN */
+
+#playerContainer{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
     display:none;
+    z-index:9999;
 }
 
-video{
+#videoPlayer{
     width:100%;
-    max-height:500px;
+    height:100%;
+    object-fit:contain;
     background:black;
+}
+
+/* Ocultar todos los controles nativos */
+#videoPlayer::-webkit-media-controls,
+#videoPlayer::-webkit-media-controls-enclosure,
+#videoPlayer::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+#videoPlayer::-moz-media-controls {
+    display: none !important;
+}
+
+#closePlayer{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    border:none;
+    padding:10px 14px;
+    font-size:14px;
+    cursor:pointer;
+    border-radius:4px;
+    z-index:10000;
 }
 </style>
 
 <script>
-// protección básica
-document.addEventListener('contextmenu',e=>e.preventDefault());
-document.addEventListener('dragstart',e=>e.preventDefault());
+// Protección básica
+document.addEventListener('contextmenu',function(e){e.preventDefault();});
+document.addEventListener('dragstart',function(e){e.preventDefault();});
 
+document.addEventListener('keydown',function(e){
+    if(e.ctrlKey && (e.key==='c'||e.key==='C'||e.key==='u'||e.key==='U'||e.key==='s'||e.key==='S')){
+        e.preventDefault();
+    }
+    if(e.key==='F12'){
+        e.preventDefault();
+    }
+});
 </script>
+
 </head>
 
 <body>
 
 <div class="note">
-Selecciona un canal para reproducirlo directamente en el navegador.
+Selecciona un canal para reproducirlo en pantalla completa.
 </div>
 
 <button onclick="loadList()">Actualizar Lista</button>
@@ -134,8 +174,11 @@ Selecciona un canal para reproducirlo directamente en el navegador.
 <tbody id="channelsTable"></tbody>
 </table>
 
-<div id="playerBox">
-<video id="videoPlayer" controls autoplay playsinline></video>
+<!-- PLAYER -->
+
+<div id="playerContainer">
+    <button id="closePlayer" onclick="closePlayer()">Cerrar</button>
+    <video id="videoPlayer" autoplay playsinline></video>
 </div>
 
 <script>
@@ -143,53 +186,61 @@ Selecciona un canal para reproducirlo directamente en el navegador.
 const LIST_URL="https://ltvplus.github.io/%7C%3Er3M!uM.m3u";
 
 function openChannel(url){
-
+    const container=document.getElementById("playerContainer");
     const player=document.getElementById("videoPlayer");
-    const box=document.getElementById("playerBox");
 
     player.src=url;
-    box.style.display="block";
-
+    container.style.display="block";
     player.play();
+
+    if(player.requestFullscreen){
+        player.requestFullscreen().catch(()=>{});
+    }
+}
+
+function closePlayer(){
+    const container=document.getElementById("playerContainer");
+    const player=document.getElementById("videoPlayer");
+
+    player.pause();
+    player.src="";
+    container.style.display="none";
+
+    if(document.fullscreenElement){
+        document.exitFullscreen();
+    }
 }
 
 async function loadList(){
-
     const tbody=document.getElementById("channelsTable");
-
     tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Cargando lista...</td></tr>";
 
     try{
-
-        const response=await fetch(LIST_URL+"?t="+Date.now());
+        const response=await fetch(LIST_URL+"?v="+Date.now(),{cache:"no-store"});
         const data=await response.text();
+
+        if(!data.includes("#EXTM3U")){
+            throw new Error("Lista inválida");
+        }
 
         parseM3U(data);
 
-    }catch(err){
-
+    }catch(e){
         tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Error cargando lista</td></tr>";
-
     }
 }
 
 function parseM3U(data){
-
-    const lines=data.split('\n');
+    const lines=data.split(/\r?\n/);
     const tbody=document.getElementById("channelsTable");
-
     tbody.innerHTML="";
 
     let channel={};
 
     lines.forEach(line=>{
-
         line=line.trim();
-
         if(line.startsWith("#EXTINF")){
-
             const name=line.split(",")[1]||"Sin nombre";
-
             const group=line.match(/group-title="(.*?)"/);
             const logo=line.match(/tvg-logo="(.*?)"/);
 
@@ -199,34 +250,25 @@ function parseM3U(data){
                 logo:logo?logo[1]:"",
                 url:""
             };
-
-        }else if(line && !line.startsWith("#")){
-
+        }
+        else if(line && !line.startsWith("#")){
             channel.url=line;
-
             const logoHTML=channel.logo
                 ? `<div class="logo-box"><img class="logo" loading="lazy" src="${channel.logo}" onerror="this.style.display='none'"></div>`
                 : "";
 
             const row=document.createElement("tr");
-
             row.innerHTML=`
-
 <td>${channel.name}</td>
 <td>${channel.group}</td>
 <td class="center">${logoHTML}</td>
 <td class="center">
 <span class="action-link" onclick='openChannel("${channel.url}")'>Abrir</span>
 </td>
-
 `;
-
             tbody.appendChild(row);
-
         }
-
     });
-
 }
 
 document.addEventListener("DOMContentLoaded",loadList);
