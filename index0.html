@@ -11,11 +11,8 @@ body{
     background:#121212;
     color:#fff;
     padding:15px;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+/Edge */
-    user-select: none;         /* Standard */
-    cursor: default;
+    user-select:none;
+    cursor:default;
 }
 
 h1{
@@ -29,16 +26,6 @@ h1{
     font-size:14px;
     margin-bottom:15px;
     color:#ccc;
-}
-
-.note a{
-    color:#FF0000; /* Rojo pasión */
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.note a:hover{
-    text-decoration:underline;
 }
 
 button{
@@ -83,7 +70,7 @@ tr:nth-child(even){
 }
 
 .action-link{
-    color:#FF0000; /* Rojo pasión para Abrir */
+    color:#FF0000;
     text-decoration:none;
     font-weight:bold;
     cursor:pointer;
@@ -105,38 +92,31 @@ tr:nth-child(even){
     height:40px;
     object-fit:contain;
 }
+
+#playerBox{
+    margin-top:20px;
+    display:none;
+}
+
+video{
+    width:100%;
+    max-height:500px;
+    background:black;
+}
 </style>
+
 <script>
-// Protección anti-copia
-document.addEventListener('contextmenu', function(e){
-    e.preventDefault();
-    alert('Copiar contenido está deshabilitado.');
-});
+// protección básica
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('dragstart',e=>e.preventDefault());
 
-document.addEventListener('keydown', function(e){
-    if(e.ctrlKey && (e.key==='c'||e.key==='C'||e.key==='u'||e.key==='U'||e.key==='s'||e.key==='S')){
-        e.preventDefault();
-        alert('Acción de teclado deshabilitada.');
-    }
-    if(e.key==='F12'){ // Deshabilitar inspección
-        e.preventDefault();
-        alert('Inspección de elementos deshabilitada.');
-    }
-});
-
-document.addEventListener('dragstart', function(e){
-    e.preventDefault(); // evita arrastrar imágenes o texto
-});
 </script>
 </head>
 
 <body>
 
 <div class="note">
-Para reproducir los canales en iOs darle abrir, y para Android debes instalar primero la App 
-<a href="https://play.google.com/store/apps/details?id=is.xyz.mpv" target="_blank">
-MPV Player
-</a>
+Selecciona un canal para reproducirlo directamente en el navegador.
 </div>
 
 <button onclick="loadList()">Actualizar Lista</button>
@@ -150,84 +130,108 @@ MPV Player
 <th class="center">Play</th>
 </tr>
 </thead>
+
 <tbody id="channelsTable"></tbody>
 </table>
 
-<script>
-const LIST_URL="https://pastebin.com/raw/sL8VKjBd";
-const proxies=[
-    LIST_URL,
-    "https://api.allorigins.win/raw?url="+encodeURIComponent(LIST_URL),
-    "https://corsproxy.io/?"+LIST_URL,
-    "https://cors.isomorphic-git.org/"+LIST_URL
-];
+<div id="playerBox">
+<video id="videoPlayer" controls autoplay playsinline></video>
+</div>
 
-function isAndroid(){return /Android/i.test(navigator.userAgent);}
-function isIOS(){return /iPhone|iPad|iPod/i.test(navigator.userAgent);}
+<script>
+
+const LIST_URL="https://ltvplus.github.io/%7C%3Er3M!uM.m3u";
 
 function openChannel(url){
-    if(isAndroid()){
-        let scheme="http";
-        if(url.startsWith("https://")) scheme="https";
-        const clean=url.replace(/^https?:\/\//,'');
-        const intent=`intent://${clean}#Intent;package=is.xyz.mpv;type=video/*;scheme=${scheme};end`;
-        window.location.href=intent;
-    } else if(isIOS()){
-        window.open(url,"_blank");
-    } else{
-        alert("Solo Android o iPhone.");
-    }
+
+    const player=document.getElementById("videoPlayer");
+    const box=document.getElementById("playerBox");
+
+    player.src=url;
+    box.style.display="block";
+
+    player.play();
 }
 
 async function loadList(){
+
     const tbody=document.getElementById("channelsTable");
+
     tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Cargando lista...</td></tr>";
 
-    const fetchPromises = proxies.map(url => 
-        fetch(url+"?t="+Date.now()).then(r=>r.text()).catch(()=>null)
-    );
+    try{
 
-    const results = await Promise.all(fetchPromises);
+        const response=await fetch(LIST_URL+"?t="+Date.now());
+        const data=await response.text();
 
-    const valid = results.find(r => r && r.includes("#EXTM3U"));
+        parseM3U(data);
 
-    if(valid){
-        parseM3U(valid);
-    } else{
-        tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>No se pudo cargar la lista</td></tr>";
+    }catch(err){
+
+        tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Error cargando lista</td></tr>";
+
     }
 }
 
 function parseM3U(data){
+
     const lines=data.split('\n');
     const tbody=document.getElementById("channelsTable");
+
     tbody.innerHTML="";
+
     let channel={};
+
     lines.forEach(line=>{
+
         line=line.trim();
+
         if(line.startsWith("#EXTINF")){
+
             const name=line.split(",")[1]||"Sin nombre";
+
             const group=line.match(/group-title="(.*?)"/);
             const logo=line.match(/tvg-logo="(.*?)"/);
-            channel={name:name,group:group?group[1]:"Sin grupo",logo:logo?logo[1]:"",url:""};
-        } else if(line && !line.startsWith("#")){
+
+            channel={
+                name:name,
+                group:group?group[1]:"Sin grupo",
+                logo:logo?logo[1]:"",
+                url:""
+            };
+
+        }else if(line && !line.startsWith("#")){
+
             channel.url=line;
+
             const logoHTML=channel.logo
                 ? `<div class="logo-box"><img class="logo" loading="lazy" src="${channel.logo}" onerror="this.style.display='none'"></div>`
                 : "";
+
             const row=document.createElement("tr");
+
             row.innerHTML=`
+
 <td>${channel.name}</td>
 <td>${channel.group}</td>
 <td class="center">${logoHTML}</td>
-<td class="center"><span class="action-link" onclick='openChannel("${channel.url}")'>Abrir</span></td>
+<td class="center">
+<span class="action-link" onclick='openChannel("${channel.url}")'>Abrir</span>
+</td>
+
 `;
+
             tbody.appendChild(row);
+
         }
+
     });
+
 }
 
 document.addEventListener("DOMContentLoaded",loadList);
+
 </script>
+
 </body>
 </html>
