@@ -154,7 +154,7 @@ MPV Player
 </table>
 
 <script>
-const LIST_URL="https://raw.githubusercontent.com/ltvplus/ltvplus.github.io/refs/heads/main/|>r3M!uM.m3u";
+const LIST_URL="https://raw.githubusercontent.com/ltvplus/ltvplus.github.io/main/|>r3M!uM.m3u";
 const proxies=[
     LIST_URL,
     "https://api.allorigins.win/raw?url="+encodeURIComponent(LIST_URL),
@@ -183,27 +183,28 @@ async function loadList(){
     const tbody=document.getElementById("channelsTable");
     tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>Cargando lista...</td></tr>";
 
-    const fetchPromises = proxies.map(url => 
-        fetch(url+"?t="+Date.now()).then(r=>r.text()).catch(()=>null)
-    );
+    for(const url of proxies){
+        try{
+            const r = await fetch(url+"?t="+Date.now());
+            const text = await r.text();
 
-    const results = await Promise.all(fetchPromises);
-
-    const valid = results.find(r => r && r.includes("#EXTM3U"));
-
-    if(valid){
-        parseM3U(valid);
-    } else{
-        tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>No se pudo cargar la lista</td></tr>";
+            if(text.includes("#EXTM3U")){
+                parseM3U(text);
+                return;
+            }
+        }catch(e){}
     }
+
+    tbody.innerHTML="<tr><td colspan='4' style='text-align:center'>No se pudo cargar la lista</td></tr>";
 }
 
 function parseM3U(data){
     const lines=data.split('\n');
     const tbody=document.getElementById("channelsTable");
-    tbody.innerHTML="";
-    let channel={};
-    lines.forEach(line=>{
+    let html = "";
+    let channel = {};
+
+    for(let line of lines){
         line=line.trim();
         if(line.startsWith("#EXTINF")){
             const name=line.split(",")[1]||"Sin nombre";
@@ -215,16 +216,17 @@ function parseM3U(data){
             const logoHTML=channel.logo
                 ? `<div class="logo-box"><img class="logo" loading="lazy" src="${channel.logo}" onerror="this.style.display='none'"></div>`
                 : "";
-            const row=document.createElement("tr");
-            row.innerHTML=`
+            html += `
+<tr>
 <td>${channel.name}</td>
 <td>${channel.group}</td>
 <td class="center">${logoHTML}</td>
 <td class="center"><span class="action-link" onclick='openChannel("${channel.url}")'>Abrir</span></td>
-`;
-            tbody.appendChild(row);
+</tr>`;
         }
-    });
+    }
+
+    tbody.innerHTML = html;
 }
 
 document.addEventListener("DOMContentLoaded",loadList);
