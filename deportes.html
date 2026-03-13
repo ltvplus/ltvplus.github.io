@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canales Deportivos</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #player {
+            width: 80%;
+            max-width: 800px;
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Canales Deportivos</h1>
+<div id="player"></div>
+
+<!-- Cargamos tu PlayerJS desde GitHub -->
+<script src="https://ltvplus.github.io/playerjs.js"></script>
+
+<script>
+    // Inicializamos el reproductor usando la configuración que ya tiene tu JS
+    if (typeof Playerjs !== "undefined") {
+        var player = new Playerjs({ id: "player" });
+    } else {
+        console.error("No se pudo cargar PlayerJS");
+    }
+</script>
+
+</body>
+</html>
