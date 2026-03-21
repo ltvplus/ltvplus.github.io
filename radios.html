@@ -2,98 +2,137 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Autoradio Realista</title>
+<title>InRadio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 <style>
 body {
   margin: 0;
-  background: #222;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle at top, #1f1f2e, #0a0a0f);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
 }
 
-/* Carcasa del radio */
-.container {
-  width: 450px;
-  background: #111;
-  border: 4px solid #555;
-  border-radius: 15px;
-  box-shadow: 0 0 20px #000;
-  padding: 15px;
+.app {
+  width: 460px;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* DISPLAY */
+.display {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(135deg, #111, #1c1c2b);
+  border-radius: 15px;
+  padding: 15px;
   align-items: center;
 }
 
-/* Pantalla LED tipo segmentos */
-.display {
-  width: 100%;
-  height: 60px;
+/* COVER */
+.cover {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
   background: #000;
-  color: #0f0;
-  font-family: 'Courier New', monospace;
-  font-size: 18px;
-  text-align: center;
-  line-height: 60px;
-  letter-spacing: 2px;
-  border-radius: 5px;
-  border: 2px inset #0f0;
-  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Controles tipo botones físicos */
+/* INFO */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TEXTO */
+.now {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0ff;
+}
+
+.status {
+  font-size: 14px;
+  opacity: 0.5;
+  letter-spacing: 2px;
+}
+
+/* ECUALIZADOR GIF */
+.eq {
+  width: 70px;
+  height: 50px;
+  background: url("https://cdn.pixabay.com/animation/2025/09/20/21/46/21-46-55-572_512.gif") center/contain no-repeat;
+  display: none;
+}
+
+/* CONTROLES */
 .controls {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 15px;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 
-button {
-  width: 50px;
-  height: 50px;
+.btn {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  border: 2px solid #0f0;
-  background: #111;
-  color: #0f0;
-  font-weight: bold;
-  font-size: 18px;
+  background: linear-gradient(145deg, #1a1a2e, #0a0a0f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  box-shadow: 0 0 5px #0f0;
+  font-size: 20px;
   transition: 0.2s;
 }
 
-button:hover {
-  background: #0f0;
-  color: #000;
+.btn:hover {
+  color: #0ff;
+  transform: scale(1.1);
 }
 
-/* Lista de estaciones tipo frecuencia */
+/* LISTA */
 .list {
-  width: 100%;
   max-height: 200px;
   overflow-y: auto;
-  background: #111;
-  border: 2px solid #0f0;
-  border-radius: 5px;
-  padding: 5px;
-  font-family: monospace;
-  color: #0f0;
 }
 
 .item {
-  padding: 8px;
-  border-bottom: 1px solid #0f0;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 5px;
   cursor: pointer;
+  background: rgba(255,255,255,0.05);
+  transition: 0.2s;
 }
 
-.item:hover, .item.active {
-  background: #0f0;
+.item:hover {
+  background: rgba(0,255,255,0.2);
+}
+
+.active {
+  background: #0ff;
   color: #000;
   font-weight: bold;
 }
@@ -105,15 +144,35 @@ audio {
 </head>
 
 <body>
-<div class="container">
-  <div class="display" id="nowPlaying">SELECCIONE RADIO</div>
 
-  <div class="controls">
-    <button onclick="prevStation()">⏮</button>
-    <button onclick="stop()">⏹</button>
-    <button onclick="nextStation()">⏭</button>
+<div class="app">
+
+  <div class="header">
+    <div class="title">𝗥𝗔𝗗𝗜𝗢 𝗣𝗟𝗔𝗬𝗘𝗥 - 𝗟𝗜𝗠𝗔</div>
   </div>
 
+  <!-- DISPLAY -->
+  <div class="display">
+
+    <div class="cover" id="cover"></div>
+
+    <div class="info">
+      <div class="now" id="nowPlaying">Selecciona una radio</div>
+      <div class="status" id="status">● EN VIVO</div>
+    </div>
+
+    <div class="eq" id="equalizer"></div>
+
+  </div>
+
+  <!-- CONTROLES -->
+  <div class="controls">
+    <div class="btn" onclick="prevStation()">⏮</div>
+    <div class="btn" onclick="stop()">⏹</div>
+    <div class="btn" onclick="nextStation()">⏭</div>
+  </div>
+
+  <!-- LISTA -->
   <div class="list" id="playlist"></div>
 
   <audio id="audio"></audio>
@@ -123,7 +182,6 @@ audio {
 const urlM3U = "https://raw.githubusercontent.com/ltvplus/ltvplus.github.io/main/radiospe.m3u";
 let stations = [];
 let currentIndex = -1;
-let hls = null;
 
 async function loadM3U() {
   const res = await fetch(urlM3U);
@@ -132,17 +190,23 @@ async function loadM3U() {
 
   for (let i = 0; i < lines.length; i++) {
     if (lines[i].includes("#EXTINF")) {
-      const name = lines[i].split(",").pop().trim();
+      const line = lines[i];
+      const name = line.split(",").pop().trim();
+      const logoMatch = line.match(/tvg-logo="(.*?)"/);
+      const logo = logoMatch ? logoMatch[1] : "";
       const url = lines[i + 1]?.trim();
-      if(url && url.startsWith("http")) stations.push({name, url});
+
+      if (url) stations.push({ name, url, logo });
     }
   }
+
   renderList();
 }
 
 function renderList() {
   const container = document.getElementById("playlist");
   container.innerHTML = "";
+
   stations.forEach((s, i) => {
     const div = document.createElement("div");
     div.className = "item";
@@ -155,59 +219,94 @@ function renderList() {
 function selectStation(i) {
   currentIndex = i;
   const s = stations[i];
+
   document.getElementById("nowPlaying").innerText = s.name;
+
+  const cover = document.getElementById("cover");
+  cover.style.backgroundImage = s.logo ? `url(${s.logo})` : "none";
+
   document.querySelectorAll(".item").forEach((el, idx) => {
-    el.classList.toggle("active", idx === i);
+    const isActive = idx === i;
+    el.classList.toggle("active", isActive);
+
+    if (isActive) {
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
   });
+
   playCurrent();
 }
 
 function playCurrent() {
-  if(currentIndex === -1) return;
   const s = stations[currentIndex];
   const audio = document.getElementById("audio");
-  if(hls) { hls.destroy(); hls = null; }
+  const status = document.getElementById("status");
+  const eq = document.getElementById("equalizer");
 
-  if(s.url.includes(".m3u8")) {
-    if(Hls.isSupported()){
-      hls = new Hls();
-      hls.loadSource(s.url);
-      hls.attachMedia(audio);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => audio.play());
-    } else {
-      audio.src = s.url;
-      audio.play();
-    }
-  } else {
-    audio.src = s.url;
-    audio.play().catch(() => alert("No se puede reproducir el stream"));
-  }
+  audio.src = s.url;
+  audio.play().then(() => {
+    status.style.opacity = "1";
+    eq.style.display = "block";
+  }).catch(() => alert("Error al reproducir"));
 
-  audio.onerror = () => alert("Stream no compatible o bloqueado");
+  audio.onerror = () => {
+    status.style.opacity = "0.3";
+    eq.style.display = "none";
+  };
 }
 
 function stop() {
   const audio = document.getElementById("audio");
+  const status = document.getElementById("status");
+  const eq = document.getElementById("equalizer");
+
   audio.pause();
   audio.src = "";
-  if(hls){ hls.destroy(); hls=null; }
+  status.style.opacity = "0.4";
+  eq.style.display = "none";
 }
 
-function prevStation(){
-  if(stations.length === 0) return;
-  let i = currentIndex - 1;
-  if(i<0) i = stations.length - 1;
-  selectStation(i);
+function prevStation() {
+  currentIndex = (currentIndex - 1 + stations.length) % stations.length;
+  selectStation(currentIndex);
 }
 
-function nextStation(){
-  if(stations.length === 0) return;
-  let i = currentIndex + 1;
-  if(i>=stations.length) i = 0;
-  selectStation(i);
+function nextStation() {
+  currentIndex = (currentIndex + 1) % stations.length;
+  selectStation(currentIndex);
 }
 
+// --- Soporte control remoto Android TV ---
+document.addEventListener("keydown", (e) => {
+  switch(e.key) {
+    case "ArrowLeft":  // izquierda
+      prevStation();
+      e.preventDefault();
+      break;
+    case "ArrowRight": // derecha
+      nextStation();
+      e.preventDefault();
+      break;
+    case "Enter":      // botón OK/PlayPause
+    case "MediaPlayPause":
+      if (document.getElementById("audio").paused) {
+        playCurrent();
+      } else {
+        stop();
+      }
+      e.preventDefault();
+      break;
+    case "MediaStop":  // botón Stop
+      stop();
+      e.preventDefault();
+      break;
+  }
+});
 loadM3U();
 </script>
+
 </body>
 </html>
