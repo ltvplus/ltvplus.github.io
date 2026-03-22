@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPTV Streaming</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+        overflow: hidden;
+        user-select: none;
+    }
+
+    header {
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        background: #020617;
+    }
+
+    #categories {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding: 1rem;
+        outline: none;
+    }
+
+    .category {
+        background: #1e293b;
+        padding: 0.7rem 1.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+        outline: none;
+        flex-shrink: 0;
+        font-size: 1rem;
+    }
+
+    .category:focus, .category.active {
+        background: #6366f1;
+        transform: scale(1.05);
+    }
+
+    #channels {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px,1fr));
+        gap: 1rem;
+        padding: 1rem;
+        outline: none;
+    }
+
+    .channel {
+        background: #020617;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 120px;
+        overflow: hidden;
+        transition: 0.2s;
+        outline: none;
+    }
+
+    .channel:focus {
+        transform: scale(1.05);
+        border: 2px solid #6366f1;
+    }
+
+    .channel img {
+        max-width: 80%;
+        max-height: 60px;
+        object-fit: contain;
+        margin-bottom: 5px;
+    }
+
+    #playerOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: none;
+        z-index: 9999;
+    }
+
+    #video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #closeBtn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(0,0,0,0.6);
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 8px;
+        z-index: 10;
+    }
+
+    @media (min-width: 800px) {
+        header { font-size: 2rem; padding: 2rem; }
+        .category { padding: 1rem 2rem; font-size: 1.3rem; }
+        #channels { gap: 1.5rem; padding: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); }
+        .channel { height: 180px; }
+        .channel img { max-height: 100px; margin-bottom: 10px; }
+        #closeBtn { font-size: 2rem; padding: 0.7rem 1.5rem; top: 2rem; right: 2rem; }
+    }
+</style>
+</head>
+<body>
+<header>📺 IPTV Streaming</header>
+<div id="categories" tabindex="0"></div>
+<div id="channels" tabindex="0"></div>
+
+<div id="playerOverlay">
+    <button id="closeBtn">✕</button>
+    <video id="video" playsinline autoplay muted></video>
+</div>
+
+<script>
+const M3U_URL = "https://ltvplus.github.io/|>3rU.m3u";
+let categories = {};
+let currentCategoryIndex = 0;
+let currentChannelIndex = 0;
+let categoryElements = [];
+let channelElements = [];
+let onCategory = true;
+
+async function loadM3U() {
+    const res = await fetch(M3U_URL);
+    const text = await res.text();
+    const lines = text.split("\n");
+
+    for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith("#EXTINF")) {
+            const info = lines[i];
+            const url = lines[i + 1];
+            const name = info.split(",")[1];
+            const logo = (info.match(/tvg-logo="(.*?)"/) || [])[1];
+            const group = (info.match(/group-title="(.*?)"/) || [])[1] || "Otros";
+
+            if (!categories[group]) categories[group] = [];
+            categories[group].push({ name, logo, url });
+        }
+    }
+
+    renderCategories();
+}
+
+function renderCategories() {
+    const container = document.getElementById("categories");
+    container.innerHTML = "";
+    categoryElements = [];
+
+    Object.keys(categories).forEach((cat, i) => {
+        const btn = document.createElement("div");
+        btn.className = "category";
+        btn.innerText = cat;
+        btn.tabIndex = 0;
+        btn.onclick = () => { setActiveCategory(i); };
+        container.appendChild(btn);
+        categoryElements.push(btn);
+        if (i === 0) btn.classList.add("active");
+    });
+
+    const extraButtons = [
+        { name: "Radios FM", url: "https://ltvplus.github.io/radios.html" },
+        { name: "Movies", url: "https://la.movie" }
+    ];
+
+    extraButtons.forEach(btnData => {
+        const btn = document.createElement("div");
+        btn.className = "category";
+        btn.innerText = btnData.name;
+        btn.tabIndex = 0;
+        btn.onclick = () => { window.location.href = btnData.url; };
+        container.appendChild(btn);
+        categoryElements.push(btn);
+    });
+
+    renderChannels(categories[Object.keys(categories)[0]]);
+    categoryElements[0].focus();
+}
+
+function renderChannels(list) {
+    const container = document.getElementById("channels");
+    container.innerHTML = "";
+    channelElements = [];
+
+    list.forEach((ch, i) => {
+        const div = document.createElement("div");
+        div.className = "channel";
+        div.tabIndex = 0;
+        div.innerHTML = `<img src="${ch.logo || ''}" alt="${ch.name}"><p>${ch.name}</p>`;
+        div.onclick = () => playChannel(ch.url);
+        container.appendChild(div);
+        channelElements.push(div);
+    });
+
+    currentChannelIndex = 0;
+    channelElements[0]?.focus();
+}
+
+function setActiveCategory(index) {
+    categoryElements.forEach(c => c.classList.remove("active"));
+    categoryElements[index].classList.add("active");
+    currentCategoryIndex = index;
+
+    if (index < Object.keys(categories).length) {
+        renderChannels(categories[Object.keys(categories)[index]]);
+        onCategory = true;
+    } else {
+        channelElements = [];
+        onCategory = true;
+    }
+}
+
+function playChannel(url) {
+    const video = document.getElementById("video");
+    const overlay = document.getElementById("playerOverlay");
+
+    overlay.style.display = "block";
+    video.pause();
+    video.src = "";
+    video.muted = false;
+    video.autoplay = true;
+
+    if (window.hls) window.hls.destroy();
+
+    if (Hls.isSupported() && url.includes(".m3u8")) {
+        window.hls = new Hls();
+        window.hls.loadSource(url);
+        window.hls.attachMedia(video);
+        window.hls.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(()=>{}));
+    } else {
+        video.src = url;
+        video.play().catch(()=>{});
+    }
+
+    if (overlay.requestFullscreen) overlay.requestFullscreen();
+}
+
+function closePlayer() {
+    const overlay = document.getElementById("playerOverlay");
+    const video = document.getElementById("video");
+    video.pause();
+    video.src = "";
+    if (window.hls) window.hls.destroy();
+    overlay.style.display = "none";
+}
+
+document.getElementById("closeBtn").onclick = () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else closePlayer();
+};
+
+document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) closePlayer();
+});
+
+document.addEventListener("keydown", e => {
+    if (document.getElementById("playerOverlay").style.display === "block") {
+        if (e.key === "Backspace" || e.key === "Escape") closePlayer();
+        return;
+    }
+
+    if (onCategory) {
+        if (e.key === "ArrowRight") {
+            currentCategoryIndex = Math.min(currentCategoryIndex + 1, categoryElements.length - 1);
+            setActiveCategory(currentCategoryIndex);
+            categoryElements[currentCategoryIndex].focus();
+        } else if (e.key === "ArrowLeft") {
+            currentCategoryIndex = Math.max(currentCategoryIndex - 1, 0);
+            setActiveCategory(currentCategoryIndex);
+            categoryElements[currentCategoryIndex].focus();
+        } else if (e.key === "ArrowDown") {
+            onCategory = false;
+            channelElements[currentChannelIndex]?.focus();
+        }
+    } else {
+        if (e.key === "ArrowRight") {
+            currentChannelIndex = Math.min(currentChannelIndex + 1, channelElements.length - 1);
+            channelElements[currentChannelIndex].focus();
+        } else if (e.key === "ArrowLeft") {
+            currentChannelIndex = Math.max(currentChannelIndex - 1, 0);
+            channelElements[currentChannelIndex].focus();
+        } else if (e.key === "ArrowUp") {
+            onCategory = true;
+            categoryElements[currentCategoryIndex].focus();
+        } else if (e.key === "Enter") {
+            channelElements[currentChannelIndex]?.click();
+        }
+    }
+});
+
+loadM3U();
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('selectstart', e => e.preventDefault());
+document.addEventListener('dragstart', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if ((e.ctrlKey && ['u','s','c'].includes(e.key.toLowerCase())) ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+        e.key === 'F12') {
+        e.preventDefault();
+        alert("No se permite copiar el código 😎");
+    }
+});
+</script>
+</body>
+</html>
