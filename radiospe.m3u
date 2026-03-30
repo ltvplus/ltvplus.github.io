@@ -7,18 +7,18 @@ https://mdstrm.com/audio/5fad731fcf097a068af3c8f7/live.m3u8
 https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/Z6ZZYZYE6R.jpg" group-title="Radios FM",90.5 La Zona
 https://mdstrm.com/audio/5fada54116646e098d97e6a5/live.m3u8
-#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/f7srrqlddlud.png" group-title="Radios FM",91.9 Cumbia Mix
-https://mdstrm.com/audio/6598b6ab95a235085823b24f/live.m3u8
-#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/c9naybugfeej.png" group-title="Radios FM",92.1 Radio Disney
-https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_PER_LMAAC.aac
+#EXTINF:-1 tvg-logo="https://vitalfm.pe/wp-content/uploads/2024/04/logob.png" group-title="Radios FM",91.4 Vital FM
+https://stream.mediacorp.pe/icecast:/51.159.194.111:8002/VitalFM/2/icecast.audio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_de_Radio_PBO.jpg/120px-Logo_de_Radio_PBO.jpg" group-title="Radios FM",91.9 PBO
+https://stream.zeno.fm/beu1evysezzuv
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/gScBgqwDEp.jpg" group-title="Radios FM",92.5 Studio 92
 https://mdstrm.com/audio/5fada553978fe1080e3ac5ea/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/VZd6pyTMTY.png" group-title="Radios FM",93.1 Ritmo Romántica
 https://mdstrm.com/audio/6839e2376607bdf6b2fcde27/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/2b7cvuLrCb.png" group-title="Radios FM",93.7 La Inolvidable
 https://mdstrm.com/audio/6839e24cf4eacd81ada4e6b4/live.m3u8
-#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/eLk5CpPL4E.jpg" group-title="Radios FM",94.3 Corazón
-https://mdstrm.com/audio/5fada514fc16c006bd63370f/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/c9naybugfeej.png" group-title="Radios FM",94.3 Radio Disney
+https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_PER_LM.mp3
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/4T9RuHnF42.png" group-title="Radios FM",94.9 La Karibeña
 https://karibena.egostreaming.pe/radio/6898b6e52d9e088a6de159/
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/tq4NUPk2pm.png" group-title="Radios FM",95.5 Exitosa
@@ -31,15 +31,31 @@ https://mdstrm.com/audio/5fada56fe4e09508207a7951/live.m3u8
 https://mdstrm.com/audio/6839e1c82cc4c480fcd318dd/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/Adjngp9Gps.png" group-title="Radios FM",98.1 Onda Cero
 https://mdstrm.com/audio/6598b65ab398c90871aff8cc/icecast.audio
+#EXTINF:-1 tvg-logo="https://cdn-radiotime-logos.tunein.com/s11082g.png" group-title="Radios FM",99.1 Doble Nueve
+http://conectperu.com:8002/
 #EXTINF:-1 tvg-logo="https://static2.mytuner.mobi/media/tvos_radios/774/bethel-radio.702b0ca5.jpg" group-title="Radios FM",100.1 Bethel Radio
 https://alfa.betheltv.tv/radiobethel/1/icecast.audio
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/xgbPEVhymn.png" group-title="Radios FM",101.1 Panamericana
 https://mdstrm.com/audio/6598b62dded1380470f4e539/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/ns3bnMSxg9.jpg" group-title="Radios FM",102.1 Radio Oxígeno
 https://mdstrm.com/audio/5fab0687bcd6c2389ee9480c/live.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/87/Radio_Am%C3%A9rica_Per%C3%BA_2021.png" group-title="Radios FM",104.7 Radio América
+https://panel.innovatestream.pe:10948/stream
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c9/Radio_Nacional_Peru_2023.png" group-title="Radios FM",103.9 Radio Nacional
+https://cdnhd.iblups.com/hls/0773874174fd4eba8bb9eff741d190dc.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/gaF98DkLrX.png" group-title="Radios FM",106.3 Radiomar
 https://mdstrm.com/audio/6839e261d2efddf5bfbc2d3d/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/8fTKXj2Ynz.png" group-title="Radios FM",107.1 Nueva Q
 https://mdstrm.com/audio/6839e1f153fcf56d988d5943/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/tPMrZYueEe.png" group-title="Radios FM",107.7 Planeta
 https://mdstrm.com/audio/6839e274f40e6b9832e37633/live.m3u8
+#EXTINF:-1 group-title="Radios AM",580 Radio María
+https://dreamsiteradiocp4.com/proxy/rmperu2?mp=/stream
+#EXTINF:-1 group-title="Radios AM",620 Radio Ovación
+https://5949aa132c8fb.streamlock.net:1963/ipradioovacion1/liveovacion1radio/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/f7srrqlddlud.png" group-title="Radios Online",Cumbia Mix
+https://mdstrm.com/audio/6598b6ab95a235085823b24f/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/eLk5CpPL4E.jpg" group-title="Radios Online",Corazón
+https://mdstrm.com/audio/5fada514fc16c006bd63370f/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/503/radio-panamericana-salsa-power.af97fbb9.png" group-title="Radios Online",Salsa Power
+https://mdstrm.com/audio/6598b751261d9e088a6deadd/icecast.m3u8
