@@ -5,9 +5,8 @@
 <title>InRadio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- HLS + DASH -->
+<!-- HLS -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/dashjs@latest/dist/dash.all.min.js"></script>
 
 <style>
 body {
@@ -135,11 +134,6 @@ body {
 audio {
   display: none;
 }
-
-/* Protección extra */
-* {
-  user-select: none;
-}
 </style>
 </head>
 
@@ -179,7 +173,6 @@ const urlM3U = "https://raw.githubusercontent.com/ltvplus/ltvplus.github.io/main
 let stations = [];
 let currentIndex = -1;
 let hls = null;
-let dash = null;
 
 async function loadM3U() {
   const res = await fetch(urlM3U);
@@ -196,7 +189,7 @@ async function loadM3U() {
 
       const url = lines[i + 1]?.trim();
 
-      if (url && (url.startsWith("http://") || url.startsWith("https://"))) {
+      if (url && url.startsWith("http")) {
         stations.push({ name, url, logo });
       }
     }
@@ -228,7 +221,12 @@ function selectStation(i) {
   cover.style.backgroundImage = s.logo ? `url(${s.logo})` : "none";
 
   document.querySelectorAll(".item").forEach((el, idx) => {
-    el.classList.toggle("active", idx === i);
+    const isActive = idx === i;
+    el.classList.toggle("active", isActive);
+
+    if (isActive) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   });
 
   playCurrent();
@@ -242,89 +240,70 @@ function playCurrent() {
   const status = document.getElementById("status");
   const eq = document.getElementById("equalizer");
 
-  // limpiar
-  if (hls) { hls.destroy(); hls = null; }
-  if (dash) { dash.reset(); dash = null; }
-
-  audio.pause();
-  audio.src = "";
-
-  const url = s.url.toLowerCase();
-
-  function activarUI() {
-    status.style.opacity = "1";
-    eq.style.display = "block";
+  // limpiar HLS previo
+  if (hls) {
+    hls.destroy();
+    hls = null;
   }
 
-  function errorUI() {
-    status.style.opacity = "0.3";
-    eq.style.display = "none";
-  }
-
-  function fallback() {
-    audio.src = s.url;
-    audio.play().then(activarUI).catch(errorUI);
-  }
-
-  // HLS
-  if (url.includes(".m3u8")) {
+  // detectar HLS
+  if (s.url.includes(".m3u8")) {
 
     if (Hls.isSupported()) {
       hls = new Hls();
       hls.loadSource(s.url);
       hls.attachMedia(audio);
+
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
         audio.play();
-        activarUI();
+        status.style.opacity = "1";
+        eq.style.display = "block";
       });
-      hls.on(Hls.Events.ERROR, fallback);
 
-    } else if (audio.canPlayType("application/vnd.apple.mpegurl")) {
-      audio.src = s.url;
-      audio.play().then(activarUI).catch(fallback);
+      hls.on(Hls.Events.ERROR, () => {
+        status.style.opacity = "0.3";
+        eq.style.display = "none";
+      });
+
     } else {
-      fallback();
+      audio.src = s.url;
+      audio.play();
     }
 
-  // DASH
-  } else if (url.includes(".mpd")) {
-
-    try {
-      dash = dashjs.MediaPlayer().create();
-      dash.initialize(audio, s.url, true);
-      activarUI();
-    } catch {
-      fallback();
-    }
-
-  // AUDIO NORMAL
   } else {
-
-    if (
-      audio.canPlayType("audio/mpeg") ||
-      audio.canPlayType("audio/aac") ||
-      audio.canPlayType("audio/ogg")
-    ) {
-      audio.src = s.url;
-      audio.play().then(activarUI).catch(fallback);
-    } else {
-      fallback();
-    }
+    audio.src = s.url;
+    audio.play()
+      .then(() => {
+        status.style.opacity = "1";
+        eq.style.display = "block";
+      })
+      .catch(() => {
+        status.style.opacity = "0.3";
+        eq.style.display = "none";
+      });
   }
 
-  audio.onerror = errorUI;
+  audio.onerror = () => {
+    status.style.opacity = "0.3";
+    eq.style.display = "none";
+  };
 }
 
 function stop() {
   const audio = document.getElementById("audio");
+  const status = document.getElementById("status");
+  const eq = document.getElementById("equalizer");
+
   audio.pause();
   audio.src = "";
 
-  if (hls) { hls.destroy(); hls = null; }
-  if (dash) { dash.reset(); dash = null; }
+  if (hls) {
+    hls.destroy();
+    hls = null;
+  }
 
-  document.getElementById("status").style.opacity = "0.4";
-  document.getElementById("equalizer").style.display = "none";
+  status.style.opacity = "0.4";
+  eq.style.display = "none";
 }
 
 function prevStation() {
@@ -339,34 +318,81 @@ function nextStation() {
   selectStation(currentIndex);
 }
 
-// Control remoto
+// Control remoto Android TV
 document.addEventListener("keydown", (e) => {
   switch(e.key) {
-    case "ArrowLeft": prevStation(); break;
-    case "ArrowRight": nextStation(); break;
+    case "ArrowLeft":
+      prevStation();
+      break;
+    case "ArrowRight":
+      nextStation();
+      break;
     case "Enter":
     case "MediaPlayPause":
       const audio = document.getElementById("audio");
       if (audio.paused) playCurrent();
       else stop();
       break;
-    case "MediaStop": stop(); break;
+    case "MediaStop":
+      stop();
+      break;
   }
 });
 
-// PROTECCIÓN
+loadM3U();
+
+// ================= PROTECCIÓN BÁSICA =================
+
+// Bloquear clic derecho
 document.addEventListener("contextmenu", e => e.preventDefault());
-document.addEventListener("keydown", e => {
-  if (e.key === "F12") e.preventDefault();
-  if (e.ctrlKey && ["u","s","c"].includes(e.key.toLowerCase())) e.preventDefault();
+
+// Bloquear teclas comunes de inspección
+document.addEventListener("keydown", function(e) {
+
+  // F12
+  if (e.key === "F12") {
+    e.preventDefault();
+  }
+
+  // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S / Ctrl+C
+  if (e.ctrlKey && (
+      e.key === "u" ||
+      e.key === "s" ||
+      e.key === "c" ||
+      (e.shiftKey && (e.key === "I" || e.key === "J"))
+  )) {
+    e.preventDefault();
+  }
+
 });
+
+// Bloquear selección de texto
 document.addEventListener("selectstart", e => e.preventDefault());
 
-console.log = () => {};
-console.warn = () => {};
-console.error = () => {};
+// Detectar DevTools abiertos
+(function() {
+  let devtoolsOpen = false;
 
-loadM3U();
+  setInterval(() => {
+    const widthThreshold = window.outerWidth - window.innerWidth > 160;
+    const heightThreshold = window.outerHeight - window.innerHeight > 160;
+
+    if (widthThreshold || heightThreshold) {
+      if (!devtoolsOpen) {
+        devtoolsOpen = true;
+        document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:40%'>Acceso restringido</h1>";
+      }
+    } else {
+      devtoolsOpen = false;
+    }
+  }, 1000);
+})();
+
+// Desactivar consola
+console.log = function() {};
+console.warn = function() {};
+console.error = function() {};
+
 </script>
 
 </body>
