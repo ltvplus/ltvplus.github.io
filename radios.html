@@ -240,13 +240,11 @@ function playCurrent() {
   const status = document.getElementById("status");
   const eq = document.getElementById("equalizer");
 
-  // limpiar HLS previo
   if (hls) {
     hls.destroy();
     hls = null;
   }
 
-  // detectar HLS
   if (s.url.includes(".m3u8")) {
 
     if (Hls.isSupported()) {
@@ -318,7 +316,6 @@ function nextStation() {
   selectStation(currentIndex);
 }
 
-// Control remoto Android TV
 document.addEventListener("keydown", (e) => {
   switch(e.key) {
     case "ArrowLeft":
@@ -341,57 +338,14 @@ document.addEventListener("keydown", (e) => {
 
 loadM3U();
 
-// ================= PROTECCIÓN BÁSICA =================
 
-// Bloquear clic derecho
+// ================= PROTECCIÓN SUAVE (NO ROMPE UX) =================
+
+// Solo esto si quieres algo básico
 document.addEventListener("contextmenu", e => e.preventDefault());
 
-// Bloquear teclas comunes de inspección
-document.addEventListener("keydown", function(e) {
-
-  // F12
-  if (e.key === "F12") {
-    e.preventDefault();
-  }
-
-  // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S / Ctrl+C
-  if (e.ctrlKey && (
-      e.key === "u" ||
-      e.key === "s" ||
-      e.key === "c" ||
-      (e.shiftKey && (e.key === "I" || e.key === "J"))
-  )) {
-    e.preventDefault();
-  }
-
-});
-
-// Bloquear selección de texto
-document.addEventListener("selectstart", e => e.preventDefault());
-
-// Detectar DevTools abiertos
-(function() {
-  let devtoolsOpen = false;
-
-  setInterval(() => {
-    const widthThreshold = window.outerWidth - window.innerWidth > 160;
-    const heightThreshold = window.outerHeight - window.innerHeight > 160;
-
-    if (widthThreshold || heightThreshold) {
-      if (!devtoolsOpen) {
-        devtoolsOpen = true;
-        document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:40%'>Acceso restringido</h1>";
-      }
-    } else {
-      devtoolsOpen = false;
-    }
-  }, 1000);
-})();
-
-// Desactivar consola
-console.log = function() {};
-console.warn = function() {};
-console.error = function() {};
+// opcional:
+// document.addEventListener("selectstart", e => e.preventDefault());
 
 </script>
 
