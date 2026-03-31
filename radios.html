@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <title>InRadio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- HLS + DASH -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/dashjs@latest/dist/dash.all.min.js"></script>
 
 <style>
 body {
@@ -27,7 +30,6 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-/* HEADER */
 .header {
   text-align: center;
   margin-bottom: 15px;
@@ -38,7 +40,6 @@ body {
   font-weight: bold;
 }
 
-/* DISPLAY */
 .display {
   display: flex;
   gap: 12px;
@@ -48,7 +49,6 @@ body {
   align-items: center;
 }
 
-/* COVER */
 .cover {
   width: 80px;
   height: 80px;
@@ -58,7 +58,6 @@ body {
   background-position: center;
 }
 
-/* INFO */
 .info {
   flex: 1;
   display: flex;
@@ -66,7 +65,6 @@ body {
   justify-content: center;
 }
 
-/* TEXTO */
 .now {
   font-size: 20px;
   font-weight: bold;
@@ -79,7 +77,6 @@ body {
   letter-spacing: 2px;
 }
 
-/* ECUALIZADOR GIF */
 .eq {
   width: 70px;
   height: 50px;
@@ -87,7 +84,6 @@ body {
   display: none;
 }
 
-/* CONTROLES */
 .controls {
   display: flex;
   justify-content: space-around;
@@ -112,7 +108,6 @@ body {
   transform: scale(1.1);
 }
 
-/* LISTA */
 .list {
   max-height: 200px;
   overflow-y: auto;
@@ -140,6 +135,11 @@ body {
 audio {
   display: none;
 }
+
+/* Protección extra */
+* {
+  user-select: none;
+}
 </style>
 </head>
 
@@ -151,9 +151,7 @@ audio {
     <div class="title">𝗥𝗔𝗗𝗜𝗢 𝗣𝗟𝗔𝗬𝗘𝗥 - 𝗟𝗜𝗠𝗔</div>
   </div>
 
-  <!-- DISPLAY -->
   <div class="display">
-
     <div class="cover" id="cover"></div>
 
     <div class="info">
@@ -162,17 +160,14 @@ audio {
     </div>
 
     <div class="eq" id="equalizer"></div>
-
   </div>
 
-  <!-- CONTROLES -->
   <div class="controls">
     <div class="btn" onclick="prevStation()">⏮</div>
     <div class="btn" onclick="stop()">⏹</div>
     <div class="btn" onclick="nextStation()">⏭</div>
   </div>
 
-  <!-- LISTA -->
   <div class="list" id="playlist"></div>
 
   <audio id="audio"></audio>
@@ -180,8 +175,11 @@ audio {
 
 <script>
 const urlM3U = "https://raw.githubusercontent.com/ltvplus/ltvplus.github.io/main/radiospe.m3u";
+
 let stations = [];
 let currentIndex = -1;
+let hls = null;
+let dash = null;
 
 async function loadM3U() {
   const res = await fetch(urlM3U);
@@ -192,11 +190,15 @@ async function loadM3U() {
     if (lines[i].includes("#EXTINF")) {
       const line = lines[i];
       const name = line.split(",").pop().trim();
+
       const logoMatch = line.match(/tvg-logo="(.*?)"/);
       const logo = logoMatch ? logoMatch[1] : "";
+
       const url = lines[i + 1]?.trim();
 
-      if (url) stations.push({ name, url, logo });
+      if (url && (url.startsWith("http://") || url.startsWith("https://"))) {
+        stations.push({ name, url, logo });
+      }
     }
   }
 
@@ -226,85 +228,144 @@ function selectStation(i) {
   cover.style.backgroundImage = s.logo ? `url(${s.logo})` : "none";
 
   document.querySelectorAll(".item").forEach((el, idx) => {
-    const isActive = idx === i;
-    el.classList.toggle("active", isActive);
-
-    if (isActive) {
-      el.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    }
+    el.classList.toggle("active", idx === i);
   });
 
   playCurrent();
 }
 
 function playCurrent() {
+  if (currentIndex === -1) return;
+
   const s = stations[currentIndex];
   const audio = document.getElementById("audio");
   const status = document.getElementById("status");
   const eq = document.getElementById("equalizer");
 
-  audio.src = s.url;
-  audio.play().then(() => {
+  // limpiar
+  if (hls) { hls.destroy(); hls = null; }
+  if (dash) { dash.reset(); dash = null; }
+
+  audio.pause();
+  audio.src = "";
+
+  const url = s.url.toLowerCase();
+
+  function activarUI() {
     status.style.opacity = "1";
     eq.style.display = "block";
-  }).catch(() => alert("Error al reproducir"));
+  }
 
-  audio.onerror = () => {
+  function errorUI() {
     status.style.opacity = "0.3";
     eq.style.display = "none";
-  };
+  }
+
+  function fallback() {
+    audio.src = s.url;
+    audio.play().then(activarUI).catch(errorUI);
+  }
+
+  // HLS
+  if (url.includes(".m3u8")) {
+
+    if (Hls.isSupported()) {
+      hls = new Hls();
+      hls.loadSource(s.url);
+      hls.attachMedia(audio);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        audio.play();
+        activarUI();
+      });
+      hls.on(Hls.Events.ERROR, fallback);
+
+    } else if (audio.canPlayType("application/vnd.apple.mpegurl")) {
+      audio.src = s.url;
+      audio.play().then(activarUI).catch(fallback);
+    } else {
+      fallback();
+    }
+
+  // DASH
+  } else if (url.includes(".mpd")) {
+
+    try {
+      dash = dashjs.MediaPlayer().create();
+      dash.initialize(audio, s.url, true);
+      activarUI();
+    } catch {
+      fallback();
+    }
+
+  // AUDIO NORMAL
+  } else {
+
+    if (
+      audio.canPlayType("audio/mpeg") ||
+      audio.canPlayType("audio/aac") ||
+      audio.canPlayType("audio/ogg")
+    ) {
+      audio.src = s.url;
+      audio.play().then(activarUI).catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  audio.onerror = errorUI;
 }
 
 function stop() {
   const audio = document.getElementById("audio");
-  const status = document.getElementById("status");
-  const eq = document.getElementById("equalizer");
-
   audio.pause();
   audio.src = "";
-  status.style.opacity = "0.4";
-  eq.style.display = "none";
+
+  if (hls) { hls.destroy(); hls = null; }
+  if (dash) { dash.reset(); dash = null; }
+
+  document.getElementById("status").style.opacity = "0.4";
+  document.getElementById("equalizer").style.display = "none";
 }
 
 function prevStation() {
+  if (stations.length === 0) return;
   currentIndex = (currentIndex - 1 + stations.length) % stations.length;
   selectStation(currentIndex);
 }
 
 function nextStation() {
+  if (stations.length === 0) return;
   currentIndex = (currentIndex + 1) % stations.length;
   selectStation(currentIndex);
 }
 
-// --- Soporte control remoto Android TV ---
+// Control remoto
 document.addEventListener("keydown", (e) => {
   switch(e.key) {
-    case "ArrowLeft":  // izquierda
-      prevStation();
-      e.preventDefault();
-      break;
-    case "ArrowRight": // derecha
-      nextStation();
-      e.preventDefault();
-      break;
-    case "Enter":      // botón OK/PlayPause
+    case "ArrowLeft": prevStation(); break;
+    case "ArrowRight": nextStation(); break;
+    case "Enter":
     case "MediaPlayPause":
-      if (document.getElementById("audio").paused) {
-        playCurrent();
-      } else {
-        stop();
-      }
-      e.preventDefault();
+      const audio = document.getElementById("audio");
+      if (audio.paused) playCurrent();
+      else stop();
       break;
-    case "MediaStop":  // botón Stop
-      stop();
-      e.preventDefault();
-      break;
+    case "MediaStop": stop(); break;
   }
 });
+
+// PROTECCIÓN
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("keydown", e => {
+  if (e.key === "F12") e.preventDefault();
+  if (e.ctrlKey && ["u","s","c"].includes(e.key.toLowerCase())) e.preventDefault();
+});
+document.addEventListener("selectstart", e => e.preventDefault());
+
+console.log = () => {};
+console.warn = () => {};
+console.error = () => {};
+
 loadM3U();
 </script>
 
