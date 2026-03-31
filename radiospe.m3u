@@ -32,7 +32,7 @@ https://mdstrm.com/audio/6839e1c82cc4c480fcd318dd/live.m3u8
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/Adjngp9Gps.png" group-title="Radios FM",98.1 Onda Cero
 https://mdstrm.com/audio/6598b65ab398c90871aff8cc/icecast.audio
 #EXTINF:-1 tvg-logo="https://cdn-radiotime-logos.tunein.com/s11082g.png" group-title="Radios FM",99.1 Doble Nueve
-http://conectperu.com:8002/index.mp3
+https://conectperu.com:7000/stream
 #EXTINF:-1 tvg-logo="https://static2.mytuner.mobi/media/tvos_radios/774/bethel-radio.702b0ca5.jpg" group-title="Radios FM",100.1 Bethel Radio
 https://alfa.betheltv.tv/radiobethel/1/icecast.audio
 #EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/xgbPEVhymn.png" group-title="Radios FM",101.1 Panamericana
