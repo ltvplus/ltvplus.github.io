@@ -38,7 +38,7 @@ https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/nativa.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/gMYg5TW2/JN19.png" group-title="Locales",JN19
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/jn19/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Z59KxkZ/TRIVU.png" group-title="Locales",Trivu
-https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/trivu.stream/playlist.m3u8
+https://www.chasquirouter.com/salida/sd/trivu.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PHbtL9k/ATVSUR.png" group-title="Locales",ATV Sur
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/atvsur.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/QSDQdFj/TELELIMA.png" group-title="Locales",Telelima
@@ -58,13 +58,13 @@ https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/MaticesTV.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/XZyfs2tn/DOBLE-C.png" group-title="Locales",Doble C
 https://live20.bozztv.com/giatv/giatv-doblec1/doblec1/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Q7mLf8jg/FOLKLORE-TV.png" group-title="Locales",Folklore TV
-https://tv.folkloretv.pe/folkloretv/playlist.m3u8
+https://play.folkloretv.pe/StreamSD/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/k6cfgCrK/FUEGO-TV.png" group-title="Región Costa",Fuego TV
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/fuegotv.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/wZrVFJW1/GAMARRA-CHANNEL.png" group-title="Región Costa",Gamarra TV
 https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/GamarraChannel/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/kV5160y4/CTV.png" group-title="Región Costa",CTV PERU
-https://ca2.inka.net.pe/ctvperu-live/playlist.m3u8
+https://ca2.oxira.net.pe/ctvperu-live/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/wZBXjwsL/NACIONALTV-PERU.png" group-title="Región Costa",Nacional Tv Perú
 https://play.agenciastreaming.com:8081/nacionaltv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Ld5mM6vY/NEOTV.png" group-title="Región Costa",NEOTV
@@ -72,9 +72,9 @@ https://bantel-cdn1.iptvperu.tv:1936/btnscrtn/DigitalTV/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Fkw5S2wK/RTVCALLAO.png" group-title="Región Costa",RTV CALLAO
 https://servilive.com:3757/live/regiontvlive.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/7tyP8MP6/COSMOS.png" group-title="Región Costa",Cosmos TV
-https://5790d294af2dc.streamlock.net/8134/8134/playlist.m3u8
+https://videoserver.tmcreativos.com:19360/tvcosmos/tvcosmos.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/ksjKMwBq/N-CANAL.png" group-title="Región Costa",N CANAL
-https://live-evg25.tv360.bitel.com.pe/bitel/ncanalSRT/chunks.m3u8
+https://play.agenciastreaming.com:8081/nuestrocanal/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/QFQRbQVR/SOLTV.png" group-title="Región Costa",SOL TV
 https://video03.logicahost.com.br/soltv/soltv/playlist.m3u
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Cp2PwPNJ/VISION-SUR.png" group-title="Región Costa",Visión Sur Televisión
@@ -82,7 +82,7 @@ https://ott1.hdlatam.tv/live_abr/webtvVisionSur/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/39M98nM2/AGROTV.png" group-title="Región Sierra",Agro TV
 https://play.agenciastreaming.com:8081/agrotv/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Vct8nfRM/AUNO.png" group-title="Región Sierra",AUNO
-https://live-evg25.tv360.bitel.com.pe/bitel/auno/chunks.m3u8
+https://play.agenciastreaming.com:8081/antena1/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/wZ6wQ3Y5/CNC-I.png" group-title="Región Sierra",CNC | Cajamarca
 https://7.innovatestream.pe:19360/cnctv/cnctv.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/7tFGbnbg/COSITEL.png" group-title="Región Sierra",Cositel Perú
@@ -96,9 +96,9 @@ https://play.agenciastreaming.com:8081/uniteltv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/qMDQPVJn/CADENATV.png" group-title="Región Sierra",CADENA TV
 https://tv.bitstreaming.net:3789/live/cdntvlive.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/CT51N9s/XTV.png" group-title="Región Sierra",XTV
-https://play.agenciastreaming.com:8081/xtv/playlist.m3u8
+https://live-evg11.tv360.bitel.com.pe/bitel/xtv/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/ztdhXYn/XTVPLUS.png" group-title="Región Sierra",XTV PLUS
-https://play.agenciastreaming.com:8081/xtvplus/playlist.m3u8
+https://live20.bozztv.com/giatv/giatv-xtvplus/xtvplus/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/vpcqvr8/AMAZONICA-TV.png" group-title="Región Selva",Amazónica TV
 https://videoserver.tmcreativos.com:19360/amazonicatv/amazonicatv.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/jkgR4Wdx/AUTENTICA-TV.png" group-title="Región Selva",Auténtica TV
@@ -107,8 +107,8 @@ https://live.obslivestream.com/autenticatvmux/playlist.m3u8
 https://srt.grupolimalive.com/cnc/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/5XM0GVzB/CRTV.png" group-title="Región Selva",CRTV
 https://live.obslivestream.com/crtvmux/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/pj4CMNxR/PLANETA.png" group-title="Región Selva",Planeta
-https://live.obslivestream.com/planetatv/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/qqqzw22/TLS.png" group-title="Región Selva",TLS
+https://7.innovatestream.pe:19360/tvnoticiassatipo/tvnoticiassatipo.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/gbLXnrr8/RIBERE-A.png" group-title="Región Selva",Ribereña
 https://7.innovatestream.pe:19360/riberenatv/riberenatv.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Nd4Nnfw1/SELVA-TV.png" group-title="Región Selva",SELVA TV
@@ -119,3 +119,63 @@ https://live.obslivestream.com/supercanal/playlist.m3u8
 https://live.obslivestream.com/telecolormux/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/fVTGcTVh/VIA-TELEVISION.png" group-title="Región Selva",Via Televisión
 https://videoserver.tmcreativos.com:19360/cablerasvia/cablerasvia.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/gM2SFsZvYx.png" group-title="Radios FM",88.3 Mágica
+https://mdstrm.com/audio/6839e28eb3fdc597ac2e2e43/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/tkVbkyCh6S.jpg" group-title="Radios FM",88.9 Felicidad
+https://mdstrm.com/audio/5fad731fcf097a068af3c8f7/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/WkzScZeaR2.jpg" group-title="Radios FM",89.7 RPP
+https://mdstrm.com/audio/5fab3416b5f9ef165cfab6e9/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/Z6ZZYZYE6R.jpg" group-title="Radios FM",90.5 La Zona
+https://mdstrm.com/audio/5fada54116646e098d97e6a5/live.m3u8
+#EXTINF:-1 tvg-logo="https://vitalfm.pe/wp-content/uploads/2024/04/logob.png" group-title="Radios FM",91.4 Vital FM
+https://stream.mediacorp.pe/icecast:/51.159.194.111:8002/VitalFM/2/icecast.audio
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_de_Radio_PBO.jpg/120px-Logo_de_Radio_PBO.jpg" group-title="Radios FM",91.9 PBO
+https://stream.zeno.fm/beu1evysezzuv
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/gScBgqwDEp.jpg" group-title="Radios FM",92.5 Studio 92
+https://mdstrm.com/audio/5fada553978fe1080e3ac5ea/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/VZd6pyTMTY.png" group-title="Radios FM",93.1 Ritmo Romántica
+https://mdstrm.com/audio/6839e2376607bdf6b2fcde27/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/2b7cvuLrCb.png" group-title="Radios FM",93.7 La Inolvidable
+https://mdstrm.com/audio/6839e24cf4eacd81ada4e6b4/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/c9naybugfeej.png" group-title="Radios FM",94.3 Radio Disney
+https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_PER_LM.mp3
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/4T9RuHnF42.png" group-title="Radios FM",94.9 La Karibeña
+https://karibena.egostreaming.pe/radio/6898b6e52d9e088a6de159/
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/tq4NUPk2pm.png" group-title="Radios FM",95.5 Exitosa
+https://neptuno-2-audio.mediaserver.digital/79525baf-b0f5-4013-a8bd-3c5c293c6561
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/9hxrjuhEGv.png" group-title="Radios FM",96.1 La Kalle
+https://lakalle.egostreaming.pe/radio/a7b9c3e4567f8d0123456789/
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/gxKy7JRwrW.jpg" group-title="Radios FM",96.7 Mega Mix
+https://mdstrm.com/audio/5fada56fe4e09508207a7951/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/dEg9AUE3CD.png" group-title="Radios FM",97.3 Moda
+https://mdstrm.com/audio/6839e1c82cc4c480fcd318dd/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/Adjngp9Gps.png" group-title="Radios FM",98.1 Onda Cero
+https://mdstrm.com/audio/6598b65ab398c90871aff8cc/icecast.audio
+#EXTINF:-1 tvg-logo="https://cdn-radiotime-logos.tunein.com/s11082g.png" group-title="Radios FM",99.1 Doble Nueve
+https://conectperu.com:7000/stream
+#EXTINF:-1 tvg-logo="https://static2.mytuner.mobi/media/tvos_radios/774/bethel-radio.702b0ca5.jpg" group-title="Radios FM",100.1 Bethel Radio
+https://alfa.betheltv.tv/radiobethel/1/icecast.audio
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/xgbPEVhymn.png" group-title="Radios FM",101.1 Panamericana
+https://mdstrm.com/audio/6598b62dded1380470f4e539/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/ns3bnMSxg9.jpg" group-title="Radios FM",102.1 Radio Oxígeno
+https://mdstrm.com/audio/5fab0687bcd6c2389ee9480c/live.m3u8
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/87/Radio_Am%C3%A9rica_Per%C3%BA_2021.png" group-title="Radios FM",104.7 Radio América
+https://panel.innovatestream.pe:10948/stream
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/c/c9/Radio_Nacional_Peru_2023.png" group-title="Radios FM",103.9 Radio Nacional
+https://cdnhd.iblups.com/hls/0773874174fd4eba8bb9eff741d190dc.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/gaF98DkLrX.png" group-title="Radios FM",106.3 Radiomar
+https://mdstrm.com/audio/6839e261d2efddf5bfbc2d3d/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/8fTKXj2Ynz.png" group-title="Radios FM",107.1 Nueva Q
+https://mdstrm.com/audio/6839e1f153fcf56d988d5943/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/tPMrZYueEe.png" group-title="Radios FM",107.7 Planeta
+https://mdstrm.com/audio/6839e274f40e6b9832e37633/live.m3u8
+#EXTINF:-1 group-title="Radios AM",580 Radio María
+https://dreamsiteradiocp4.com/proxy/rmperu2?mp=/stream
+#EXTINF:-1 group-title="Radios AM",620 Radio Ovación
+https://5949aa132c8fb.streamlock.net:1963/ipradioovacion1/liveovacion1radio/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/f7srrqlddlud.png" group-title="Radios Online",Cumbia Mix
+https://mdstrm.com/audio/6598b6ab95a235085823b24f/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/radios-150px/eLk5CpPL4E.jpg" group-title="Radios Online",Corazón
+https://mdstrm.com/audio/5fada514fc16c006bd63370f/live.m3u8
+#EXTINF:-1 tvg-logo="https://static.mytuner.mobi/media/tvos_radios/503/radio-panamericana-salsa-power.af97fbb9.png" group-title="Radios Online",Salsa Power
+https://mdstrm.com/audio/6598b751261d9e088a6deadd/icecast.m3u8
