@@ -3,420 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Visor M3U Profesional</title>
+<title>Probador M3U8 PASTEBIN</title>
 
 <style>
-
-body{
-    font-family: Arial, sans-serif;
-    background:#121212;
-    color:white;
-    margin:0;
-    padding:15px;
-}
-
-h1{
-    text-align:center;
-    margin-bottom:10px;
-}
-
-.note{
-    text-align:center;
-    color:#ccc;
-    margin-bottom:20px;
-}
-
-.note a{
-    color:#4fc3f7;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
+*{ box-sizing:border-box; }
+body{ margin:0; padding:15px; background:#121212; color:white; font-family:Arial,sans-serif; }
+.container{ max-width:1200px; margin:auto; }
+h1{ text-align:center; margin-bottom:10px; }
+.note{ text-align:center; color:#ccc; margin-bottom:20px; }
+.note a{ color:#4fc3f7; text-decoration:none; font-weight:bold; }
 
 input{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:6px;
-    margin-bottom:10px;
-    font-size:14px;
-    box-sizing:border-box;
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+margin-bottom:10px;
+font-size:14px;
+background:#1e1e1e;
+color:white;
 }
 
 button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:6px;
-    background:#2196f3;
-    color:white;
-    font-size:15px;
-    cursor:pointer;
-    margin-bottom:15px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+background:#2196f3;
+color:white;
+font-size:15px;
+cursor:pointer;
+margin-bottom:15px;
 }
 
-button:hover{
-    background:#1976d2;
-}
+button:hover{ background:#1976d2; }
+
+.status{ text-align:center; margin-bottom:15px; color:#ccc; }
 
 table{
-    width:100%;
-    border-collapse:collapse;
-    background:#1e1e1e;
+width:100%;
+border-collapse:collapse;
+background:#1e1e1e;
 }
 
 th, td{
-    border:1px solid #333;
-    padding:8px;
-    font-size:12px;
-    text-align:center;
+border:1px solid #333;
+padding:8px;
+text-align:center;
+font-size:12px;
 }
 
-th{
-    background:#222;
-}
+th{ background:#222; }
 
-tr:nth-child(even){
-    background:#181818;
-}
+tr:nth-child(even){ background:#181818; }
 
-img{
-    max-width:60px;
-    border-radius:4px;
-}
+img{ width:50px; border-radius:4px; }
 
-.action-link{
-    color:#4fc3f7;
-    text-decoration:none;
-    font-weight:bold;
-}
+.action-link{ color:#4fc3f7; text-decoration:none; font-weight:bold; }
 
 .copy-btn{
-    background:#4caf50;
-    padding:6px 8px;
-    border:none;
-    color:white;
-    border-radius:4px;
-    cursor:pointer;
+background:#4caf50;
+border:none;
+color:white;
+padding:6px 8px;
+border-radius:4px;
+cursor:pointer;
 }
 
-.copy-btn:hover{
-    background:#388e3c;
-}
+.copy-btn:hover{ background:#388e3c; }
 
-.status{
-    margin:10px 0;
-    text-align:center;
-    color:#ccc;
-}
+.loading{ animation:pulse 1s infinite; }
 
+@keyframes pulse{
+0%{ opacity:1; }
+50%{ opacity:0.5; }
+100%{ opacity:1; }
+}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<h1>Visor M3U Profesional</h1>
+<h1>Probador M3U8 PASTEBIN</h1>
 
 <div class="note">
-    Recomendado instalar
-    <a href="https://play.google.com/store/apps/details?id=is.xyz.mpv" target="_blank">
-        MPV Player
-    </a>
+Se debe instalar la app
+<a href="https://play.google.com/store/apps/details?id=is.xyz.mpv" target="_blank"> MPV Player </a>
 </div>
 
-<input
-    type="text"
-    id="urlInput"
-    placeholder="Pega URL M3U o M3U8"
-/>
+<input type="text" id="urlInput" placeholder="Pegar URL aquí" />
+<button onclick="loadFromURL()"> Cargar Lista </button>
 
-<button onclick="loadFromURL()">
-    Cargar Lista
-</button>
+<div class="status" id="status"> Esperando lista... </div>
 
-<div class="status" id="status">
-    Esperando lista...
-</div>
+<!-- 🔴 FILTRO AÑADIDO (SIN TOCAR TU LÓGICA) -->
+<input type="text" id="filterInput" placeholder="Filtrar canales por nombre..." oninput="filterChannels()" />
 
 <table>
-
 <thead>
 <tr>
-    <th>Nombre</th>
-    <th>Grupo</th>
-    <th>Logo</th>
-    <th>Abrir MPV</th>
-    <th>Copiar</th>
+<th>Nombre</th>
+<th>Grupo</th>
+<th>Logo</th>
+<th>Abrir MPV</th>
+<th>Copiar</th>
 </tr>
 </thead>
-
 <tbody id="channelsTable"></tbody>
-
 </table>
 
 </div>
 
 <script>
 
+/* ====================================================
+FETCH CON TIMEOUT
+==================================================== */
+async function fetchWithTimeout(resource, options = {}) {
+const { timeout = 15000 } = options;
+const controller = new AbortController();
+const id = setTimeout(() => controller.abort(), timeout);
+
+const response = await fetch(resource, { ...options, signal: controller.signal });
+
+clearTimeout(id);
+return response;
+}
+
+/* ====================================================
+CARGAR IPTV
+==================================================== */
 async function loadFromURL(){
+const url = document.getElementById("urlInput").value.trim();
+const status = document.getElementById("status");
 
-    const url = document.getElementById("urlInput").value.trim();
-
-    const status = document.getElementById("status");
-
-    if(!url){
-
-        alert("Ingresa una URL válida");
-        return;
-
-    }
-
-    status.innerHTML = "Cargando lista...";
-
-    try{
-
-        /*
-        PROXIES ALTERNATIVOS
-        */
-
-        const proxies = [
-
-            "https://api.allorigins.win/raw?url=",
-            "https://corsproxy.io/?",
-            "https://cors-anywhere.herokuapp.com/"
-
-        ];
-
-        let data = null;
-
-        for(const proxy of proxies){
-
-            try{
-
-                const finalURL = proxy + encodeURIComponent(url);
-
-                const response = await fetch(finalURL,{
-
-                    method:"GET",
-
-                    headers:{
-                        "Accept":"*/*"
-                    }
-
-                });
-
-                if(!response.ok){
-                    continue;
-                }
-
-                const text = await response.text();
-
-                if(text.includes("#EXTM3U")){
-
-                    data = text;
-                    break;
-
-                }
-
-            }
-            catch(e){
-
-                console.log("Proxy falló:", proxy);
-
-            }
-
-        }
-
-        if(!data){
-
-            status.innerHTML = "No se pudo cargar la lista.";
-
-            alert(
-                "El servidor IPTV probablemente bloquea CORS.\n\n" +
-                "Necesitas usar backend PHP o NodeJS."
-            );
-
-            return;
-
-        }
-
-        parseM3U(data);
-
-        status.innerHTML = "Lista cargada correctamente.";
-
-    }
-    catch(error){
-
-        console.error(error);
-
-        status.innerHTML = "Error cargando lista.";
-
-        alert("Error al cargar la lista.");
-
-    }
-
+if(!url){
+alert("Ingresa URL válida");
+return;
 }
 
+status.innerHTML = "Intentando cargar lista...";
+status.classList.add("loading");
+
+const attempts = [
+url,
+"https://api.allorigins.win/raw?url=" + encodeURIComponent(url),
+"https://api.allorigins.win/raw?url=" + url,
+"https://corsproxy.io/?" + url,
+"https://thingproxy.freeboard.io/fetch/" + url,
+"https://yacdn.org/proxy/" + url
+];
+
+let loaded = false;
+
+for(const finalURL of attempts){
+try{
+console.log("Intentando:", finalURL);
+
+const response = await fetchWithTimeout(finalURL,{
+method:"GET",
+mode:"cors",
+cache:"no-cache",
+headers:{ "Accept":"*/*" },
+timeout:15000
+});
+
+if(!response.ok) continue;
+
+let data = await response.text();
+
+data = data.replace(/\r/g,"").trim();
+
+if(data.includes("#EXTM3U") || data.includes("#EXTINF")){
+parseM3U(data);
+status.innerHTML = "Lista cargada correctamente";
+status.classList.remove("loading");
+loaded = true;
+break;
+}
+
+}catch(error){
+console.log("Falló:", finalURL);
+}
+}
+
+if(!loaded){
+status.innerHTML = "No se pudo cargar la lista";
+status.classList.remove("loading");
+alert("Servidor IPTV bloqueó navegador/CORS.");
+}
+}
+
+/* ====================================================
+PARSEAR M3U
+==================================================== */
 function parseM3U(data){
+const lines = data.split('\n');
+const tbody = document.getElementById("channelsTable");
+tbody.innerHTML = "";
 
-    const lines = data.split('\n');
+let currentChannel = null;
+let total = 0;
 
-    const tbody = document.getElementById("channelsTable");
+lines.forEach(line => {
+line = line.trim();
+if(!line) return;
 
-    tbody.innerHTML = "";
+if(line.startsWith("#EXTINF:")){
+const nameMatch = line.split(",")[1] || "Sin nombre";
+const groupMatch = line.match(/group-title="(.*?)"/);
+const logoMatch = line.match(/tvg-logo="(.*?)"/);
 
-    let currentChannel = null;
-
-    let total = 0;
-
-    lines.forEach(line => {
-
-        line = line.trim();
-
-        if(!line){
-            return;
-        }
-
-        /*
-        INFO CANAL
-        */
-
-        if(line.startsWith("#EXTINF:")){
-
-            const nameMatch = line.split(",")[1] || "Sin nombre";
-
-            const groupMatch = line.match(/group-title="(.*?)"/);
-
-            const logoMatch = line.match(/tvg-logo="(.*?)"/);
-
-            currentChannel = {
-
-                name: nameMatch.trim(),
-
-                group: groupMatch
-                    ? groupMatch[1]
-                    : "Sin grupo",
-
-                logo: logoMatch
-                    ? logoMatch[1]
-                    : "",
-
-                url: ""
-
-            };
-
-        }
-
-        /*
-        URL STREAM
-        */
-
-        else if(
-            !line.startsWith("#")
-            && currentChannel
-        ){
-
-            currentChannel.url = line;
-
-            let scheme = "http";
-
-            if(line.startsWith("https://")){
-
-                scheme = "https";
-
-            }
-
-            const cleanUrl = line.replace(
-                /^https?:\/\//,
-                ''
-            );
-
-            const intentUrl =
-                `intent://${cleanUrl}` +
-                `#Intent;package=is.xyz.mpv;type=video/*;scheme=${scheme};end`;
-
-            const row = document.createElement("tr");
-
-            row.innerHTML = `
-
-                <td>${escapeHTML(currentChannel.name)}</td>
-
-                <td>${escapeHTML(currentChannel.group)}</td>
-
-                <td>
-
-                    ${
-                        currentChannel.logo
-                        ? `<img src="${currentChannel.logo}" loading="lazy">`
-                        : 'No logo'
-                    }
-
-                </td>
-
-                <td>
-
-                    <a
-                        class="action-link"
-                        href="${intentUrl}"
-                    >
-                        Abrir
-                    </a>
-
-                </td>
-
-                <td>
-
-                    <button
-                        class="copy-btn"
-                        onclick="copyToClipboard('${currentChannel.url}')"
-                    >
-                        Copiar
-                    </button>
-
-                </td>
-
-            `;
-
-            tbody.appendChild(row);
-
-            total++;
-
-        }
-
-    });
-
-    document.getElementById("status").innerHTML =
-        `Canales cargados: ${total}`;
-
+currentChannel = {
+name: nameMatch.trim(),
+group: groupMatch ? groupMatch[1] : "Sin grupo",
+logo: logoMatch ? logoMatch[1] : "",
+url:""
+};
 }
 
+else if(!line.startsWith("#") && currentChannel){
+currentChannel.url = line;
+
+let scheme = "http";
+if(line.startsWith("https://")) scheme = "https";
+
+const cleanUrl = line.replace(/^https?:\/\//, '');
+
+const intentUrl = `intent://${cleanUrl}#Intent;package=is.xyz.mpv;type=video/*;scheme=${scheme};end;`;
+
+const row = document.createElement("tr");
+
+row.innerHTML =
+`<td>${escapeHTML(currentChannel.name)}</td>
+<td>${escapeHTML(currentChannel.group)}</td>
+<td>${ currentChannel.logo ? `<img src="${currentChannel.logo}" loading="lazy">` : "No logo" }</td>
+<td><a class="action-link" href="${intentUrl}">Abrir</a></td>
+<td><button class="copy-btn" onclick="copyToClipboard('${currentChannel.url}')">Copiar</button></td>`;
+
+tbody.appendChild(row);
+total++;
+}
+});
+
+document.getElementById("status").innerHTML = `Canales cargados: ${total}`;
+}
+
+/* ====================================================
+COPIAR URL
+==================================================== */
 function copyToClipboard(text){
-
-    navigator.clipboard.writeText(text)
-    .then(() => {
-
-        alert("URL copiada");
-
-    });
-
+navigator.clipboard.writeText(text).then(()=>{
+alert("URL copiada");
+});
 }
 
+/* ====================================================
+ESCAPAR HTML
+==================================================== */
 function escapeHTML(str){
+return str
+.replace(/&/g,"&")
+.replace(/</g,"<")
+.replace(/>/g,">")
+.replace(/"/g,""")
+.replace(/'/g,"'");
+}
 
-    return str
-        .replace(/&/g,"&")
-        .replace(/</g,"<")
-        .replace(/>/g,">")
-        .replace(/"/g,""")
-        .replace(/'/g,"'");
+/* ====================================================
+🔴 FILTRO POR NOMBRE (NUEVO - NO MODIFICA TU FLUJO)
+==================================================== */
+function filterChannels(){
+const filter = document.getElementById("filterInput").value.toLowerCase();
+const rows = document.querySelectorAll("#channelsTable tr");
 
+rows.forEach(row => {
+const nameCell = row.cells[0];
+if(!nameCell) return;
+
+const name = nameCell.textContent.toLowerCase();
+row.style.display = name.includes(filter) ? "" : "none";
+});
 }
 
 </script>
