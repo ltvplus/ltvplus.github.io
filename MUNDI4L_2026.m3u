@@ -1,0 +1,51 @@
+#EXTM3U
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ARGENTINA",TELEFE
+http://8.243.126.131:8000/play/a0mc/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ARGENTINA",TyC Sports
+http://186.148.196.82:8001/play/a0ar
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="CHILE",CHV HD
+http://190.119.168.226:4000/play/a0dk/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COLOMBIA",Win Sports
+http://181.78.67.171:8000/play/a0iq/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COLOMBIA",Win Sports+ HD
+http://181.119.86.1:8000/play/a0d4
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COLOMBIA",Caracol TV
+http://181.119.86.1:8000/play/a0dn
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ECUADOR",Teleamazonas
+http://181.78.67.171:8000/play/a08t/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="PERU",América HD
+http://8.243.126.131:8000/play/a01q/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="VENEZUELA",Televen
+http://38.183.213.254:8000/play/a00j/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ESPAÑA",La 1 UHD
+http://176.65.146.99:8401/play/a094/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="DGO",DSPORTS
+http://181.64.27.65:8000/play/a0cq/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="DGO",DSPORTS 2
+http://177.53.152.117:8000/play/a07c/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="DGO",DSPORTS+
+http://181.64.27.65:8000/play/a0dq/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COSTA RICA",FOX
+http://190.105.128.198:5800/play/a05p/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COSTA RICA",Teletica 7
+http://200.229.147.142:8000/play/a06r/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Tigo Sports
+http://45.5.119.43:4000/play/a05t/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 3
+http://186.151.95.60:8000/play/ca08/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 7
+http://168.228.44.241:9998/play/a042/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 11
+http://186.151.95.60:8000/play/c09/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="HONDURAS",Telecadena
+http://190.105.128.198:5800/play/a08n/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="HONDURAS",Canal 3 Telesistemas
+http://190.105.128.198:5800/play/a04z/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="HONDURAS",Canal 5
+http://190.105.128.198:5800/play/a01b/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="MEXICO",Canal 5
+http://168.228.44.241:9998/play/a0cy/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="MEXICO",Azteca 7
+http://45.5.119.43:4000/play/a026/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="MEXICO",Canal 9 HD
+http://ak-47scan.dyndns.tv:25461/live/Juan823/XrrdxQgVwb2E/73536.m3u8
