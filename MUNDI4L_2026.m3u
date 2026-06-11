@@ -34,7 +34,7 @@ http://45.5.119.43:4000/play/a05t/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 3
 http://186.151.95.60:8000/play/ca08/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 7
-http://45.171.64.30:8800/play/a07j
+http://190.83.9.222:8000/play/ca103/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 11
 http://186.151.95.60:8000/play/c09/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="HONDURAS",Telecadena
