@@ -2,15 +2,15 @@
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ARGENTINA",TELEFE
 http://8.243.126.131:8000/play/a0mc/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ARGENTINA",TyC Sports
-http://186.148.196.82:8001/play/a0ar
+http://cabletacna.iptvperu.tv:8001/play/a0ar
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="CHILE",CHV HD
 http://190.119.168.226:4000/play/a0dk/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COLOMBIA",Win Sports
 http://181.78.67.171:8000/play/a0iq/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COLOMBIA",Win Sports+ HD
-http://181.119.86.1:8000/play/a0d4
+http://190.61.42.218:9000/play/a01s/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="COLOMBIA",Caracol TV
-http://181.119.86.1:8000/play/a0dn
+http://8.243.126.131:8000/play/a0le/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="ECUADOR",Teleamazonas
 http://181.78.67.171:8000/play/a08t/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="PERU",América HD
@@ -34,7 +34,7 @@ http://45.5.119.43:4000/play/a05t/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 3
 http://186.151.95.60:8000/play/ca08/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 7
-http://168.228.44.241:9998/play/a042/index.m3u8
+http://45.171.64.30:8800/play/a07j
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="GUATEMALA",Canal 11
 http://186.151.95.60:8000/play/c09/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="HONDURAS",Telecadena
