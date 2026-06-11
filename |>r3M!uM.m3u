@@ -1,11 +1,131 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Servidor 1",L1MAX
-http://38.7.101.90:8000/play/a1es/index.m3u8
-#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Servidor 2",L1MAX
-http://181.224.226.128:5000/play/a001/index.m3u8
-#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Servidor 3",L1MAX
-http://38.158.233.150:8000/play/a0vu/index.m3u8
-#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Servidor 4",L1MAX
-http://190.119.187.91:8050/play/a0ne/index.m3u8
-#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="Servidor 5",L1MAX
-http://190.117.20.38:8000/play/a08c/index.m3u8
+#EXTINF:-1 tvg-id="Willax.pe" tvg-logo="https://i.ibb.co/MD2JBPnZ/WILLAX.png" group-title="Nacionales",WILLAX HD
+http://8.243.126.131:8000/play/a01s/index.m3u8
+#EXTINF:-1 tvg-id="Latina.pe" tvg-logo="https://i.ibb.co/9kKJsj3g/LATINA.png" group-title="Nacionales",LATINA HD
+http://8.243.126.131:8000/play/a001/index.m3u8
+#EXTINF:-1 tvg-id="RppTV.pe" tvg-logo="https://i.ibb.co/5gzhfrDs/RPP.png" group-title="Nacionales",RPP HD
+http://200.60.97.100:28888/play/a08k/index.m3u8
+#EXTINF:-1 tvg-id="AmericaTelevision.pe" tvg-logo="https://i.ibb.co/KpjfT12j/AMERICA.png" group-title="Nacionales",AMERICA HD
+http://8.243.126.131:8000/play/a01q/index.m3u8
+#EXTINF:-1 tvg-id="PanamericanaTelevision.pe" tvg-logo="https://i.ibb.co/d46jNSvg/PANAMERICANA.png" group-title="Nacionales",PANAMERICANA
+http://8.243.126.131:8000/play/a01r/index.m3u8
+#EXTINF:-1 tvg-id="ExitosaTV.pe" tvg-logo="https://i.ibb.co/1Y8hWQ90/EXITOSA.png" group-title="Nacionales",EXITOSA HD
+http://8.243.126.131:8000/play/a01w/index.m3u8
+#EXTINF:-1 tvg-id="TVPeru.pe" tvg-logo="https://i.ibb.co/9k59dSMX/TVPERU.png" group-title="Nacionales",TV PERU HD
+http://8.243.126.131:8000/play/a04k/index.m3u8
+#EXTINF:-1 tvg-id="Atv+.pe" tvg-logo="https://i.ibb.co/0kwJkM4/ATVPLUS.png" group-title="Nacionales",ATV+ NOTICIAS
+http://8.243.126.131:8000/play/a04n/index.m3u8
+#EXTINF:-1 tvg-id="Atv.pe" tvg-logo="https://i.ibb.co/7dZvdnMf/ATV.png" group-title="Nacionales",ATV HD
+http://8.243.126.131:8000/play/a01z/index.m3u8
+#EXTINF:-1 tvg-id="VivaTV.pe" tvg-logo="https://i.ibb.co/tM4vrQpL/VIVATV.png" group-title="Locales",Viva TV HD
+http://200.60.97.100:28888/play/a07r/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/LdZdbgBV/LATELE.png" group-title="Locales",LA TELE HD
+http://8.243.126.131:8000/play/a01v/index.m3u8
+#EXTINF:-1 tvg-id="UsmpTV.pe" tvg-logo="https://i.ibb.co/0j3TJ1g2/USMPTV.png" group-title="Locales",USMPTV
+http://200.60.97.100:28888/play/a07q/index.m3u8
+#EXTINF:-1 tvg-id="GlobalTv.pe" tvg-logo="https://i.ibb.co/DgPwwHS1/GLOBAL.png" group-title="Nacionales",Global HD
+http://179.51.160.246:8888/play/a007/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/wF0Z9XzT/JUSTICIA-TV.png" group-title="Locales",JUSTICIA TV
+http://179.51.160.246:8888/play/a02n/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Y7n0n14L/KARIBENA.png" group-title="Locales",KARIBEÑA HD
+http://200.60.97.100:28888/play/a07b/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/DfxDLp84/PBO.png" group-title="Locales",PBO HD
+http://200.60.97.100:28888/play/a0ch/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/P7DjsVn/CONECTA2-TV.png" group-title="Locales",CONECTA2 TV
+http://179.51.160.246:8888/play/a02o/index.m3u8
+#EXTINF:-1 tvg-id="NativaTv.pe" tvg-logo="https://i.ibb.co/qFpVP3pL/NATIVA.png" group-title="Locales",NATIVA
+http://201.218.140.30:9000/play/asds
+#EXTINF:-1 tvg-id="JN19TELEJUAN.pe" tvg-logo="https://i.ibb.co/gMYg5TW2/JN19.png" group-title="Locales",JN19
+http://148.222.230.201:8000/play/a0ok/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Z59KxkZ/TRIVU.png" group-title="Locales",TRIVU HD
+http://200.60.97.100:28888/play/a097/index.m3u8
+#EXTINF:-1 tvg-id="AtvSur.pe" tvg-logo="https://i.ibb.co/PHbtL9k/ATVSUR.png" group-title="Locales",ATV SUR
+http://45.173.201.51:4000/play/a0oc/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/QSDQdFj/TELELIMA.png" group-title="Locales",Telelima
+http://201.218.140.30:9000/play/a01l
+#EXTINF:-1 tvg-logo="https://i.ibb.co/YJNnf2z/BHTV.png" group-title="Locales",BHTV
+https://sc1.wasidata.com/Bhtv/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/FqdbN1TS/OVACION.png" group-title="Locales",Ovación
+https://5c3fb01839654.streamlock.net:1963/iptvovacion2/liveovacion2tv/index.m3u8
+#EXTINF:-1 tvg-id="Bethel.pe" tvg-logo="https://i.ibb.co/mC3Qb1fT/BETHELTV.png" group-title="Locales",BETHEL TV
+http://8.243.126.131:8000/play/a04x/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Ng86jy1t/ODTV.png" group-title="Locales",ODTV
+https://live.ondadigitaltv.com/ODTV/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/ym4TnB7m/ODTV2.png" group-title="Locales",ODTV2
+https://live.ondadigitaltv.com/ODTV2/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/XZyfs2tn/DOBLE-C.png" group-title="Locales",DOBLE C TELEVISION
+http://148.222.230.197:8000/play/a09j/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Q7mLf8jg/FOLKLORE-TV.png" group-title="Locales",Folklore TV
+http://201.218.140.30:9000/play/a0au
+#EXTINF:-1 tvg-id="IPe.pe" tvg-logo="https://i.ibb.co/B513TXpt/CANAL-IPE.png" group-title="Locales",Canal IPE
+http://8.243.126.131:8000/play/a04p/index.m3u8
+#EXTINF:-1 tvg-id="DiscoveryKids.pe" tvg-logo="https://i.ibb.co/kgHfwbJf/DISCOVERY-KIDS.png" group-title="Infantiles",Discovery Kids HD
+http://168.228.44.241:9998/play/a00r/index.m3u8
+#EXTINF:-1 tvg-id="CartoonNetwork.pe" tvg-logo="https://i.ibb.co/WvWBk8Nt/CARTOON-NETWORK.png" group-title="Infantiles",Cartoon Network HD
+http://179.51.160.246:8888/play/a01t/index.m3u8
+#EXTINF:-1 tvg-id="Cartoonito.pe" tvg-logo="https://i.ibb.co/Xx05Yf6n/CARTOONITO.png" group-title="Infantiles",Cartoonito
+http://179.51.160.246:8888/play/a025/index.m3u8
+#EXTINF:-1 tvg-id="DisneyChannel.pe" tvg-logo="https://i.ibb.co/B27b6NCT/DISNEY-CHANNEL.png" group-title="Infantiles",Disney Channel HD
+http://181.13.252.102:8000/play/a02r/index.m3u8
+#EXTINF:-1 tvg-id="DisneyJunior.pe" tvg-logo="https://i.ibb.co/b5SPh8Xn/DISNEY-JR.png" group-title="Infantiles",Disney Junior HD
+http://200.60.97.100:28888/play/a07x/index.m3u8
+#EXTINF:-1 tvg-id="Nickelodeon.pe" tvg-logo="https://i.ibb.co/xt3Fjv4f/NICKELODEON.png" group-title="Infantiles",Nickelodeon HD
+http://181.13.252.102:8000/play/a04z/index.m3u8
+#EXTINF:-1 tvg-id="NickJr.pe" tvg-logo="https://i.ibb.co/7Jp3RPxG/NICK-JR.png" group-title="Infantiles",Nick JR.
+http://179.51.160.246:8888/play/a00x/index.m3u8
+#EXTINF:-1 tvg-id="AdultSwim.pe" tvg-logo="https://i.ibb.co/TDS338xS/ADULTSWIM.png" group-title="Infantiles",Adult Swim
+http://181.78.17.52:8000/play/a0qe/index.m3u8
+#EXTINF:-1 tvg-id="bitMe HD.uy" tvg-logo="https://i.ibb.co/QvXMrcWW/BITME.png" group-title="Infantiles",BitMe
+http://200.115.120.1:8000/play/ca012/index.m3u8
+#EXTINF:-1 tvg-id="Tooncast.co" tvg-logo="https://i.ibb.co/Kp7X6cqG/TOONCAST.png" group-title="Infantiles",Tooncast
+http://181.78.17.52:8000/play/a0rh/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",TELEFE | AR
+http://8.243.126.131:8000/play/a0mc/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",TyC Sports | AR
+http://181.176.155.7:8090/play/a1pb/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",CHV HD | CL
+http://190.119.168.226:4000/play/a0dk/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Win Sports | CO
+http://181.78.67.171:8000/play/a0iq/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Win Sports+ HD | CO
+http://190.61.42.218:9000/play/a01s/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Caracol TV | CO
+http://8.243.126.131:8000/play/a0le/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Teleamazonas | EC
+http://181.78.67.171:8000/play/a08t/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",América HD | PE
+http://8.243.126.131:8000/play/a01q/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Televen | VE
+http://38.183.213.254:8000/play/a00j/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",La 1 UHD | ES
+http://176.65.146.99:8401/play/a094/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",DSPORTS | DGO
+http://181.64.27.65:8000/play/a0cq/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",DSPORTS 2 | DGO
+http://177.53.152.117:8000/play/a07c/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",DSPORTS+ | DGO
+http://181.64.27.65:8000/play/a0dq/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",FOX | CR
+http://190.105.128.198:5800/play/a05p/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Teletica 7 | CR
+http://200.229.147.142:8000/play/a06r/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Tigo Sports | GT
+http://45.5.119.43:4000/play/a05t/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 3 | GT
+http://186.151.95.60:8000/play/ca08/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 7 | GT
+http://190.83.9.222:8000/play/ca103/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 11 | GT
+http://186.151.95.60:8000/play/c09/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Telecadena | HN
+http://190.105.128.198:5800/play/a08n/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 3 Telesistemas | HN
+http://190.105.128.198:5800/play/a04z/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 5 | HN
+http://190.105.128.198:5800/play/a01b/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 5 | MX
+http://168.228.44.241:9998/play/a0cy/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Azteca 7 | MX
+http://45.5.119.43:4000/play/a026/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",Canal 9 HD | MX
+http://ak-47scan.dyndns.tv:25461/live/Juan823/XrrdxQgVwb2E/73536.m3u8
