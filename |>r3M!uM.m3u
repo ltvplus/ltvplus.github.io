@@ -166,17 +166,113 @@ http://179.51.160.246:8888/play/a02h/index.m3u8
 #EXTINF:-1 tvg-id="RussiaToday.pe" tvg-logo="https://i.ibb.co/84Kp2M8t/RT.png" group-title="Noticias",RT en Español
 http://148.222.230.197:8000/play/a0lr/index.m3u8
 #EXTINF:-1 tvg-id="BbcNews.pe" tvg-logo="https://bbcnews.bbcstudios.com/media/6203/bbc_news_logo.png" group-title="Noticias",BBC News
-http://190.119.168.226:4000/play/a0bj/index.m3u8
+http://45.5.116.228:8000/play/a06s/index.m3u8
 #EXTINF:-1 tvg-id="CnnEEUU.pe" tvg-logo="https://i.ibb.co/mVSvQHPZ/CNN-INTERNACIONAL.png" group-title="Noticias",CNN Internacional
 http://168.228.44.241:9998/play/a00m/index.m3u8
 #EXTINF:-1 tvg-id="CNN en Español.co" tvg-logo="https://i.ibb.co/SDX578wG/CNN-ESPANOL.png" group-title="Noticias",CNN Español
-http://200.4.241.75:5050/play/a09y/index.m3u8
+http://190.14.10.19:16000/play/a02u/index.m3u8
 #EXTINF:-1 tvg-id="CanalN.pe" tvg-logo="https://i.ibb.co/TDspfh7D/CANAL-N.png" group-title="Noticias",CANAL N
 http://181.176.155.7:8090/play/a1q2/index.m3u8
 #EXTINF:-1 tvg-id="LATINA NOTICIAS.pe" tvg-logo="https://i.ibb.co/Vc9PY9dt/LATINA-NOTICIAS.png" group-title="Noticias",Latina Noticias
 https://jireh-3-hls-video-us-isp.dps.live/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latinanoticias/latinanoticias.smil/latinanoticias/livestream0/chunks.m3u8
 #EXTINF:-1 tvg-logo="https://wotta.moderntv.eu/cache/upload/24h.png" group-title="Noticias",24h
 https://ztnr.rtve.es/ztnr/1694255.m3u8
+#EXTINF:-1 tvg-id="History.pe" tvg-logo="https://i.ibb.co/DHGkj8np/HISTORY.png" group-title="Cultura",History HD
+http://179.51.160.246:8888/play/a00p/index.m3u8
+#EXTINF:-1 tvg-id="H2.mx" tvg-logo="https://i.ibb.co/0pKrrZgg/HISTORY2.png" group-title="Cultura",History 2 HD
+http://8.243.126.131:8000/play/a05u/index.m3u8
+#EXTINF:-1 tvg-id="NationalGeographic.pe" tvg-logo="https://i.ibb.co/yFgTQDkT/NATIONAL-GEOGRAPHIC.png" group-title="Cultura",Nat Geo HD
+http://45.5.116.228:8000/play/a0kk/index.m3u8
+#EXTINF:-1 tvg-id="AnimalPlanet.pe" tvg-logo="https://i.ibb.co/5hf2dGVj/ANIMAL-PLANET.png" group-title="Cultura",Animal Planet HD
+http://190.14.10.19:16000/play/a09d/index.m3u8
+#EXTINF:-1 tvg-id="LoveNature.pe" tvg-logo="https://i.ibb.co/WpkNbq3w/LOVE-NATURE.png" group-title="Cultura",LOVE NATURE
+http://200.115.120.1:8000/play/ca059/index.m3u8
+#EXTINF:-1 tvg-id="DiscoveryChannel.pe" tvg-logo="https://i.ibb.co/hJZ2g9Qw/DISCOVERY.png" group-title="Cultura",Discovery Channel HD
+http://190.14.10.19:16000/play/a07y/index.m3u8
+#EXTINF:-1 tvg-id="InvestigationDiscovery.pe" tvg-logo="https://i.ibb.co/ds4TXXNH/DISCOVERY-ID.png" group-title="Cultura",Discovery ID HD
+http://179.51.160.246:8888/play/a021/index.m3u8
+#EXTINF:-1 tvg-id="DISCOVERY SCIENCE.ve" tvg-logo="https://i.ibb.co/sJHfh850/DISCOVERY-SCIENCE.png" group-title="Cultura",Discovery Science
+http://179.51.160.246:8888/play/a022/index.m3u8
+#EXTINF:-1 tvg-id="DISCOVERY HD THEATER.ve" tvg-logo="https://i.ibb.co/1tGYkZRR/DISCOVERY-THEATHER.png" group-title="Cultura",Discovery Theater HD
+http://45.5.116.228:8000/play/a061/index.m3u8
+#EXTINF:-1 tvg-id="Discovery World.co" tvg-logo="https://i.ibb.co/8DzNy8c2/DISCOVERY-WORLD.png" group-title="Cultura",Discovery World HD
+http://8.243.126.131:8000/play/a05x/index.m3u8
+#EXTINF:-1 tvg-id="DISCOVERY TURBO.ve" tvg-logo="https://i.ibb.co/Gvz1vjfr/DISCOVERY-TURBO.png" group-title="Variedades",Discovery Turbo
+http://179.51.160.246:8888/play/a01s/index.m3u8
+#EXTINF:-1 tvg-id="DISCOVERY HOME AND HEALTH.ve" tvg-logo="https://i.ibb.co/5xX0xYwh/DISCOVERY-H-H.png" group-title="Variedades",Home & Health HD
+http://45.5.117.99:8000/play/a0hw/index.m3u8
+#EXTINF:-1 tvg-id="TLC.pe" tvg-logo="https://i.ibb.co/pr4HxPG7/TLC.png" group-title="Variedades",TLC
+http://190.14.10.19:16000/play/a06g/index.m3u8
+#EXTINF:-1 tvg-id="HGTV.pe" tvg-logo="https://i.ibb.co/vx0n2KSN/HGTV.png" group-title="Variedades",HGTV
+http://200.115.120.1:8000/play/ca61/index.m3u8
+#EXTINF:-1 tvg-id="HOLA TV HD.ve" tvg-logo="https://i.ibb.co/SX8KKFrw/HOLATV.png" group-title="Variedades",HOLA! TV HD
+http://45.5.116.228:8000/play/a0hx/index.m3u8
+#EXTINF:-1 tvg-id="PlusLife.pe" tvg-logo="https://i.ibb.co/TM5RJ65H/PLUSTV-LIFE.png" group-title="Variedades",Plus TV Life
+http://190.119.187.91:8050/play/a0pk/index.m3u8
+#EXTINF:-1 tvg-id="ElGourmet.pe" tvg-logo="https://i.ibb.co/whxYP5tQ/EL-GOURMET.png" group-title="Variedades",El Gourmet
+http://200.4.241.75:5050/play/a0ap/index.m3u8
+#EXTINF:-1 tvg-id="FOOD NETWORK HD.ve" tvg-logo="https://i.ibb.co/DH77CLHt/FOOD-NETWORK.png" group-title="Variedades",Food Network
+http://8.243.126.131:8000/play/a05w/index.m3u8
+#EXTINF:-1 tvg-id="ENTERTAINMENT TELEVISION.ve" tvg-logo="https://i.ibb.co/vCB13h5T/E.png" group-title="Variedades",E! Entertairment HD
+http://181.66.249.246:8000/play/a0dc/index.m3u8
+#EXTINF:-1 tvg-id="Lifetime.pe" tvg-logo="https://i.ibb.co/MxvSf1hN/LIFETIME.png" group-title="Variedades",Lifetime
+http://148.222.230.197:8000/play/a0m9/index.m3u8
+#EXTINF:-1 tvg-id="las estrellas.pe" tvg-logo="https://i.ibb.co/LhnmYy7T/LAS-ESTRELLAS.png" group-title="Novelas",Las Estrellas HD
+http://200.229.147.142:8000/play/a08z/index.m3u8
+#EXTINF:-1 tvg-id="K-DRAMA.pe" tvg-logo="https://i.ibb.co/Fbk86KrM/KANAL-D-DRAMA.png" group-title="Novelas",KANAL D DRAMA
+http://179.51.160.246:8888/play/a00f/index.m3u8
+#EXTINF:-1 tvg-id="Pasiones HD.pe" tvg-logo="https://i.ibb.co/KjGS06DG/PASIONES.png" group-title="Novelas",Pasiones HD
+http://181.176.155.7:8090/play/a1fe/index.m3u8
+#EXTINF:-1 tvg-id="Tl Novelas.pe" tvg-logo="https://i.ibb.co/xqSgtSft/TLNOVELAS.png" group-title="Novelas",TL Novelas
+http://179.51.160.246:8888/play/a02p/index.m3u8
+#EXTINF:-1 tvg-id="TNT NOVELAS HD.pe" tvg-logo="https://i.ibb.co/Ldk1kbjf/TNT-NOVELAS.png" group-title="Novelas",TNT Novelas HD
+http://8.243.126.131:8000/play/a050/index.m3u8
+#EXTINF:-1 tvg-id="HTV.pe" tvg-logo="https://i.ibb.co/jk5wKPYz/HTV.png" group-title="Musicales",HTV
+http://190.14.10.19:16000/play/a05k/index.m3u8
+#EXTINF:-1 tvg-id="Telehit.pe" tvg-logo="https://i.ibb.co/pjPqKBr1/TELEHIT.png" group-title="Musicales",TELEHIT
+http://190.60.47.50:8070/play/a005/index.m3u8
+#EXTINF:-1 tvg-id="TELEHIT MUSICA.pe" tvg-logo="https://i.ibb.co/4wmq0YHq/TELEHIT-MUSICA.png" group-title="Musicales",TELEHIT MUSICA
+http://168.228.44.241:9998/play/a0c3/index.m3u8
+#EXTINF:-1 tvg-id="TOP LATINO.pe" tvg-logo="https://i.ibb.co/XfRk4NyT/TOP-LATINO.png" group-title="Musicales",Top Latino
+http://181.66.249.246:8000/play/a051/index.m3u8
+#EXTINF:-1 tvg-id="MTV HD.pe" tvg-logo="https://i.ibb.co/Y4Krf56L/MTV.png" group-title="Musicales",MTV
+http://181.176.155.7:8090/play/a1nj/index.m3u8
+#EXTINF:-1 tvg-id="HBO.mx" tvg-logo="https://i.ibb.co/hRB6p6FN/HBO.png" group-title="Películas y Series",HBO HD
+http://45.5.117.99:8000/play/a0l2/index.m3u8
+#EXTINF:-1 tvg-id="HBO 2.mx" tvg-logo="https://i.ibb.co/ccJD6Pcs/HBO2.png" group-title="Películas y Series",HBO2 HD
+http://45.5.117.99:8000/play/a00c/index.m3u8
+#EXTINF:-1 tvg-id="HBO PLUS.pe" tvg-logo="https://i.ibb.co/tpHgFMpL/HBO-PLUS.png" group-title="Películas y Series",HBO Plus HD
+http://45.5.117.99:8000/play/a0l4/index.m3u8
+#EXTINF:-1 tvg-id="HBO FAMILY.pe" tvg-logo="https://i.ibb.co/nNStZvTj/HBO-FAMILY.png" group-title="Películas y Series",HBO Family HD
+http://45.5.117.99:8000/play/a0l5/index.m3u8
+#EXTINF:-1 tvg-id="HBO Mundi.co" tvg-logo="https://i.ibb.co/HRtzfBx/HBO-MUNDI.png" group-title="Películas y Series",HBO Mundi
+http://190.119.168.226:4000/play/a0eo/index.m3u8
+#EXTINF:-1 tvg-id="HBO POP.pe" tvg-logo="https://i.ibb.co/HfNKWt81/HBO-POP.png" group-title="Películas y Series",HBO POP HD
+http://190.119.168.226:4000/play/a06t/index.m3u8
+#EXTINF:-1 tvg-id="HBO Signature.co" tvg-logo="https://i.ibb.co/gF3m8WZG/HBO-SIGNATURE.png" group-title="Películas y Series",HBO Signature HD
+http://200.115.120.1:8000/play/ca139/index.m3u8
+#EXTINF:-1 tvg-id="HBO XTREME.pe" tvg-logo="https://i.ibb.co/q3s4Jq0Q/HBO-XTREME.png" group-title="Películas y Series",HBO XTREME HD
+http://45.5.117.99:8000/play/a0l6/index.m3u8
+#EXTINF:-1 tvg-id="Multicinema HD.uy" tvg-logo="https://i.ibb.co/84G8Np38/MULTICINEMA.png" group-title="Películas y Series",Multicinema
+http://200.115.120.1:8000/play/ca140/index.m3u8
+#EXTINF:-1 tvg-id="Multipremier SD.uy" tvg-logo="https://i.ibb.co/3m9wMxqq/MULTIPREMIER.png" group-title="Películas y Series",Multipremier
+http://45.5.117.99:8000/play/a0ij/index.m3u8
+#EXTINF:-1 tvg-id="UNIVERSAL CINEMA.mx" tvg-logo="https://i.ibb.co/TxpQrm5g/UNIVERSAL-CINEMA.png" group-title="Películas y Series",UNIVERSAL CINEMA HD
+http://186.151.95.60:8000/play/a04w/index.m3u8
+#EXTINF:-1 tvg-id="UNIVERSAL COMEDY.mx" tvg-logo="https://i.ibb.co/fdkNm8c2/UNIVERSAL-COMEDY.png" group-title="Películas y Series",UNIVERSAL COMEDY HD
+http://45.5.117.99:8000/play/a0i5/index.m3u8
+#EXTINF:-1 tvg-id="UNIVERSAL PREMIERE.mx" tvg-logo="https://i.ibb.co/JWWYjHgZ/UNIVERSAL-PREMIERE.png" group-title="Películas y Series",UNIVERSAL PREMIERE HD
+http://8.243.126.131:8000/play/a0iq/index.m3u8
+#EXTINF:-1 tvg-id="UNIVERSAL CRIME.mx" tvg-logo="https://i.ibb.co/JjpXkd8n/UNIVERSAL-CRIME.png" group-title="Películas y Series",UNIVERSAL CRIME HD
+http://200.60.97.100:28888/play/a03j/index.m3u8
+#EXTINF:-1 tvg-id="Universal Reality.uy" tvg-logo="https://i.ibb.co/WN6VRG1Y/UNIVERSAL-REALITY.png" group-title="Películas y Series",UNIVERSAL REALITY HD
+http://186.151.95.60:8000/play/a03r/index.m3u8
+#EXTINF:-1 tvg-id="CINE FAMILIAR.pe" tvg-logo="https://i.ibb.co/9kw1xvsW/CINE-FAMILIAR.png" group-title="Películas y Series",Cine Familiar HD
+http://200.229.147.142:8000/play/a07v/index.m3u8
+#EXTINF:-1 tvg-id="CINE HISPANO HD.pe" tvg-logo="https://i.ibb.co/Kjt9WfHw/CINE-HISPANO.png" group-title="Películas y Series",Cine Hispano HD
+http://200.229.147.142:8000/play/a07x/index.m3u8
+#EXTINF:-1 tvg-id="CINE PREMIUM HD.pe" tvg-logo="https://i.ibb.co/VY5kYj2x/CINE-PREMIUM.png" group-title="Películas y Series",Cine Premium HD
+http://181.66.249.246:8000/play/a0ju/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",TELEFE | AR
 http://8.243.126.131:8000/play/a0mc/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="Copa Mundial 2026",TyC Sports | AR
