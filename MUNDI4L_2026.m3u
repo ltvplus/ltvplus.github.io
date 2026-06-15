@@ -91,6 +91,8 @@ http://38.183.213.254:8000/play/a00j/index.m3u8
 http://liontv.es:8080/live/NESTORCHI/GRETF/1486379.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",La 1 | ES
 http://ak-47scan.dyndns.tv:25461/live/Juan823/XrrdxQgVwb2E/46454.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",La 1 | ES
+http://176.65.146.93:8401/play/a09a/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",FOX | CR
 http://liontv.es:8080/live/NESTORCHI/GRETF/331437.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",FOX | CR
@@ -142,7 +144,7 @@ http://190.14.10.19:16000/play/a09v/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",TUDN | US
 http://190.83.9.222:8000/play/ca099/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",TUDN | US
-http://190.83.9.222:8000/play/ca099/index.m3u8
+http://190.83.9.222:8000/play/ca040/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",TUDN | US
 http://liontv.es:8080/live/NESTORCHI/GRETF/388757.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",Canal 5 | MX
@@ -151,47 +153,3 @@ http://200.115.120.1:8000/play/ca0105/index.m3u8
 http://45.5.119.43:4000/play/a026/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Copa Mundial 2026",Canal 9 HD | MX
 http://ak-47scan.dyndns.tv:25461/live/Juan823/XrrdxQgVwb2E/73536.m3u8
-#EXTINF:-1 tvg-id="Espn.pe" tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="⚽ Bloque ESPN Sur",ESPN HD
-http://181.176.155.7:8090/play/a1qh/index.m3u8
-#EXTINF:-1 tvg-id="Espn2.pe" tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="⚽ Bloque ESPN Sur",ESPN 2 HD
-http://45.173.201.51:4000/play/a0m2/index.m3u8
-#EXTINF:-1 tvg-id="Espn3.pe" tvg-logo="https://i.ibb.co/ycKgBfC7/ESPN3.png" group-title="⚽ Bloque ESPN Sur",ESPN 3 HD
-http://179.51.160.246:8888/play/a00k/index.m3u8
-#EXTINF:-1 tvg-id="Espn4.pe" tvg-logo="https://i.ibb.co/TDbLPNgJ/ESPN4.png" group-title="⚽ Bloque ESPN Sur",ESPN 4 HD
-http://179.51.160.246:8888/play/a00l/index.m3u8
-#EXTINF:-1 tvg-id="Espn5.pe" tvg-logo="https://i.ibb.co/SX7tcGV3/ESPN5.png" group-title="⚽ Bloque ESPN Sur",ESPN 5 HD
-http://179.51.160.246:8888/play/a00m/index.m3u8
-#EXTINF:-1 tvg-id="Espn6.pe" tvg-logo="https://i.ibb.co/DfC2v2Yw/ESPN6.png" group-title="⚽ Bloque ESPN Sur",ESPN 6 HD
-http://179.51.160.246:8888/play/a00n/index.m3u8
-#EXTINF:-1 tvg-id="Espn7.pe" tvg-logo="https://i.ibb.co/N60Dsr73/ESPN7.png" group-title="⚽ Bloque ESPN Sur",ESPN 7 HD
-http://179.51.160.246:8888/play/a00o/index.m3u8
-#EXTINF:-1 tvg-id="ESPN.co" tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="⚽ Bloque ESPN Sur",ESPN HD | CO
-http://181.78.21.174:8015/play/a00l/index.m3u8
-#EXTINF:-1 tvg-id="ESPN 2.co" tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="⚽ Bloque ESPN Sur",ESPN 2 HD | CO
-http://181.78.8.199:8000/play/a0b2/index.m3u8
-#EXTINF:-1 tvg-id="ESPN HD.cl" tvg-logo="https://i.ibb.co/NnYpYHzq/ESPN.png" group-title="⚽ Bloque ESPN Sur",ESPN HD | CL
-http://200.4.241.75:5050/play/a0bb/index.m3u8
-#EXTINF:-1 tvg-id="ESPN 2 HD.cl" tvg-logo="https://i.ibb.co/0VY8gRDk/ESPN2.png" group-title="⚽ Bloque ESPN Sur",ESPN 2 HD | CL
-http://181.79.87.131:8000/play/a0e9/index.m3u8
-#EXTINF:-1 tvg-id="ESPN Premium HD.cl" tvg-logo="https://i.ibb.co/B5XhTspB/ESPNPREMIUM.png" group-title="⚽ Bloque ESPN Sur",ESPN PREMIUM HD | CL
-http://181.64.27.65:8000/play/a0mz/index.m3u8
-#EXTINF:-1 tvg-id="Canal ESPN (República Dominicana).do" tvg-logo="https://i.ibb.co/Qvqcj4Zk/ESPN-MX.png" group-title="⚽ Bloque ESPN Norte",ESPN HD
-http://45.5.117.99:8000/play/a060/index.m3u8
-#EXTINF:-1 tvg-id="Canal ESPN 2 (República Dominicana).do" tvg-logo="https://i.ibb.co/xK3QKbpg/ESPN2-MX.png" group-title="⚽ Bloque ESPN Norte",ESPN 2 HD
-http://45.5.117.99:8000/play/a061/index.m3u8
-#EXTINF:-1 tvg-id="Canal ESPN 3 (República Dominicana).do" tvg-logo="https://i.ibb.co/tPMc1xt2/ESPN3-MX.png" group-title="⚽ Bloque ESPN Norte",ESPN 3 HD
-http://45.5.117.99:8000/play/a062/index.m3u8
-#EXTINF:-1 tvg-id="Canal ESPN 4 (República Dominicana).do" tvg-logo="https://i.ibb.co/PZCfh3Rk/ESPN4-MX.png" group-title="⚽ Bloque ESPN Norte",ESPN 4 HD
-http://45.5.117.99:8000/play/a064/index.m3u8
-#EXTINF:-1 tvg-id="Canal ESPN 5 (Centroamerica y República Dominicana).do" tvg-logo="https://i.ibb.co/d4ntGZxB/ESPN5-MX.png" group-title="⚽ Bloque ESPN Norte",ESPN 5 HD
-http://45.5.117.99:8000/play/a065/index.m3u8
-#EXTINF:-1 tvg-id="MovistarDeportes.pe" tvg-logo="https://i.ibb.co/MxdFSrYB/MOVISTARDEPORTES.png" group-title="PERU",MOVISTAR DEPORTES
-http://200.4.241.75:5050/play/a0ei/index.m3u8
-#EXTINF:-1 tvg-id="L1.pe" tvg-logo="https://i.ibb.co/7d027zDJ/L1.png" group-title="PERU",LIGA 1
-http://179.1.146.22:8000/play/a0l4/index.m3u8
-#EXTINF:-1 tvg-id="L1 MAX.pe" tvg-logo="https://i.ibb.co/4RxB4Zhq/L1MAX.png" group-title="PERU",LIGA 1 MAX HD
-http://179.1.146.22:8000/play/a0l5/index.m3u8
-#EXTINF:-1 tvg-id="CLAROSPORTS.ve" tvg-logo="https://i.ibb.co/S42JGMnw/CLARO-SPORTS.png" group-title="MEXICO",Claro Sports HD
-http://45.5.117.99:8000/play/a04w/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/Tx615bSQ/CLARO-SPORTS2.png" group-title="MEXICO",Claro Sports 2 HD
-http://45.5.117.99:8000/play/a04x/index.m3u8
