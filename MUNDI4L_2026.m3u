@@ -58,7 +58,7 @@ http://liontv.es:8080/live/NESTORCHI/GRETF/834969.m3u8
 #EXTINF:-1 tvg-id="Caracol HD.co" tvg-logo="https://i.ibb.co/YBTpR2LF/CARACOL.png" group-title="⚽ Mundial 2026 🇨🇴",CARACOL | CO
 http://ak-47scan.dyndns.tv:25461/live/Juan823/XrrdxQgVwb2E/261870.m3u8
 #EXTINF:-1 tvg-id="Caracol HD.co" tvg-logo="https://i.ibb.co/YBTpR2LF/CARACOL.png" group-title="⚽ Mundial 2026 🇨🇴",CARACOL | CO
-http://nocable.cc:8080/live/tzURG8/866009/320297.m3u8
+http://186.148.163.17:8000/play/a09o/index.m3u8
 #EXTINF:-1 tvg-id="Caracol HD.co" tvg-logo="https://i.ibb.co/mCbd2CNL/RCN.png" group-title="⚽ Mundial 2026 🇨🇴",RCN | CO
 http://190.61.43.114:45000/play/a01m/index.m3u8
 #EXTINF:-1 tvg-id="Caracol HD.co" tvg-logo="https://i.ibb.co/mCbd2CNL/RCN.png" group-title="⚽ Mundial 2026 🇨🇴",RCN | CO
@@ -104,7 +104,7 @@ http://190.119.168.226:4000/play/a0dk/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M5gt1ZDH/CHILE-VISION.png" group-title="⚽ Mundial 2026 🇨🇱",CHV HD | CL
 http://200.4.241.75:5050/play/a0b6/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M5gt1ZDH/CHILE-VISION.png" group-title="⚽ Mundial 2026 🇨🇱",CHV HD | CL
-http://190.119.179.90:8050/play/a08q/index.m3u8
+http://38.199.4.105:9999/play/a0qy/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M5gt1ZDH/CHILE-VISION.png" group-title="⚽ Mundial 2026 🇨🇱",CHV HD | CL
 http://200.4.241.75:5050/play/a0b6/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/M5gt1ZDH/CHILE-VISION.png" group-title="⚽ Mundial 2026 🇨🇱",CHV HD | CL
@@ -120,25 +120,35 @@ http://38.183.213.254:8000/play/a00j/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/XxYMcKLK/TELEVEN.png" group-title="⚽ Mundial 2026 🇪🇨 🇻🇪",Televen | VE
 http://liontv.es:8080/live/NESTORCHI/GRETF/117953.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇨🇷",FOX | CR
-http://45.5.117.99:8000/play/a02v/index.m3u8
+http://38.52.182.224:8000/play/a0ay/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇨🇷",FOX | CR
-http://45.5.119.43:4000/play/a002/index.m3u8
+http://45.5.117.99:8000/play/a02v/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇨🇷",FOX | CR
 http://190.105.128.198:5800/play/a05p/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇨🇷",FOX | CR
 http://liontv.es:8080/live/NESTORCHI/GRETF/331437.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇨🇷",FOX | CR
 http://ak-47scan.dyndns.tv:25461/live/Juan823/XrrdxQgVwb2E/40520.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
-http://liontv.es:8080/live/NESTORCHI/GRETF/1625701.m3u8
-#EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
-http://liontv.es:8080/live/NESTORCHI/GRETF/1071.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇬🇹",FOX | GT
+http://179.60.224.196:8000/play/a0in/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇬🇹",FOX | GT
+http://190.14.10.19:16000/play/a0a2/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇬🇹",FOX | GT
+http://38.52.182.224:8000/play/a0j9/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇬🇹",FOX | GT
+http://38.252.238.18:8000/play/a078/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/Z6nT6XRh/FOX.png" group-title="⚽ Mundial 2026 🇬🇹",FOX | GT
+http://190.83.9.222:8000/play/a012/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
 http://45.5.119.43:4000/play/a05t/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
 http://45.5.118.152:8000/play/a08x/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
 http://190.14.10.19:16000/play/a00ps/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
+http://liontv.es:8080/live/NESTORCHI/GRETF/1625701.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/sJD0gHKZ/TIGO-SPORTS.png" group-title="⚽ Mundial 2026 🇬🇹",Tigo Sports HD | GT
+http://liontv.es:8080/live/NESTORCHI/GRETF/1071.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/j95scBF7/TELEMUNDO.png" group-title="⚽ Mundial 2026 🇺🇸",TELEMUNDO | US
 http://190.11.225.124:5000/live/telemundo_hd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/j95scBF7/TELEMUNDO.png" group-title="⚽ Mundial 2026 🇺🇸",TELEMUNDO | US
@@ -152,13 +162,23 @@ http://nocable.cc:8080/live/tzURG8/866009/121244.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇺🇸",TUDN | US
 http://190.14.10.19:16000/play/a09v/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇺🇸",TUDN | US
-http://190.83.9.222:8000/play/ca099/index.m3u8
+http://181.119.177.253:8000/play/a0ds/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇺🇸",TUDN | US
-http://190.83.9.222:8000/play/ca040/index.m3u8
+http://45.186.106.207:8000/play/a099/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇺🇸",TUDN | US
 http://45.5.118.152:8000/play/a08n/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇺🇸",TUDN | US
 http://181.119.177.253:8000/play/a0ds/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇲🇽 🇭🇳",TUDN | MX
+http://45.5.116.228:8000/play/sky/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇲🇽 🇭🇳",TUDN | MX
+http://45.5.119.43:4000/play/a05q/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇲🇽 🇭🇳",TUDN | MX
+http://168.228.44.241:9998/play/a048/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇲🇽 🇭🇳",TUDN | MX
+http://168.228.44.241:9998/play/a0b0/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.ibb.co/1frfHxcG/TUDN.png" group-title="⚽ Mundial 2026 🇲🇽 🇭🇳",TUDN | MX
+http://200.115.96.66:4000/play/a0dn/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇪🇸",La 1 | ES
 http://176.65.146.93:8401/play/a09a/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇪🇸",La 1 | ES
@@ -182,19 +202,19 @@ http://190.105.128.198:5800/play/a08n/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 3 | GT
 http://186.151.95.60:8000/play/ca08/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 3 | GT
-http://45.5.119.43:4000/play/a0h5/index.m3u8
+http://190.14.10.19:16000/play/a08v/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 3 | GT
 http://liontv.es:8080/live/NESTORCHI/GRETF/470906.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 7 | GT
 http://45.5.118.136:8888/play/a00e/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 7 | GT
-http://45.5.119.43:4000/play/a0h4/index.m3u8
+http://190.83.9.222:8000/play/ca103/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 7 | GT
 http://liontv.es:8080/live/NESTORCHI/GRETF/470907.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 11 | GT
 http://186.151.95.60:8000/play/c09/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 11 | GT
-http://45.5.119.43:4000/play/a0jk/index.m3u8
+http://190.83.9.222:8000/play/ca104/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇬🇹",Canal 11 | GT
 http://liontv.es:8080/live/NESTORCHI/GRETF/463178.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/PZW9bSJ5/COPA-MUNDIAL.png" group-title="⚽ Mundial 2026 🇲🇽 🇭🇳",Canal 3 Telesistemas | HN
