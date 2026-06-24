@@ -22,9 +22,7 @@ https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgn
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/kp7qfx2tly/out/v1/bbfb730b45b74d4ea875d75786ea3f13/cenc-sd.mpd
 
 #EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="⚽🏆 DGO FHD",DSPORTS FHD
-#KODIPROP:inputstreamaddon=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=f8b207c10f3f76aeba32a360ec52b9e4:afad49d20eb39670e93e371c1d669921
 https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3gg2jnixjn/out/v1/e1840e01f3f14563b66bbb944d5cc54c/cenc.mpd
 
