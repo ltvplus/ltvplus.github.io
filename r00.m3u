@@ -7,12 +7,36 @@
 #KODIPROP:inputstream.adaptive.license_key=45bbd582f220f438f896450d8306a3f2:582c6ba7f64bbc0f2d91c6b0c265760c
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd
 
+#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS HD
+http://livetv-plus.com:8880/live/BVBEA/RAUJV/469393.m3u8
+
+#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS HD
+http://181.119.93.83:8000/play/a184/index.m3u8
+
+#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS HD
+http://190.108.83.69:8000/play/a0cb/index.m3u8
+
+#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS HD
+http://200.60.97.100:28888/play/a08j/index.m3u8
+
 #EXTINF:-1 tvg-id="DSPORTS 2 HD.ve" tvg-logo="https://i.ibb.co/7JcX24vF/DSPORTS2.png" group-title="⚽🏆 DGO SD", DIRECTV 2
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=18044a84b7e6c1bbf852591797e53a2c:38b3b6f8810917d89636927bddb79294
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgnhx/out/v1/5045630288d44123ba85427b2c36f29f/cenc-sd.mpd
+
+#EXTINF:-1 tvg-id="DSPORTS 2 HD.ve" tvg-logo="https://i.ibb.co/7JcX24vF/DSPORTS2.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS 2 HD
+http://livetv-plus.com:8880/live/BVBEA/RAUJV/518958.m3u8
+
+#EXTINF:-1 tvg-id="DSPORTS 2 HD.ve" tvg-logo="https://i.ibb.co/7JcX24vF/DSPORTS2.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS 2 HD
+http://181.119.93.83:8000/play/a185/index.m3u8
+
+#EXTINF:-1 tvg-id="DSPORTS 2 HD.ve" tvg-logo="https://i.ibb.co/7JcX24vF/DSPORTS2.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS 2 HD
+http://190.108.83.69:8000/play/a0c6/index.m3u8
+
+#EXTINF:-1 tvg-id="DSPORTS 2 HD.ve" tvg-logo="https://i.ibb.co/7JcX24vF/DSPORTS2.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS 2 HD
+http://200.60.97.100:28888/play/a0c8/index.m3u8
 
 #EXTINF:-1 tvg-id="DSPORTS + HD.ve" tvg-logo="https://i.ibb.co/0y0YCFyk/DSPORTS-PLUS.png" group-title="⚽🏆 DGO SD", DIRECTV +
 #KODIPROP:inputstreamaddon=inputstream.adaptive
@@ -21,28 +45,14 @@ https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgn
 #KODIPROP:inputstream.adaptive.license_key=8afa490e1640be969729fb459182e4ec:6f129820cdd5b6978a98c604c72cf05b
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/kp7qfx2tly/out/v1/bbfb730b45b74d4ea875d75786ea3f13/cenc-sd.mpd
 
-#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="⚽🏆 DGO FHD",DSPORTS FHD
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=f8b207c10f3f76aeba32a360ec52b9e4:afad49d20eb39670e93e371c1d669921
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3gg2jnixjn/out/v1/e1840e01f3f14563b66bbb944d5cc54c/cenc.mpd
+#EXTINF:-1 tvg-id="DSPORTS + HD.ve" tvg-logo="https://i.ibb.co/0y0YCFyk/DSPORTS-PLUS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS+ HD
+http://livetv-plus.com:8880/live/BVBEA/RAUJV/69954.m3u8
 
-#EXTINF:-1 tvg-name="DSPORTS + HD.ve" tvg-logo="https://i.ibb.co/0y0YCFyk/DSPORTS-PLUS.png" group-title="⚽🏆 DGO FHD",DSPORTS + FHD
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=41121cea7a3d49a78c9496d1b0d919e4:de048d4c2870b8d53961aaeac1804947
-https://prope9660ag6.airspace-cdn.cbsivideo.com/out/v1/a634dbd5b8474f38b38a8ce37dd77b50/manifest.mpd
+#EXTINF:-1 tvg-id="DSPORTS + HD.ve" tvg-logo="https://i.ibb.co/0y0YCFyk/DSPORTS-PLUS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS+ HD
+http://181.119.93.83:8000/play/a28a/index.m3u8
 
-#EXTINF:-1 tvg-name="" tvg-logo="https://i.ibb.co/j95scBF7/TELEMUNDO.png" group-title="⚽🏆 USA FHD",Telemundo
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1efe4add8fdf327c5f8d2a1c195e5c71:4f50e6f011e60ca01ee561f27187e78f
-https://paz-live1-ott.izzigo.tv/out/u/dash/NOG1/TELEMUNDO-ARIZONA-USA-TCS-HD/TELEMUNDO-ARIZONA-USA-TCS-HD.mpd
+#EXTINF:-1 tvg-id="DSPORTS + HD.ve" tvg-logo="https://i.ibb.co/0y0YCFyk/DSPORTS-PLUS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS+ HD
+http://190.108.83.69:8000/play/a05w/index.m3u8
 
-#EXTINF:-1 tvg-name="" tvg-logo="https://i.ibb.co/wFfq95kY/FOX.png" group-title="⚽🏆 USA FHD",FOX
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1f68713028d439ec03be07f56c1d6213:20093db6455160fffed4c394def3193d
-https://abemgapaaaaaaaamjqcglddgof6nb.ta.bia-cf.live.pv-cdn.net/pdx-nitro/live/dash/enc/qmjlikytt2/out/v1/fc40f22f10374517a2784e1d97cb23f4/cenc.mpd
+#EXTINF:-1 tvg-id="DSPORTS + HD.ve" tvg-logo="https://i.ibb.co/0y0YCFyk/DSPORTS-PLUS.png" group-title="⚽ Copa Mundial 2026 🏆",DGO | DSPORTS+ HD
+http://200.60.97.100:28888/play/a0c9/index.m3u8
