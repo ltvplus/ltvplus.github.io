@@ -70,7 +70,7 @@ https://edge-live22-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.ey
 #EXTHTTP:{"Origin":"https://portal.app.flow.com.py","Referer":"https://portal.app.flow.com.py/","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"}
 https://edge-live22-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzgyNTE3MDUwIiwic2lwIjoiNDUuMjI4LjY3LjI4IiwicGF0aCI6Ii9saXZlL2M3ZWRzL0ZveF9TcG9ydHNfUHJlbWl1bl9IRC9TQV9MaXZlX2Rhc2hfY2VuYy8iLCJzZXNzaW9uX2Nkbl9pZCI6ImU2NTA0ODZkNzc2OGE3NGMiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzIwMS4yMzUuNjYuMTE0IiwiYXVkIjoiMzUyIiwic291cmNlcyI6Wzg1LDIxMCw4Niw4OF19.zar51N5bBXdsLxG2ANPBc7_8_AaZD5ken-oajanyYaf2MeaZqPk8wk_XNxxmOfpjc_gHh3WtRKbdzXV06VdzVQ==/live/c4eds/RPC_C4/SA_Live_dash_enc/RPC_C4.mpd
 
-#EXTINF:-1 tvg-id="CANAL 5 MX" tvg-logo="https://i.postimg.cc/ZKbRcwFq/descarga-(5).jpg" group-title="⚽🏆COPA MUNDIAL 2026",MX | CANAL 5
+#EXTINF:-1 tvg-id="CANAL 5 MX" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/07/Logotipo-Canal-5-M%C3%A9xico.png" group-title="⚽🏆COPA MUNDIAL 2026",MX | CANAL 5
 #KODIPROP:inputstreamaddon=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
