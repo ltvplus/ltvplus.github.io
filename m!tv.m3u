@@ -1,0 +1,70 @@
+#EXTM3U
+#EXTINF:-1,A&E
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/aye.stream/playlist.m3u8
+#EXTINF:-1,AXN
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/axn.stream/playlist.m3u8
+#EXTINF:-1,CINE FAMILIAR
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinefamiliar.stream/playlist.m3u8
+#EXTINF:-1,CINE HISPANO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinehispano.stream/playlist.m3u8
+#EXTINF:-1,CINE PREMIUM
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinepremium.stream/playlist.m3u8
+#EXTINF:-1,CINECANAL
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinecanal.stream/playlist.m3u8
+#EXTINF:-1,CLASSIC+
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/classic.stream/playlist.m3u8
+#EXTINF:-1,FILM & ARTS
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/universalcomedy/playlist.m3u8
+#EXTINF:-1,FMH MOVIES
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/FMH_Movies.stream/playlist.m3u8
+#EXTINF:-1,GOLDEN
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/golden.stream/playlist.m3u8
+#EXTINF:-1,HBO
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/HBO/playlist.m3u8
+#EXTINF:-1,HBO FAMILY
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/HBO_Family/playlist.m3u8
+#EXTINF:-1,HBO MUNDI
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/cinemax.stream/playlist.m3u8
+#EXTINF:-1,HBO SIGNATURE
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/hbosignature.stream/playlist.m3u8
+#EXTINF:-1,HBO XTREME
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/HBO_Xtreme/playlist.m3u8
+#EXTINF:-1,HBO+
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/hboplus/playlist.m3u8
+#EXTINF:-1,SONY CHANNEL
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/sonychannel.stream/playlist.m3u8
+#EXTINF:-1,SPACE
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/xmp_trans/space.stream/playlist.m3u8
+#EXTINF:-1,STAR CHANNEL
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/StarChannel.stream/playlist.m3u8
+#EXTINF:-1,STUDIO UNIVERSAL
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/studiouniversal/playlist.m3u8
+#EXTINF:-1,TNT
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/tnt/playlist.m3u8
+#EXTINF:-1,UNIVERSAL TV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/universal/playlist.m3u8
+#EXTINF:-1,USA
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Android TV) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
+http://bantel-cdn1.iptvperu.tv:1935/btnscrtn/ESPN5.stream/playlist.m3u8
