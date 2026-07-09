@@ -42,6 +42,20 @@ https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hufm7lgn
 #KODIPROP:inputstream.adaptive.license_key=8afa490e1640be969729fb459182e4ec:6f129820cdd5b6978a98c604c72cf05b
 https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/kp7qfx2tly/out/v1/bbfb730b45b74d4ea875d75786ea3f13/cenc-sd.mpd
 
+#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="Amazon",DSPORTS FHD 🇨🇴
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=f8b207c10f3f76aeba32a360ec52b9e4:afad49d20eb39670e93e371c1d669921
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/3gg2jnixjn/out/v1/e1840e01f3f14563b66bbb944d5cc54c/cenc.mpd
+
+#EXTINF:-1 tvg-id="DSPORTS HD.ve" tvg-logo="https://i.ibb.co/WWDdrBV5/DSPORTS.png" group-title="Amazon",DSPORTS FHD 🇦🇷
+#KODIPROP:inputstreamaddon=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=c432184d1ab00475aded5731162d99b7:5f361ae2b35dcb415fe612ea7e85ed9d
+https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/qubxnja5rl/out/v1/4ef0db80aa3341e2babb58314541f1e0/cenc.mpd
+
 #EXTINF:-1 tvg-id="bitMe HD.uy" tvg-logo="https://i.ibb.co/QvXMrcWW/BITME.png" group-title="Amazon",Bitme
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
 #KODIPROP:inputstream.adaptive.license_key=391ad12844fdb7c127e2c7ba23582b3b:6c9b3103cd519fcad556e84f918998cd
@@ -158,9 +172,30 @@ https://cache07.zapitv.com/live/eds_c2/eurosport_1_hd/dash_live_ez/eurosport_1_h
 #EXTHTTP:{"Origin":"https://portal.app.flow.com.py","Referer":"https://portal.app.flow.com.py/","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"}
 https://cache07.zapitv.com/live/eds_c2/eurosport_2_hd/dash_live_ez/eurosport_2_hd.mpd
 
-#EXTINF:-1 group-title="dTV" group-logo="",CHILEVISION_HD
+#EXTINF:-1 tvg-id="Telemundo Chicago (WSNS)" tvg-logo="https://i.ibb.co/20SHH7nX/TELEMUNDO-CHICAGO.png" group-title="VPN USA",TELEMUNDO CHICAGO
+#KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","k":"cbWSY3Y4sCxA4yoiCNWOOQ","kid":"oA7eNr5GMGGyHLRu0jKIqw""},{"kty":"oct","k":"7LsZ/+9PMVvZ7V8TiZko/g","kid":"3JduFbiDPRK0Lz+fouGrtA"},{"kty":"oct","k":"u3Sly50ulRG+GjXmUPzKZw","kid":"Lc+50Jh8SX+P5CIJQSUWEg"},{"kty":"oct","k":"NeBUXp7PjoobkVQDe3pd0g","kid":"sD0nNxj4Otm3Zq7PSBiYnA"}],"type":"temporary"}
-#EXTVLCOPT:http-user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
-https://1040-aws-da-mt.vrioott.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1040/1040_CHILEVISION_HD_DASH/manifest.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7d6bb9f86e133e4cb33440b493b6b672:584ad285dcb9e7d42cf3e93f1cc3fe11
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(WSNS)/master.mpd
+
+#EXTINF:-1 tvg-id="Telemundo Denver (KDEN)" tvg-logo="https://i.ibb.co/bRX337YD/TELEMUNDO-DENVER.png" group-title="VPN USA",TELEMUNDO DENVER
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2a195c95880e37688286e0a6117a336f:e6cba1c52ebee16289775f5164daece7
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(KDEN)/master.mpd
+
+#EXTINF:-1 tvg-id="Telemundo 52 (KVEA)" tvg-logo="https://i.ibb.co/KcvHrb8B/TELEMUNDO-CALIFORNIA.png" group-title="VPN USA",TELEMUNDO CALIFORNIA
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=ce7ab3022e753307997f58afe001bac4:72d631a66e635c60829a0fe7705516c1
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s-v2/Live/channel(kvea)/master.mpd
+
+#EXTINF:-1 tvg-id="Universo (West)" tvg-logo="https://i.ibb.co/99KrFvMC/UNIVERSO.png" group-title="VPN USA",UNIVERSO
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=2a195c95880e37688286e0a6117a336f:e6cba1c52ebee16289775f5164daece7
+https://live-oneapp-prd-news.akamaized.net/Content/CMAF_OL2-CTR-4s/Live/channel(universo-west)/master.mpd
